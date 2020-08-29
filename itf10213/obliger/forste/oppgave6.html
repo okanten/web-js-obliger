@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Løsning: Oblig 1 oppgave 6</title>
+        <meta charset ="utf-8" />
+
+        <script>
+
+            var totalAmount = 0;
+
+            window.addEventListener("load", function() { // alternativ måte å vente på page load
+
+                document.getElementById("txtItem").focus(function() { this.select(); }); // gir den første tekstboksen fokus
+                document.getElementById("btnAdd").addEventListener("click", addItem); // om btnAdd blir trykket kjøres funksjonen addItem();
+
+            });
+
+            function addItem() {
+                var ul = document.getElementById("itemList");
+                var li = document.createElement("li");
+                var tItem = document.getElementById("txtItem"); // forkorter document.getElementById("txtItem") til tItem
+                var tAmount = document.getElementById("txtAmount"); // ^
+
+
+                if (tItem.value && tAmount.value !== "") { // sjekker om begge tekstboksene inneholder noe
+
+                    document.getElementById("warning").innerHTML = ""; // fjerner eventuel advarsel
+                    li.appendChild(document.createTextNode(parseInt(tAmount.value) + " " + tItem.value)); // bruker parseInt her for å fjerne eventuelle bokstaver brukeren skriver i tekstfeltet txtAmount
+                    ul.appendChild(li); // legger til et nytt liste-element
+                //  tItem.value = "";
+                    tItem.focus(); // gir tekstboksen txtItem fokus
+                    tItem.select(); // markerer teksten som allerede er i tekstboksen
+
+                    totalAmount++; // plusser på en i verdien til totalAmount slik at antall varer øker med én
+
+                    document.getElementById("total").innerHTML = "Antall varer: " + totalAmount; // printer ut antall varer
+
+                } else {
+                    tItem.focus();
+                    document.getElementById("warning").innerHTML = "Du må skrive inn både vare og antall"; // gir brukeren en advarsel om en av (eller begge) tekstboksene mangler verdi.
+                }
+            }
+
+
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Løsning: Oblig 1 oppgave 6</h1>
+
+        <h2>Handleliste</h2>
+
+        <p>Vare: <input type="text" id="txtItem" class="test"/></p>
+        <p>Antall: <input type="text" id="txtAmount" class="test"/></p>
+        <input type="button" id="btnAdd" value="Legg til" />
+        <p id="warning" style="color: red; font-weight: bold;"></p>
+
+        <h3>Liste: </h3>
+        <ul id="itemList"></ul>
+
+        <p id="total">Antall varer: 0</p>
+
+    </body>
+
+</html>

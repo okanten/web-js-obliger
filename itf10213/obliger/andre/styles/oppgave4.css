@@ -1,0 +1,79 @@
+body {
+    max-width: 1200px;
+    margin: 2% auto;
+    background-color: #f4f4f4;
+    background-image: url('');
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body * {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+.wrapper {
+    display: grid;
+    box-shadow: 1px 3px 10px 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "header header radio"
+                            "main main config"
+                            "foot foot foot";
+
+}
+
+
+header {
+    grid-area: header;
+    border-bottom: 1px solid;
+}
+
+
+header#time {
+    display: block;
+}
+
+div#radioPlayer {
+    grid-area: radio;
+    border-bottom: 1px solid;
+}
+
+div#config {
+    padding: 1%;
+    grid-area: config;
+    margin: 2% 4%;
+    background-color: rgba(40, 40, 38, 0.3);
+}
+
+#txtHours {
+    width: 25%;
+}
+
+div#footer {
+    margin-top: 25px;
+    grid-area: foot;
+    border-top: 1px solid;
+    padding-top: 1em;
+    text-align: center;
+}
+
+div#maincontent {
+    padding: 1%;
+    margin: 1%;
+    grid-area: main;
+}
+
+img#pageImage {
+    width: 500px;
+    height: 350px;
+}
+
+p.tips {
+    font-size: 12px;
+}

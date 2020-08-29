@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Infprog oblig 2 ekstra 2</title>
+        <meta charset ="utf-8" />
+        <link rel="stylesheet" href="styles/body.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/ekstra2.css" />
+
+
+        <script>
+
+            // koden ser helt jævlig ut
+
+            var $ = function(id) {
+                return document.getElementById(id);
+            }
+
+            window.addEventListener("load", function () {
+
+                doTwo();
+                doThree();
+                doFour();
+                doFive();
+
+            });
+
+
+            function doTwo() {
+                var res;
+
+                for(var i = 1; i <= 5; i++) {
+                    for (var ii = 1; ii <= 5; ii++) {
+                        if (res !== undefined) {
+                            res += "<li>" + "" + i + ii + "</li>";
+                        } else {
+                            res = "<li>" + "" + i + ii + "</li>";
+                        }
+                    }
+                }
+                $("outTwo").innerHTML += res;
+            }
+
+            function doThree() {
+                var res;
+
+                for(var i = 1; i <= 5; i++) {
+                    for(var ii = 1; ii <= 5; ii++) {
+                        for(var iii = 1; iii <= 5; iii++) {
+                            if (res !== undefined) {
+                                res += "<li>" + "" + i + ii + iii + "</li>";
+                            } else {
+                                res = "<li>" + "" + i + ii + iii + "</li>";
+                            }
+                        }
+                    }
+                }
+                $("outThree").innerHTML += res;
+            }
+
+
+            function doFour() {
+                var res;
+
+                for(var i = 1; i <= 5; i++) {
+                    for(var ii = 1; ii <= 5; ii++) {
+                        for(var iii = 1; iii <= 5; iii++) {
+                            for(var iv = 1; iv <= 5; iv++) {
+                                if (res !== undefined) {
+                                    res += "<li>" + "" + i + ii + iii + iv + "</li>";
+                                } else {
+                                    res = "<li>" + "" + i + ii + iii + iv + "</li>";
+                                }
+                            }
+                        }
+                    }
+                }
+                $("outFour").innerHTML += res;
+
+            }
+
+            function doFive() {
+                var res;
+
+                for(var i = 1; i <= 5; i++) {
+                    for(var ii = 1; ii <= 5; ii++) {
+                        for(var iii = 1; iii <= 5; iii++) {
+                            for(var iv = 1; iv <= 5; iv++) {
+                                for(var v = 1; v <= 5; v++) {
+                                    if (res !== undefined) {
+                                        res += "<li>" + "" + i + ii + iii + iv + v + "</li>";
+                                    } else {
+                                        res = "<li>" + "" + i + ii + iii + iv + v + "</li>";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                $("outFive").innerHTML += res;
+            }
+
+        </script>
+
+
+    </head>
+
+    <body>
+
+        <nav>
+            <ul id="navigation">
+                <li><a href="oppgave1.html">Oppgave 1-3</a></li>
+                <li><a href="oppgave4.html">Oppgave 4</a></li>
+                <li><a href="oppgave5.html">Oppgave 5</a></li>
+                <li><a href="oppgave6.html">Oppgave 6</a></li>
+                <li><a href="oppgave7.html">Oppgave 7</a></li>
+                <li><a href="ekstra1.html">Ekstra 1</a></li>
+                <li><a href="ekstra2.html">Ekstra 2</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+            <header>
+                <h1>Løsning: Oblig 2 ekstra 2</h1>
+            </header>
+
+                <ul id="outTwo"><h3>2 siffer</h3></ul>
+                <ul id="outThree"><h3>3 siffer</h3></ul>
+                <ul id="outFour"><h3>4 siffer</h3></ul>
+                <ul id="outFive"><h3>5 siffer</h3></ul>
+
+            <footer>
+                <p><a href="https://github.com/okstudies" target="_blank">GitHub</a></p>
+                <p><a href="#navigation">Til toppen</a></p>
+            </footer>
+        </div>
+
+    </body>
+
+</html>

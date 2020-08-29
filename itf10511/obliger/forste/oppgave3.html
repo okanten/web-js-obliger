@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="no">
+    <head>
+        <title>Oppgave 3: Hva er FTP?</title>
+        <meta charset="UTF-8" />
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet" />
+        <link rel="stylesheet" href="stilark.css" />
+    </head>
+    <body>
+
+        <header>
+            <h1><a href="oppgave1.html">O.K Avis</a></h1>
+            <nav>
+                <p>Interne</p>
+                    <ul>
+                        <li><a href="oppgave1.html">Oppgave 1</a></li>
+                        <li><a href="oppgave2.html">Oppgave 2</a></li>
+                        <li><a href="oppgave3.html">Oppgave 3</a></li>
+                        <li><a href="oppgave4.html">Oppgave 4</a></li>
+                        <li><a href="stilark.css">Oppgave 5</a></li>
+                        <li><a href="oppgave6.html">Oppgave 6</a></li>
+                    </ul>
+                <p>Eksterne (Åpnes i ny fane)</p>
+                    <ul>
+                        <li><a href="https://www.webdevelopersnotes.com/what-is-web-server" target="_blank">Webserver artikkel #1 </a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_web_server" target="_blank">Webserver artikkel #2</a></li>
+                    </ul>
+                </nav>
+        </header>
+
+
+
+    <section>
+        <h5 class="oppgavenr">Oppgave 3</h5>
+
+        <article>
+            <h2>Hva er FTP?</h2>
+
+            <p>FTP står for File Transfer Protocol og er en standard nettverksprotokoll man bruker til å overføre filer mellom en klient og en server. Siden FTP er en gammel protokoll og derfor (opprinnelig) sender informasjon i klartest har det kommet en rekke «videreutviklinger» av protokollen de siste årene. Det finnes mange varianter av FTP i dag, men de mest brukte er FTPS (bruker TLS og SSL for sikkerhet), og SFTP (Secure Shell File Transfer Protocol).</p>
+
+
+            <p>Nå skal det sies at sistnevnte egentlig ikke er en videreutvikling av FTP, men heller en videreutvikling av SSH-protokollen som gjør det mulig å overføre filer via SSH.</p>
+
+            <p>FTP (med varianter) brukes sammen med webservere for å overføre filer frem og tilbake. Dette kan være filtyper som: html, css, php, js, eller andre filtyper knyttet til webutvikling. Ved å overføre slike filer til en webserver gjennom FTP publiserer man (som oftest) nettsiden eller nettstedet slik at det ligger ute på internett istedenfor lokalt på din maskin.</p>
+
+            <figure>
+                <a href="bilder/filezilla.png">
+                    <img src="bilder/filezilla_small.png" alt="Skjermdump av FileZilla" />
+                </a>
+                <figcaption>Skjermdump av FileZilla (Klikk for full størrelse)</figcaption>
+            </figure>
+            <p>På bildet til høyre kan du se en skjermdump av FTP-klienten <em>FileZilla</em>. Nesten helt øverst i programmet skriver man inn destinasjonen (host), brukernavn, passord og port.</p>
+            <p>Under ser vi en logg som viser de siste statusoppdateringene. I dette bildet ser vi loggen over filoverføringer, samt at klienten henter ut informasjon fra en rekke filbaner.</p>
+            <p>Videre har vi to filutforskere, en for den lokale maskinen (klienten) og en for den eksterne maskinen (webserveren). Disse filutforskerne har også en "Drag'n'Drop" funksjon som gjør det intuitivt å overføre filer.</p>
+            <p>Helt i bunn ser vi vellykkede filoverføringer med informasjon om hvor filen befinner seg på den lokale maskinen og hvor den ble lagret på den eksterne (serveren), samt også hvilken retning overføringen tok. Her ser vi at retningen er fra den lokale maskinen til webserveren (-->>)</p>
+            <p>Det er også mulig å velge forskjellige faner, slik at man kan se hvilke filer som er i kø, hvilke overføringer som feilet og hvilke som var vellykkede</p>
+
+        </article>
+    </section>
+
+    <section id="ekstern">
+        <h3>Tilleggsinformasjon</h3>
+        <article><h2>Andre bruksområder</h2>
+            <p>FTP kan brukes til mye annet enn bare webutvikling og webservere.
+                For eksempel har Uninett (selskapet som drifter nettet til hiø, m.f) en egen FTP-server med diverse linux-distroer og andre godsaker koblet til en 2Gbit/s linje for rask overføring (<a href="http://ftp.uninett.no" target="_blank">ftp.uninett.no</a>).</p>
+        </article>
+    </section>
+
+    <footer>
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </footer>
+
+    </body>
+
+</html>

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+a {
+  outline: none; }
+
+a:link {
+  color: #5d88a3; }
+
+a:visited {
+  color: #627987; }
+
+a:hover {
+  color: #387e5e; }
+
+a:active {
+  color: #a7f2cf; }
+
+header nav {
+    margin: 1em 0em;
+    padding: 0.2em;
+    border: 1px solid black;
+    background-color: rgba(75, 75, 75, 0.86);
+    color: rgba(255, 54, 199, 0.47);
+    -webkit-box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+header nav ul {
+    display: block;
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 1em;
+    padding: 0.5em 1em;
+    background-color: rgba(10, 10, 10, 0.64);
+    border: 1px solid black;
+}

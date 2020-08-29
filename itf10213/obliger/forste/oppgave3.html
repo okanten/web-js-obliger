@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Løsning: Oblig 1 oppgave 3</title>
+        <meta charset ="utf-8" />
+
+        <script>
+
+            var txtFirst, txtLast, answer; // definerer variablene txtFirst, txtLast og answer
+
+            window.addEventListener("load", function() {
+
+                document.getElementById("btnAdd").addEventListener("click", mathAdd); // caller funksjonen som gir oss summen av tallene dersom plussknappen blir klikket
+                document.getElementById("btnSub").addEventListener("click", mathSub); // caller funksjonen som gir oss differansen av tallene dersom minusknappen blir klikket
+                document.getElementById("btnDivide").addEventListener("click", mathDivide); // caller funksjonen som gir oss kvotienten av tallene dersom deleknappen blir klikket
+                document.getElementById("btnMultiply").addEventListener("click", mathMultiply); // caller funksjonen som gir oss produktet av tallene dersom gangeknappen blir klikket
+
+            });
+
+
+            function mathAdd() {
+
+                txtFirst = parseInt(document.getElementById("txtOne").value, 10);
+                txtLast = parseInt(document.getElementById("txtTwo").value, 10);
+
+                    /*
+                        Gir txtFirst verdien til den første tekstboksen (txtOne)
+                        Gir txtLast verdien til den andre tekstboksen (txtTwo)
+
+                        parseInt "analyserer" variablene og gir oss et rent tall (gjør om fra String til Integer) basert på det matematiske tallsystemet oppgitt (titallsystemet i dette tilfellet)
+                        Det fjerner da eventuelle bokstaver eller andre tegn som ikke er tall og bestemmer også at det skal vises i tallsystemet vi mennesker bruker. (10 er default, så det er strengt tatt ikke nødvendig å spesifisere det)
+                    */
+
+                answer = parseInt(txtFirst + txtLast);
+
+                showResult(txtFirst + " + " + txtLast + " = " + answer);
+
+            }
+
+            function mathSub() {
+
+                txtFirst = parseInt(document.getElementById("txtOne").value, 10);
+                txtLast = parseInt(document.getElementById("txtTwo").value, 10);
+
+                answer = parseInt(txtFirst - txtLast);
+
+                showResult(txtFirst + " - " + txtLast + " = " + answer);
+
+            }
+
+            function mathDivide() {
+
+                txtFirst = parseInt(document.getElementById("txtOne").value, 10);
+                txtLast = parseInt(document.getElementById("txtTwo").value, 10);
+
+                answer = parseInt(txtFirst / txtLast);
+
+                showResult(txtFirst + " / " + txtLast + " = " + answer);
+
+            }
+
+            function mathMultiply() {
+
+                txtFirst = parseInt(document.getElementById("txtOne").value, 10);
+                txtLast = parseInt(document.getElementById("txtTwo").value, 10);
+
+                answer = parseInt(txtFirst * txtLast);
+
+                showResult(txtFirst + " * " + txtLast + " = " + answer);
+
+            }
+
+            function showResult(i) {
+                document.getElementById("result").innerHTML = i; // istedenfor å skrive dette hver gang lagde jeg heller en funksjon med en variabel man kan sende verdier til
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Løsning: Oblig 1 oppgave 3</h1>
+
+        <input id="txtOne" type="text" />
+        <input id="txtTwo" type="text" /><br /><br />
+
+        <button id="btnAdd" type="button">+</button>
+        <button id="btnSub" type="button">-</button>
+        <button id="btnMultiply" type="button">*</button>
+        <button id="btnDivide" type="button">/</button>
+
+        <p id="result"> = </p>
+
+
+    </body>
+
+</html>

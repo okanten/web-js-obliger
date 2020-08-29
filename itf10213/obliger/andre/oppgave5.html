@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Infprog oblig 2 oppgave 5</title>
+        <meta charset ="utf-8" />
+        <link rel="stylesheet" href="styles/body.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/oppgave5.css" />
+
+        <script>
+
+            var result = "";
+
+
+            var $ = function(id) {
+                return document.getElementById(id);
+            }
+
+            window.addEventListener("load", function() {
+
+                $("btnSubmit").addEventListener("click", function() {
+                    if($("txtName").value.length <= 0 || $("txtAge").value.length <= 0 || $("txtHeight").value.length <= 0) { // sjekker om en eller flere av feltene ikke er fylt inn.
+                        alert("Vennligst fyll inn alle feltene. \nVerdiene må være høyere enn null og navnet må være på minst én bokstav.");
+                    } else { // hvis alle feltene er fylt ut
+                        doDivination();
+                    }
+                })
+
+            });
+
+            function doDivination() {
+
+                var name = parseInt($("txtName").value.length); // setter name til lengden av navnet fylt inn av brukeren, sørger også for at det blir en ren integer ved bruk av parseInt
+                var age = parseInt($("txtAge").value); // renser verdien av alder så bokstaver ikke blir med
+                var height = parseInt($("txtHeight").value); // ^
+
+                var gender = $("selectSex").options[$("selectSex").selectedIndex].value; // henter ut hvilket kjønn som er valgt.
+
+                if (gender == "male") { // hvis kjønn er mann
+                    result = parseInt(name * age - height);
+                } else if (gender == "female") { // hvis kjønn er kvinne. Kunne brukt else her, men brukte else if for god praktisering.
+                    result = parseInt(age * height - 3);
+                }
+
+                if (result % 2 === 0) { // hvis tallet er delelig med 2
+                    changeText("<p id=\"green\"> Det vil gå deg godt her i verden... <br />For at spådommen skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345"); // printer ut spådom
+                } else if (result % 2 !== 0) { // hvis tallet ikke er delelig med 2
+                    changeText("<p id=\"red\"> Stakkars deg! Alt kommer til å gå deg galt... <br /> For at spådommen ikke skal gå i oppfyllelse, må du betale inn 100 kr til følgende kontonummer: 1234.12.12345");
+                }
+
+            }
+
+
+            function changeText(i) {
+                $("divination").innerHTML = "Spådom: </p>" + i; // trenger ikke close p taggen da den allerede er closet i html
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <nav>
+            <ul id="navigation">
+                <li><a href="oppgave1.html">Oppgave 1-3</a></li>
+                <li><a href="oppgave4.html">Oppgave 4</a></li>
+                <li><a href="oppgave5.html">Oppgave 5</a></li>
+                <li><a href="oppgave6.html">Oppgave 6</a></li>
+                <li><a href="oppgave7.html">Oppgave 7</a></li>
+                <li><a href="ekstra1.html">Ekstra 1</a></li>
+                <li><a href="ekstra2.html">Ekstra 2</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+            <header>
+                <h1>Løsning: Oblig 2 oppgave 5</h1>
+            </header>
+
+            <form id="formInfo">
+                <h2>Informasjon</h2>
+                <p>Navn: </p><input type="text" id="txtName" />
+                <p>Alder: </p><input type="text" id="txtAge" />
+                <p>Høyde (cm): </p><input type="text" id="txtHeight" />
+                <p>Kjønn: </p>
+                <select id="selectSex">
+                    <option value="male">Mann</option>
+                    <option value="female">Kvinne</option>
+                </select>
+                <p></p>
+                <input type="button" value="Utfør spådom" id="btnSubmit" />
+
+            </form>
+            <p id="divination">Spådom: </p>
+
+            <footer>
+                <p><a href="https://github.com/okstudies" target="_blank">GitHub</a></p>
+            </footer>
+        </div>
+
+    </body>
+
+</html>

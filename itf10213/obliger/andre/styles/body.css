@@ -1,0 +1,15 @@
+body {
+    max-width: 1200px;
+    margin: 2% auto;
+    background-color: #f4f4f4;
+    background-image: url('background/ferdinand-stohr-229736.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body * {
+    margin-left: 1em;
+    margin-right: 1em;
+}

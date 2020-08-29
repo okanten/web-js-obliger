@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 4 - Temaer i WordPress</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="js/nav.js"></script>
+</head>
+<body>
+
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 4 - Wordpress</h1>
+        <nav>
+         <ul id="ulmenu">
+             <li><a href="index.html"> Hjem</a></li>
+             <li><a href="oppsett.html"> Oppsett</a></li>
+             <li><a href="temaer.html"> Temaer</a></li>
+             <li><a href="plugins.html"> Plugins</a></li>
+             <li><a href="widgets.html"> Widgets</a></li>
+             <li><a href="posts.html"> Artikler og sider</a></li>
+             <li><a href="statisk.html"> Statisk forside</a></li>
+         </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <article class="main">
+            <h2 id="top">Temaer i WordPress</h2>
+            <p class="fragmentedlinks"><a href="#install">Hopp til installering</a> <a href="#activate">Hopp til aktivering</a> <a href="#theme-settings">Hopp til tema-spesifikke instillinger</a> <a href="#results">Hopp til resultater</a></p>
+
+            <h2 class="multiple" id="install">Installere temaer</h2>
+            <p>Naviger til Dashboard -> Appearance -> Themes</p>
+            <figure>
+                <a href="img/wp-themes.png"><img src="img/wp-themes.png" alt="Skjermdump av installerte temaer i WordPress" /></a>
+                <figcaption>Slik ser det ut</figcaption>
+            </figure>
+
+            <p>Klikk så "Add New Theme". Da får du opp noe slikt: </p>
+
+            <figure>
+                <a href="img/wp-themes-add.png"><img src="img/wp-themes-add.png" alt="Skjermdump av temaer som kan installeres i WordPress" /></a>
+                <figcaption>Slik ser det ut</figcaption>
+            </figure>
+
+            <p>Det er en rekke muligheter for å finne temaer, man kan f.eks slå på et feature filter</p>
+
+            <figure>
+                <a href="img/wp-themes-filter.png"><img src="img/wp-themes-filter.png" alt="Skjermdump av de forskjellige søkefiltrene i WordPress" /></a>
+                <figcaption>Valgmulighetene for filter</figcaption>
+            </figure>
+
+            <p>Jeg vil ha to temaer, så finner noen som ser passende ut og installerer de</p>
+
+            <figure>
+                <a href="img/wp-theme-evergreen.png"><img src="img/wp-theme-evergreen.png" alt="Skjermdump av de forskjellige søkefiltrene i WordPress" /></a>
+                <figcaption>Origami Evergreen</figcaption>
+            </figure>
+
+            <figure>
+                <a href="img/wp-theme-optimal.png"><img src="img/wp-theme-optimal.png" alt="Skjermdump av de forskjellige søkefiltrene i WordPress" /></a>
+                <figcaption>Optimal</figcaption>
+            </figure>
+
+
+            <h2 class="multiple" id="activate">Aktivere og konfigurere temaene</h2>
+            <p>Naviger tilbake til oversikten over dine installerte temaer og aktiver et tema ved å holde musen over det aktuelle temaet og klikke "Activate".</p>
+            <figure>
+                <a href="img/wp-theme-optimal-activated.png"><img src="img/wp-theme-optimal-activated.png" alt="Skjermdump av aktivert tema: Optimal" /></a>
+                <figcaption>Optimal er nå aktivert og klar for konfigurasjon</figcaption>
+            </figure>
+
+            <p>Vi kan nå konfigurere temaet.</p>
+            <figure>
+                <a href="img/wp-theme-optimal-customize.png"><img src="img/wp-theme-optimal-customize.png" alt="Skjermdump av konfigurasjonsmulighetene til temaet Optimal" /></a>
+                <figcaption>Ingen spesielle konfigurasjonsmuligheter - skuffende</figcaption>
+            </figure>
+            <p>Dessverre hadde ikke gratisversjonen av dette temaet så veldig mange konfigureringsmuligheter. Det har ingen konfigurasjonsmuligheter spesifikt for temaet, derfor bytter jeg tema. Temaet Optimal lever altså <em>ikke</em> opp til navnet sitt.</p>
+            <p>Temaet er rett og slett for begrenset til at jeg i det hele tatt får noe spesielt ut av det, derfor bytter jeg tema til det andre jeg også installerte</p>
+
+            <figure>
+                <a href="img/wp-theme-evergreen-activated.png"><img src="img/wp-theme-evergreen-activated.png" alt="Skjermdump av aktivert tema: Evergreen" /></a>
+                <figcaption>Evergreen er nå aktivert og klar for konfigurasjon - får håpe dette tilfredstiller meg bedre</figcaption>
+            </figure>
+
+            <figure>
+                <a href="img/wp-theme-evergreen-customize.png"><img src="img/wp-theme-evergreen-customize.png" alt="Skjermdump av konfigurasjonsmulighetene til temaet Evergreen" /></a>
+                <figcaption>Her er det en del mer konfigurasjonsmuligheter</figcaption>
+            </figure>
+            <p>Det er kanskje ikke så moderne, men jeg liker designet likevel</p>
+            <p>Når jeg går inn på "Theme settings" får jeg disse mulighetene: </p>
+
+            <figure>
+                <a href="img/wp-theme-evergreen-theme-settings.png"><img src="img/wp-theme-evergreen-theme-settings.png" alt="Skjermdump av theme settings for Evergreen" /></a>
+                <figcaption>Her er det noe mer konfigurasjonsmuligheter</figcaption>
+            </figure>
+
+
+            <h2 class="multiple" id="theme-settings">Theme settings</h2>
+
+            <section class="sflex smaller">
+
+                <figure class="height">
+                    <a href="img/wp-theme-evergreen-responsive.png"><img src="img/wp-theme-evergreen-responsive.png" alt="Skjermdump av responsive mulighetene til evergreen" /></a>
+                    <figcaption>Dette lot jeg være default</figcaption>
+                </figure>
+
+                <figure class="height">
+                    <a href="img/wp-theme-evergreen-text.png"><img src="img/wp-theme-evergreen-text.png" alt="Skjermdump av tekst mulighetene til evergreen" /></a>
+                    <figcaption>Her endret jeg alle feltene</figcaption>
+                </figure>
+
+
+
+                <figure class="height">
+                    <a href="img/wp-theme-evergreen-display.png"><img src="img/wp-theme-evergreen-display.png" alt="Skjermdump av display mulighetene til evergreen" /></a>
+                    <figcaption>Her skrudde jeg bare på center logo</figcaption>
+                </figure>
+            </section>
+            <p>Comments-delen er premium-only, derfor har jeg ikke inkludert den her</p>
+
+            <h2 id="results">Resultat</h2>
+            <section class="sflex">
+                <figure class="height">
+                    <a href="img/wp-theme-evergreen-changes-search.png"><img src="img/wp-theme-evergreen-changes-search.png" alt="Skjermdump av søkeresultat endringene om den ikke finner noe" /></a>
+                    <figcaption>Her kan vi se at søk ikke funnet er endret til det jeg satt</figcaption>
+                </figure>
+
+                <figure class="height">
+                    <a href="img/wp-theme-evergreen-changes-header.png"><img src="img/wp-theme-evergreen-changes-header.png" alt="Skjermdump av endringene til header i Evergreen" /></a>
+                    <figcaption>Her ser vi endringene i headeren - Den er sentrert</figcaption>
+                </figure>
+
+                <figure class="height">
+                    <a href="img/wp-theme-evergreen-changes-404.png"><img src="img/wp-theme-evergreen-changes-404.png" alt="Skjermdump av 404 endringene og copyright notice" /></a>
+                    <figcaption>Her kan vi se at 404 meldingen er endret til det jeg satt - Vi kan også se copyright noticen jeg endret i bunnen av siden</figcaption>
+                </figure>
+
+            </section>
+
+
+            <aside>
+                <p><a href="#top">Til toppen</a></p>
+            </aside>
+
+        </article>
+
+
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

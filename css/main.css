@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Tajawal");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+@font-face {
+  font-family: 'LiberationMonoRegular';
+  src: url("./fonts/liberation-fonts-ttf-2.00.1/LiberationMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+html {
+  background-image: url("../img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%; }
+
+body {
+  width: 95%;
+  margin: auto;
+  margin-top: 2rem;
+    /*background-color: rgba(0,0,0,0.7);
+
+    border: 1px solid rgba(142, 142, 142, 0.4);
+    -webkit-box-shadow: 8px 13px 7px 3px rgba(0,0,0,0.44);
+    -moz-box-shadow: 8px 13px 7px 3px rgba(0,0,0,0.44);
+    box-shadow: 8px 13px 7px 3px rgba(0,0,0,0.44);*/
+  color: white;
+  font-size: 0.9em; }
+  body h1 {
+    font-family: 'LiberationMonoRegular', monospace;
+    font-weight: lighter; }
+  body h2 {
+    font-family: 'Tajawal', sans-serif; }
+
+a {
+  outline: 0; }
+
+a:link {
+  /*color: #dedede;*/
+  color: white;
+  text-decoration: none; }
+
+a:visited {
+  color: #b9b9b9;
+  text-decoration: none; }
+
+a:hover {
+  color: #8dfeea;
+  text-decoration: underline; }
+
+a:active {
+  color: #8c8cda;
+  text-decoration: underline; }
+
+/********************************************
+
+BEGIN WRAPPER
+
+********************************************/
+.wrapper {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 1fr 0.1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: ". js web ." ". intro mplayer ." ". polybar polybar .";
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 1em; }
+  .wrapper #intro {
+    text-align: center;
+    grid-area: polybar; }
+    .wrapper #intro p {
+      font-size: 1em;
+      font-family: 'PT Sans Narrow', sans-serif; }
+  .wrapper #polybar {
+    width: 100%;
+    grid-area: polybar; }
+  .wrapper #polybar ul {
+    display: flex;
+    background-color: #323232;
+    padding-left: 0em;
+    padding: 0em; }
+  .wrapper #polybar ul li {
+    display: inline-block;
+    padding: 0.5em; }
+  .wrapper #polybar ul li:last-child {
+    float: right; }
+
+#active {
+  background-color: #30613c; }
+
+#date {
+  background-color: #c86e19; }
+
+#name {
+  display: block;
+  margin: 0 auto;
+  /*center*/ }
+
+.navtitle {
+  text-align: center; }
+
+nav {
+  margin-top: 2em;
+  padding-bottom: .2em;
+  padding-top: .2em;
+  font-family: 'LiberationMonoRegular', monospace;
+  font-weight: lighter;
+  border: 0.4em solid #606060;
+  background-color: rgba(50, 50, 50, 0.8); }
+  nav :NOT(p) {
+    text-align: center; }
+  nav p {
+    margin-left: 1em;
+    padding-bottom: 1em; }
+  nav ul {
+    padding-left: 0;
+    padding-right: 0;
+    margin: 1em auto 1em auto;
+    list-style: none; }
+    nav ul li {
+      display: inline;
+      padding: 1em; }
+      nav ul li a {
+        padding-top: 1em;
+        padding-bottom: 1em; }
+
+nav:not(#web) {
+  margin-right: 0.5em; }
+
+nav:not(#js) {
+  margin-left: 0.5em; }
+
+#js {
+  grid-area: js; }
+
+#web {
+  grid-area: web; }
+
+#bkjs {
+  opacity: 0.7;
+  grid-area: bkjs;
+  display: block;
+  margin: auto;
+  width: 531px;
+  height: 480px; }
+
+#bkweb {
+  opacity: 0.7;
+  grid-area: bkweb;
+  display: block;
+  margin: auto;
+  width: 531px;
+  height: 480px; }
+
+#neofetch {
+  margin-top: 1em;
+  margin-right: 0.5em;
+  padding-left: 1em;
+  grid-area: intro;
+  font-family: 'LiberationMonoRegular', monospace;
+  font-weight: lighter;
+  border: 0.4em solid #606060;
+  background-color: rgba(50, 50, 50, 0.8); }
+
+.linecounter {
+  color: gray; }
+
+pre p {
+  margin: 0;
+  line-height: 0;
+  font-family: 'LiberationMonoRegular', monospace;
+  font-weight: lighter; }
+
+#code {
+  grid-area: mplayer;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  padding-left: 1em;
+  font-family: 'LiberationMonoRegular', monospace;
+  font-weight: lighter;
+  border: 0.4em solid #606060;
+  background-color: rgba(50, 50, 50, 0.8); }
+  #code #vim {
+    font-size: 0.8em; }
+  #code #vimsaveright {
+    float: right;
+    margin-right: 1.2em; }
+
+/*
+#mplayer {
+    grid-area: mplayer;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+
+    img{
+        width: 100%;
+        border: 0.2em solid rgba(96, 96, 96, 1);
+    }
+
+    #mplayerterm {
+
+        margin-right: 0.5em;
+        margin-bottom: 0.2em;
+        padding-left: 1em;
+        font-family: 'LiberationMonoRegular', monospace;
+        font-weight: lighter;
+
+        border: 0.4em solid rgba(96, 96, 96, 1);
+        background-color: rgba(50, 50, 50, 0.8);
+    }
+}*/
+.red {
+  color: red; }
+
+.yellow {
+  color: yellow; }
+
+.teal {
+  color: teal; }
+
+.darkblue {
+  color: darkblue; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 4 - Temaer i WordPress</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="js/nav.js"></script>
+</head>
+<body>
+
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 4 - Wordpress</h1>
+        <nav>
+         <ul id="ulmenu">
+             <li><a href="index.html"> Hjem</a></li>
+             <li><a href="oppsett.html"> Oppsett</a></li>
+             <li><a href="temaer.html"> Temaer</a></li>
+             <li><a href="plugins.html"> Plugins</a></li>
+             <li><a href="widgets.html"> Widgets</a></li>
+             <li><a href="posts.html"> Artikler og sider</a></li>
+             <li><a href="statisk.html"> Statisk forside</a></li>
+         </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <article class="main">
+            <h2 id="top">Widgets i WordPress</h2>
+            <p class="fragmentedlinks"><a href="#useWidgets">Hopp til bruk av widgets</a> <a href="#result">Hopp til resultat</a></p>
+
+            <h2 class="multiple" id="useWidgets">Bruke widgets</h2>
+            <p>Jeg vil ha to widgets i footeren på siden min</p>
+
+            <p>Jeg navigerer til Appearance -> Widgets</p>
+
+            <figure>
+                <a href="img/wp-widgets-appearance.png"><img src="img/wp-widgets-appearance.png" alt="Skjermdump av widgets under appearance WordPress" /></a>
+                <figcaption>Her administrerer man widgets.</figcaption>
+            </figure>
+
+            <p>Temaet jeg bruker har bare ett sted å plassere widgets, og det er i footeren. Det er greit for min del.</p>
+
+
+            <section class="sflex smaller">
+                <figure>
+                    <a href="img/wp-widgets-recent.png"><img src="img/wp-widgets-recent.png" alt="Skjermdump av hvordan man legger til en widget til et widget-area" /></a>
+                    <figcaption>Dette er hva som kommer opp når man velger en widget - Om man har et tema med flere widget-områder vil det være flere valgmuligheter her</figcaption>
+                </figure>
+
+                <figure>
+                    <a href="img/wp-widget-recent-added.png"><img src="img/wp-widget-recent-added.png" alt="Skjermdump av hvordan widgeten ser ut når ma har lagt den til i et widget-area" /></a>
+                    <figcaption>Når man har lagt til "Recent Posts" i et widget-område kan man velge tittel og antall artikler som skal vises.</figcaption>
+                </figure>
+            </section>
+            <p>Som neste widget føler jeg recent comments passer bra sammen med recent posts</p>
+
+            <section class="sflex smaller">
+                <figure>
+                    <a href="img/wp-widget-recentcomments.png"><img src="img/wp-widget-recentcomments.png" alt="Skjermdump av hvordan man legger til en widget til et widget-area" /></a>
+                    <figcaption>Samme prosedyre som med den forrige widgeten</figcaption>
+                </figure>
+
+                <figure>
+                    <a href="img/wp-widget-recentcomments-added.png"><img src="img/wp-widget-recentcomments-added.png" alt="Skjermdump av hvordan widgeten ser ut når ma har lagt den til i et widget-area" /></a>
+                    <figcaption>Når man har lagt til "Recent Comments" i widget-området kan man også her velge tittel og antall kommentarer som skal vises.</figcaption>
+                </figure>
+            </section>
+
+
+            <h2 class="multiple" id="result">Resultat</h2>
+
+            <section class="sflex"> <!-- For å gjøre bildet sentrert -->
+                <figure>
+                    <a href="img/wp-widget-results.png"><img src="img/wp-widget-results.png" alt="Skjermdump av resultatet ble - Footeren har nå en widget for siste artikler og en for siste kommentarer" /></a>
+                    <figcaption>Når man har lagt til "Recent Comments" i widget-området kan man også her velge tittel og antall kommentarer som skal vises.</figcaption>
+                </figure>
+            </section>
+
+            <aside>
+                <p><a href="#top">Til toppen</a></p>
+            </aside>
+        </article>
+
+
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans");
+a {
+  outline: none; }
+
+a:link {
+  color: #5d88a3; }
+
+a:visited {
+  color: #627987; }
+
+a:hover {
+  color: #86d8b2; }
+
+a:active {
+  color: #a7f2cf; }
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: calc(1em + 1vw);
+    max-width: 600px;
+    margin: 0;
+    background-color: whitesmoke; }
+    body p, body em, body a :not(#crumbs) {
+      font-size: 1rem; }
+
+  ul.general {
+    font-size: 1rem; }
+
+  header.mini {
+    background-color: #bfbfbf;
+    width: 100%;
+    text-align: left;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2rem;
+    margin: 0 2em;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 900; }
+    header.mini h1 {
+      padding-left: 2em;
+      margin-left: 1em;
+      font-size: 2rem; }
+    header.mini nav ul {
+      list-style-type: none; }
+      header.mini nav ul li {
+        display: block;
+        padding: 0 2em; }
+        header.mini nav ul li a {
+          text-decoration: none; }
+    header.mini .fa-bars {
+      display: none; }
+    header.mini .fa.fa-times {
+      font-size: 2rem;
+      float: right;
+      margin: 0.5em 1em;
+      z-index: 9999; }
+
+  header.full {
+    background-color: #aaadad;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.3);
+    -moz-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.3);
+    box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.3); }
+    header.full .fa.fa-bars {
+      margin: 0.4rem; }
+    header.full ul, header.full h1, header.full .fa-times {
+      display: none; }
+
+  .wrapper {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "main main main" "ref ref ref" "foot foot foot"; }
+
+  #crumbs {
+    font-size: 0.8rem; }
+
+  section.articles {
+    grid-area: main;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around; }
+    section.articles article {
+      margin: 2em;
+      padding: 0.5em 1.5em;
+      width: 100%;
+      height: auto;
+      background-color: rgba(239, 239, 239, 0.8);
+      border-radius: 0.2em;
+      -webkit-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.1);
+      -moz-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.1);
+      box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.1); }
+      section.articles article p a.readmore {
+        float: right;
+        padding-bottom: 1em; }
+
+  section.main {
+    grid-area: main;
+    margin: 0em 1em 1em; }
+
+  article.main {
+    padding-left: 1em;
+    grid-area: main;
+    margin: 1em; }
+    article.main h2 {
+      margin: 1em 0; }
+    article.main figure {
+      -webkit-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.2);
+      -moz-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.2);
+      box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.2);
+      border: 1px solid black;
+      margin: 1.5em;
+      width: 15em;
+      height: auto; }
+      article.main figure img {
+        width: 100%; }
+      article.main figure figcaption {
+        text-align: center;
+        padding: 0.2em;
+        background-color: rgba(25, 10, 10, 0.1); }
+
+  aside {
+    margin: 1em 1em; }
+    aside img {
+      width: 44em; }
+
+  li.normal {
+    font-size: 1rem;
+    padding: 0.2em 0; }
+
+  section.extra {
+    border: 1px solid rgba(215, 215, 215, 0.5);
+    margin: 1em;
+    padding: 1em; }
+
+  .reflist {
+    grid-area: ref;
+    padding: 0.5em 1.5em;
+    margin: 2em 1em;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    .reflist .source {
+      /* 'a' funket ikke her */
+      margin: 1em;
+      padding: 0 1em;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
+  .ssgoogle {
+    width: 25em; }
+
+  footer {
+    padding: 0.5em;
+    background-color: #313232;
+    text-align: center; } }
+@media only screen and (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: whitesmoke; }
+
+  header.mini {
+    margin: 0 2em;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0; }
+    header.mini h1 {
+      display: none; }
+
+  header {
+    background-color: #bfbfbf;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.4);
+    -moz-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.4);
+    box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.4);
+    margin-top: 0.2em;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif; }
+    header .fa.fa-times, header .fa.fa-bars {
+      display: none; }
+    header nav ul {
+      list-style-type: none; }
+      header nav ul li {
+        display: inline-block;
+        padding: 0 1em; }
+        header nav ul li a {
+          text-decoration: none; }
+
+  header.full {
+    margin: 0 2em;
+    margin-top: 0.5em;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0; }
+
+  .wrapper {
+    margin-top: 8em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "main main main" "ref ref ref" "foot foot foot"; }
+
+  #crumbs {
+    font-size: 12px; }
+
+  section.articles {
+    grid-area: main;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around; }
+    section.articles article {
+      margin: 1.5em;
+      padding: 0.5em 1.5em;
+      width: 25em;
+      height: auto;
+      -webkit-box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.4);
+      -moz-box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.4);
+      box-shadow: 0px 2px 3px 0px rgba(50, 50, 50, 0.4);
+      background-color: rgba(239, 239, 239, 0.8);
+      border-radius: 0.2em; }
+      section.articles article p a.readmore {
+        float: right;
+        padding-bottom: 1em; }
+
+  article.main {
+    padding-left: 1em;
+    grid-area: main;
+    margin: 1em; }
+    article.main h2 {
+      margin: 1em 0; }
+    article.main figure {
+      -webkit-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.2);
+      -moz-box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.2);
+      box-shadow: 0px 4px 3px 0px rgba(50, 50, 50, 0.2);
+      border: 1px solid black;
+      margin: 1.5em;
+      width: 35em;
+      height: auto; }
+      article.main figure img {
+        width: 100%; }
+      article.main figure figcaption {
+        text-align: center;
+        padding: 0.2em;
+        background-color: rgba(25, 10, 10, 0.1); }
+
+  section.main {
+    grid-area: main;
+    margin-bottom: 1em; }
+
+  section.extra {
+    border: 1px solid rgba(215, 215, 215, 0.5);
+    margin: 1em;
+    padding: 1em; }
+
+  aside {
+    margin: 3em 0; }
+    aside img {
+      width: 44em; }
+
+  .fragmentedlinks {
+    text-align: center;
+    padding: 1em; }
+    .fragmentedlinks a {
+      margin: 0 2em; }
+
+  h2.multiple {
+    padding-top: 2.5em; }
+
+  .reflist {
+    grid-area: ref;
+    padding: 0.5em 1.5em;
+    margin: 2em 1em;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    .reflist .source {
+      /* 'a' funket ikke her */
+      margin: 1em;
+      padding: 0 1em;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
+  footer {
+    padding: 0.2em 1em;
+    border-radius: 0.2em;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 2em;
+    background-color: #313232;
+    text-align: left;
+    color: white; }
+    footer a {
+      padding-right: 1em;
+      float: right; } }
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+  body {
+    font-size: calc(1em + 1vw);
+    max-width: 1000px;
+    margin: 0;
+    background-color: whitesmoke; }
+    body p, body em, body a :not(#crumbs) {
+      font-size: 1rem; }
+
+  ul.general {
+    font-size: 1rem; }
+
+  header.mini {
+    background-color: #bfbfbf;
+    width: 100%;
+    text-align: left;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 3rem;
+    margin: 0 2em;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 900; }
+    header.mini h1 {
+      padding-left: 3em;
+      margin-left: 1em;
+      font-size: 2rem; }
+    header.mini nav ul {
+      list-style-type: none; }
+      header.mini nav ul li {
+        display: block;
+        padding: 0 2em; }
+        header.mini nav ul li a {
+          text-decoration: none; }
+    header.mini .fa-bars {
+      display: none; }
+    header.mini .fa.fa-times {
+      font-size: 2rem;
+      float: right;
+      margin: 0.5em 1em;
+      z-index: 9999; }
+
+  header.full {
+    background-color: #aaadad;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0; }
+    header.full .fa.fa-bars {
+      margin: 0.4rem; }
+    header.full ul, header.full h1, header.full .fa-times {
+      display: none; }
+
+  .wrapper {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "main main main" "ref ref ref" "foot foot foot"; }
+
+  #crumbs {
+    font-size: 0.8rem; }
+
+  section.articles {
+    grid-area: main;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around; }
+    section.articles article {
+      margin: 2em;
+      padding: 0.5em 1.5em;
+      width: 100%;
+      height: auto;
+      background-color: rgba(239, 239, 239, 0.8);
+      border-radius: 1em 2em; }
+      section.articles article p a.readmore {
+        float: right;
+        padding-bottom: 1em; }
+
+  section.main {
+    grid-area: main;
+    margin: 0em 1em 1em; }
+
+  article.main {
+    padding-left: 1em;
+    grid-area: main;
+    margin: 1em; }
+    article.main h2 {
+      margin: 1em 0; }
+    article.main figure {
+      border: 1px solid black;
+      margin: 1.5em;
+      width: 15em;
+      height: auto; }
+      article.main figure img {
+        width: 100%; }
+      article.main figure figcaption {
+        text-align: center;
+        padding: 0.2em;
+        background-color: rgba(25, 10, 10, 0.1); }
+
+  aside {
+    margin: 1em 1em; }
+    aside img {
+      width: 44em; }
+
+  li.normal {
+    font-size: 1rem;
+    padding: 0.2em 0; }
+
+  section.extra {
+    border: 1px solid rgba(215, 215, 215, 0.5);
+    margin: 1em;
+    padding: 1em; }
+
+  .reflist {
+    grid-area: ref;
+    padding: 0.5em 1.5em;
+    margin: 2em 1em;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); }
+    .reflist .source {
+      /* 'a' funket ikke her */
+      margin: 1em;
+      padding: 0 1em;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
+  .ssgoogle {
+    width: 25em; }
+
+  footer {
+    padding: 0.5em;
+    background-color: #313232;
+    text-align: center; } }
+
+/*# sourceMappingURL=main.css.map */

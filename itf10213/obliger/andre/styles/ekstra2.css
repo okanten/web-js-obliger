@@ -1,0 +1,59 @@
+
+.wrapper {
+    display: grid;
+    box-shadow: 1px 3px 10px 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "header header header header"
+                            "listTwo listThree listFour listFive"
+                            "foot foot foot foot";
+
+}
+
+.wrapper ul {
+    margin: 2em 2.5em 2em 0;
+    font-size: 14px;
+    list-style-type: none;
+    text-align: center;
+}
+
+.wrapper li {
+    margin: 0.5em;
+}
+
+
+header {
+    grid-area: header;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+ul#outTwo {
+    grid-area: listTwo;
+}
+
+ul#outThree {
+    grid-area: listThree;
+}
+
+ul#outFour {
+    grid-area: listFour;
+}
+
+ul#outFive {
+    grid-area: listFive;
+}
+
+
+
+
+footer {
+    margin-top: 25px;
+    margin-bottom: 2em;
+    grid-area: foot;
+    border-top: 1px solid;
+    padding-top: 1em;
+    text-align: center;
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 4 - Temaer i WordPress</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="js/nav.js"></script>
+</head>
+<body>
+
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 4 - Wordpress</h1>
+        <nav>
+         <ul id="ulmenu">
+             <li><a href="index.html"> Hjem</a></li>
+             <li><a href="oppsett.html"> Oppsett</a></li>
+             <li><a href="temaer.html"> Temaer</a></li>
+             <li><a href="plugins.html"> Plugins</a></li>
+             <li><a href="widgets.html"> Widgets</a></li>
+             <li><a href="posts.html"> Artikler og sider</a></li>
+             <li><a href="statisk.html"> Statisk forside</a></li>
+         </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <article class="main">
+            <h2 id="top">Artikler og sider i Wordpress</h2>
+            <p class="fragmentedlinks"><a href="#wpArticles">Hopp til artikler</a> <a href="#wpArticlesResult">Hopp til resultat for artikler</a> | <a href="#wpPages">Hopp til sider</a> <a href="#wpPagesResult">Hopp til resultat for sider</a> </p>
+
+            <h2 class="multiple" id="wpArticles">Artikler</h2>
+            <p>For å lage artikler (posts) i WordPress navigerer man seg frem til Posts i navigasjonsmenyen på venstre side i dashbordet</p>
+
+            <figure>
+                <a href="img/wp-posts-first.png"><img src="img/wp-posts-first.png" alt="Skjermdump av Posts i WordPress" /></a>
+                <figcaption>Slik ser Posts ut</figcaption>
+            </figure>
+
+            <p>Trykker man på "Add New" lager man en ny post</p>
+            <figure>
+                <a href="img/wp-posts-second.png"><img src="img/wp-posts-second.png" alt="Skjermdump av hvordan det ser ut når man lager en ny post i WordPress" /></a>
+                <figcaption>Man fyller inn disse tekstfeltene og eventuelle kategorier</figcaption>
+            </figure>
+
+            <p>Jeg vil ha et fremhevet bilde, dette legger jeg til nede i høyre hjørne</p>
+            <figure>
+                <a href="img/wp-posts-third.png"><img src="img/wp-posts-third.png" alt="Skjermdump av hvor man legger til fremhevede bilder" /></a>
+            </figure>
+
+            <p>Dette må jeg laste opp til WordPress og deretter velge bildet</p>
+
+            <section class="sflex smaller">
+
+                <figure class="small">
+                    <a href="img/wp-posts-upload.png"><img src="img/wp-posts-upload.png" alt="Skjermdump av hvordan opplastningsskjemaet ser ut" /></a>
+                    <figcaption>Dra bilder hit for å laste opp</figcaption>
+                </figure>
+
+                <figure class="small">
+                    <a href="img/wp-posts-upload-select.png"><img src="img/wp-posts-upload-select.png" alt="Skjermdump av bildene som er lastet opp" /></a>
+                    <figcaption>Her velger vi blant bildene vi har lastet opp</figcaption>
+                </figure>
+
+            </section>
+
+            <p>Nå er det eneste som gjenstår å publisere posten</p>
+
+            <figure>
+                <a href="img/wp-posts-publish.png"><img src="img/wp-posts-publish.png" alt="Skjermdump av publiseringsknappen" /></a>
+                <figcaption>Her kan man forhåndsvise artikkelen, endre synlighet eller sette dato for publisering eller publisere den med engang</figcaption>
+            </figure>
+
+            <p>Jeg lager enda en artikkel på akkurat samme måte som vist over</p>
+
+            <h2 class="multiple" id="wpArticlesResult">Resultat: </h2>
+
+            <section class="sflex smaller">
+
+                <figure class="small">
+                    <a href="img/wp-article1-published.png"><img src="img/wp-article1-published.png" alt="Skjermdump av den første posten" /></a>
+                    <figcaption>Den første posten</figcaption>
+                </figure>
+
+                <figure class="small">
+                    <a href="img/wp-article2-published.png"><img src="img/wp-article2-published.png" alt="Skjermdump av av den andre posten" /></a>
+                    <figcaption>Den andre posten</figcaption>
+                </figure>
+
+            </section>
+
+            <h2 class="multiple" id="wpPages">Sider</h2>
+            <p>For å lage sider (pages) i WordPress navigerer man seg frem til Pages i navigasjonsmenyen på venstre side i dashbordet</p>
+
+
+            <figure>
+                <a href="img/wp-pages-first.png"><img src="img/wp-pages-first.png" alt="Skjermdump av Posts i WordPress" /></a>
+                <figcaption>Slik ser Pages ut</figcaption>
+            </figure>
+
+            <p>Trykker man på "Add New" lager man en ny page</p>
+            <figure>
+                <a href="img/wp-pages-second.png"><img src="img/wp-pages-second.png" alt="Skjermdump av hvordan det ser ut når man lager en ny post i WordPress" /></a>
+                <figcaption>Man fyller inn disse tekstfeltene og velger eventuelle templates og gir siden en rekkefølge</figcaption>
+            </figure>
+
+            <p>Jeg vil ha et fremhevet bilde her også, dette legger jeg til nede i høyre hjørne</p>
+            <figure>
+                <a href="img/wp-pages-third.png"><img src="img/wp-pages-third.png" alt="Skjermdump av hvor man legger til fremhevede bilder" /></a>
+            </figure>
+
+            <p>Dette må jeg laste opp til WordPress og deretter velge bildet</p>
+
+            <section class="sflex smaller">
+
+                <figure class="small">
+                    <a href="img/wp-pages-upload.png"><img src="img/wp-pages-upload.png" alt="Skjermdump av hvordan opplastningsskjemaet ser ut" /></a>
+                    <figcaption>Dra bilder hit for å laste opp</figcaption>
+                </figure>
+
+                <figure class="small">
+                    <a href="img/wp-pages-upload-select.png"><img src="img/wp-pages-upload-select.png" alt="Skjermdump av bildene som er lastet opp" /></a>
+                    <figcaption>Her velger vi blant bildene vi har lastet opp</figcaption>
+                </figure>
+
+            </section>
+
+            <p>Nå er det eneste som gjenstår å publisere siden</p>
+
+            <figure>
+                <a href="img/wp-pages-publish.png"><img src="img/wp-pages-publish.png" alt="Skjermdump av publiseringsknappen" /></a>
+                <figcaption>Her kan man forhåndsvise artikkelen, endre synlighet eller sette dato for publisering eller publisere den med engang</figcaption>
+            </figure>
+
+            <p>Jeg lager enda en side på akkurat samme måte som vist over</p>
+
+            <h2 class="multiple" id="wpPagesResult">Resultat: </h2>
+
+            <section class="sflex smaller">
+
+                <figure class="small">
+                    <a href="img/wp-page1-published.png"><img src="img/wp-page1-published.png" alt="Skjermdump av den første siden" /></a>
+                    <figcaption>Den første posten</figcaption>
+                </figure>
+
+                <figure class="small">
+                    <a href="img/wp-page2-published.png"><img src="img/wp-page2-published.png" alt="Skjermdump av av den andre siden" /></a>
+                    <figcaption>Den andre posten</figcaption>
+                </figure>
+
+            </section>
+
+            <aside>
+                <p><a href="#top">Til toppen</a></p>
+            </aside>
+
+        </article>
+
+
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

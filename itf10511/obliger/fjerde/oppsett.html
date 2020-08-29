@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 4 - Oppsett av WordPress</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="js/nav.js"></script>
+</head>
+<body>
+
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 4 - Wordpress</h1>
+        <nav>
+         <ul id="ulmenu">
+             <li><a href="index.html"> Hjem</a></li>
+             <li><a href="oppsett.html"> Oppsett</a></li>
+             <li><a href="temaer.html"> Temaer</a></li>
+             <li><a href="plugins.html"> Plugins</a></li>
+             <li><a href="widgets.html"> Widgets</a></li>
+             <li><a href="posts.html"> Artikler og sider</a></li>
+             <li><a href="statisk.html"> Statisk forside</a></li>
+         </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <article class="main">
+            <h2 id="top">Oppsett av WordPress</h2>
+            <p class="fragmentedlinks"><a href="#config">Hopp til config</a> <a href="#installation">Hopp til installasjon</a> <a href="#userid">Hopp til endring av userid</a></p>
+
+            <h2 class="multiple">Laste ned WordPress</h2>
+            <p>Last ned WordPress fra <a href="https://wordpress.org/download/" target="_blank">https://wordpress.org/download/</a> og pakk ut filene i WAMP/MAMP/LAMP mappen din</p>
+            <p>Kopier så alt innholdet i wp-config-sample.php til en ny fil som du gir navnet wp-config.php</p>
+
+            <h2 class="multiple" id="config">Config</h2>
+            <p>Før vi starter installasjonen av WordPress burde vi gjøre noen små endringer i konfigurasjonsfilen</p>
+            <figure>
+                <a href="img/vimwpconfig.png"><img src="img/vimwpconfig.png" alt="Skjermdump av bash terminal med kommando: vim /var/www/html/wordpress/wp-config.php" /></a>
+                <figcaption>Rediger filen med en text-editor</figcaption>
+            </figure>
+
+            <h4>Ting vi må endre</h4>
+            <ol>
+                <li>DB_NAME</li>
+                <li>DB_USER</li>
+                <li>DB_PASSWORD</li>
+                <li>Nøkler</li>
+                <li>$table_prefix</li>
+            </ol>
+
+            <p>Vi må endre wp-config.php så den samsvarer med database-navnet og database-brukeren vi ønsker å bruke til WordPress, samt passord. I tillegg må vi generere nye nøkler slik at de er unike.</p>
+
+            <figure>
+                <a href="img/wp-config-changes.png"><img src="img/wp-config-changes.png" alt="Skjermdump av endringer i wp-config.php" /></a>
+                <figcaption>Jeg har valgt å lage en ny database-bruker til wordpress. (Passordet her er bare for illustrasjonens skyld)</figcaption>
+            </figure>
+
+            <p>Nye nøkler kan du få generert på nettsidene til WordPress, <a href="https://api.wordpress.org/secret-key/1.1/salt/" target="_blank">her</a>.</p>
+            <figure>
+                <a href="img/wp-salt-gen.png"><img src="img/wp-salt-gen.png" alt="Skjermdump av salt generatoren til WordPress" /></a>
+                <figcaption>Slik ser generatoren ut.</figcaption>
+            </figure>
+            <p>Endring av nøkler og table_prefix</p>
+            <figure>
+                <a href="img/wp-config-salt.png"><img src="img/wp-config-salt.png" alt="Skjermdump av config fila med ny salt og table_prefix" /></a>
+                <figcaption>Her er config fila med nye nøkler (Ikke de som er i bruk nå)</figcaption>
+            </figure>
+
+            <p>Dette er viktige endringer for å gjøre det vanskeligere for en potensiell hacker å komme seg inn i databasen din. Bruker du default values her vil du spare de med onde hensikter en masse tid og gjøre deg selv til et enkelt offer. <strong>ALDRI</strong> del nøklene dine med noen. De som vises i dette screenshottet er ikke i bruk.</p>
+
+
+            <h2 class="multiple" id="installation">Installasjon</h2>
+            <p>Med disse endringene i wp-config.php kan vi endelig starte installasjonen av WordPress i web-interfacet. Sørg for at WAMP/MAMP/LAMP serveren din kjører og naviger til localhost, eventuelt 127.0.0.1 i nettleseren din. Har du puttet WordPress installasjonen i en annen mappe slik som meg må du sørge for å inkludere denne.</p>
+
+            <section class="sflex">
+                <figure class="height">
+                    <a href="img/wp-web-start.png"><img src="img/wp-web-start_small.png" alt="Skjermdump av første start av WordPress i nettleseren" /></a>
+                    <figcaption>Velg språk</figcaption>
+                </figure>
+
+                <figure>
+                    <a href="img/wp-registration.png"><img src="img/wp-registration.png" alt="Skjermdump av registrering av adminbruker til WordPress i nettleseren" /></a>
+                    <figcaption>Registrer en bruker - dette blir en bruker med administrator rettigheter</figcaption>
+                </figure>
+            </section>
+
+            <p>Velg ønsket språk, side-tittel, brukernavn, passord og en email (trenger ikke være gyldig for lokal installasjon). Det er sterkt anbefalt å ikke bruke "admin" som brukernavn. Personlig brukte jeg en username generator med klesmerke+bones. Passordet burde også være rimelig sikkert, en password-manager er en god kilde til sikre passord.</p>
+            <p>Trykk så "Install WordPress". Etter dette kan du logge inn.</p>
+
+            <figure>
+                <a href="img/wp-first-launch.png"><img src="img/wp-first-launch.png" alt="Skjermdump av første start av WordPress i nettleseren" /></a>
+                <figcaption>Dette blir du møtt med etter du har logget inn</figcaption>
+            </figure>
+
+            <h2 class="multiple" id="userid">Endring av userid i databasen</h2>
+            <p>Den nye brukeren din (gucciskeletal i mitt tilfelle) vil ha id: 1 i MySQL databasen din. Dette er en sikkerhetsrisiko om du ikke endrer den, da default values gjør det lettere for hackere å få tilgang.</p>
+
+            <p>Dette kan gjøres gjennom phpMyAdmin, eller så kan det gjøres i terminalen. Jeg vil kun dekke hvordan man gjør dette i terminalen.</p>
+            <p>Aller først må vi slette posten som opprettes automatisk etter oppsettet er ferdig. Dette gjør du ved å navigere til dashboardet ditt, dette finner du om du holder musen over "speedometer"-ikonet oppi venstre hjørne på den nye wordpress siden din</p>
+            <figure>
+                <a href="img/wp-dash-nav.png"><img src="img/wp-dash-nav.png" alt="Skjermdump av første start av WordPress i nettleseren" /></a>
+                <figcaption>Her finner du administrator panelet</figcaption>
+            </figure>
+
+
+            <figure>
+                <a href="img/wp-admin-first.png"><img src="img/wp-admin-first.png" alt="Skjermdump av første start av WordPress i nettleseren" /></a>
+                <figcaption>Administrator panelet ser slik ut</figcaption>
+            </figure>
+
+            <p>Naviger så til "Posts" og kryss av "Hello World" - Slett den, husk å slette den fra "Trash" også.</p>
+
+            <p>Nå kan vi endelig endre userid'en, jeg brukte <a href="http://random.org" target="_blank">random.org</a> for å genere en ny ID. Åpne opp terminalen og skriv inn følgende kommandoer: </p>
+            <p><code>sudo mysql -u root -p</code> -  skriv inn root passordet til MySQL som du satt da du installerte WAMP/MAMP/LAMP</p>
+            <p><code>USE databasenavn;</code> - Dette velger hvilken database vi skal endre </p>
+            <p><code>UPDATE din-wp-prefix_users SET ID = 5501 WHERE ID = 1;</code> - husk å endre til prefix'en du satt i wp-config.php</p>
+            <p><code>UPDATE din-wp-prefix_usermeta SET ID = 5501 WHERE ID = 1;</code> - husk å endre til prefix'en du satt i wp-config.php</p>
+            <p><code>ALTER TABLE din-wp-prefix_users AUTO_INCREMENT = 5550;</code> - husk å endre til prefix'en du satt i wp-config.php</p>
+            <p><code>EXIT;</code> - Logg ut av mysql</p>
+
+            <p>Vi har nå endret userid'en til brukeren du registrerte, og i tillegg endret verdien for hvor mye hver nye brukerID skal øke med om man ønsker å opprette flere brukere. Nå er vi klare til å bruke WordPress trygt.</p>
+
+            <aside>
+                <p><a href="#top">Til toppen</a></p>
+            </aside>
+            
+        </article>
+
+
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Løsning: Oblig 1 oppgave 5</title>
+        <meta charset ="utf-8" />
+
+        <script>
+
+            window.addEventListener("load", function() { // alternativ måte å vente på page load
+                draw();
+            });
+
+
+            function draw() {
+                var canvas = document.getElementById("drawingArea");
+                var ctx = canvas.getContext("2d");
+
+                ctx.lineWidth = "2";
+
+                // tak
+                ctx.beginPath();
+                ctx.moveTo(18, 200);
+                ctx.lineTo(200, 20);  // strek fra venstre til høyre
+                ctx.lineTo(379, 200); // strek fra høyre til venstre
+                ctx.lineTo(17, 200); // mellom første og andre strek i bunn. Egentlig ikke nødvendig når vi har et rektangel rett under, men for ordensskyld inkluderer jeg den
+                ctx.fillStyle = "#dd854b";
+                ctx.fill();
+                ctx.stroke();
+
+
+                // rektangel under tak / grunn
+                ctx.beginPath();
+                ctx.rect(19, 200, 360, 180);
+                ctx.fillStyle = "#8df4f4";
+                ctx.fill();
+                ctx.stroke(); // for å få ramme rundt rektangelet
+
+
+                // dør
+                ctx.beginPath();
+                ctx.rect(285, 300, 52, 80);
+                ctx.fillStyle = "#ad7701";
+                ctx.fill();
+                ctx.stroke(); // for å få ramme rundt rektangelet / døra
+
+
+                // dørhåndtak
+                ctx.beginPath();
+                ctx.arc(294, 344, 3, 0, 2 * Math.PI);
+                ctx.lineWidth = "0.4";
+                ctx.fillStyle = "#a59a03"
+                ctx.fill();
+                ctx.stroke();
+
+                ctx.lineWidth = "3";
+
+                // vindu
+                ctx.beginPath();
+                ctx.rect(60, 230, 60, 60);
+                ctx.fillStyle = "#e2e2e2";
+                ctx.fill();
+
+                ctx.stroke();
+
+                // vinduslister vertikale
+                ctx.beginPath();
+                ctx.moveTo(90, 230);
+                ctx.lineTo(90, 290);
+                // vinduslister horizontale
+                ctx.moveTo(120, 260);
+                ctx.lineTo(60, 260);
+                ctx.lineWidth = "1"; // gjør vinduslistene smalere enn andre linjer, kun for at det skal se litt penere ut
+                ctx.stroke();
+
+            }
+
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <h1>Løsning: Oblig 1 oppgave 5</h1>
+        <br />
+        <canvas id="drawingArea" width="400" height="400"></canvas>
+
+    </body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Infprog oblig 2 ekstra 1</title>
+        <meta charset ="utf-8" />
+        <link rel="stylesheet" href="styles/body.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/ekstra1.css" />
+
+
+        <script>
+
+            var $ = function(id) {
+                return document.getElementById(id);
+            }
+
+            window.addEventListener("load", function() { // page load
+
+                $("btnSubmit").addEventListener("click", function() {
+                    $("txtOutput").value = ""; // renser tekstfeltet
+                    doInterest(); // caller funksjonen doInterest
+                });
+
+                $("btnClean").addEventListener("click", function() {
+                    $("txtOutput").value = ""; // renser tekstfeltet
+                })
+
+            });
+
+            function doInterest() {
+                var inputAmount = parseInt($("txtAmount").value); // henter ut informasjon
+                var inputYears = parseInt($("txtYear").value); // ^
+                var inputInterest = parseInt($("txtInterest").value); // ^^
+                var newAmount = inputAmount;
+
+                inputInterest = inputInterest / 100;
+
+                for(i = 1; i <= inputYears; i++) { // for loop som kjøres frem til i er lik antall år brukeren har skrevet inn
+                    newAmount += newAmount * inputInterest
+                    var printAmount = newAmount;
+
+                    $("txtOutput").value += "Etter " + i + " år har du " + printAmount.toFixed(0) + " kroner i banken \n";
+                }
+            }
+
+
+        </script>
+
+
+    </head>
+
+    <body>
+
+        <nav>
+            <ul id="navigation">
+                <li><a href="oppgave1.html">Oppgave 1-3</a></li>
+                <li><a href="oppgave4.html">Oppgave 4</a></li>
+                <li><a href="oppgave5.html">Oppgave 5</a></li>
+                <li><a href="oppgave6.html">Oppgave 6</a></li>
+                <li><a href="oppgave7.html">Oppgave 7</a></li>
+                <li><a href="ekstra1.html">Ekstra 1</a></li>
+                <li><a href="ekstra2.html">Ekstra 2</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+            <header>
+                <h1>Løsning: Oblig 2 ekstra 1</h1>
+            </header>
+
+            <form id="interest">
+
+                <p>Pengebeløp:  <input type="text" id="txtAmount" placeholder="10000"/></p>
+                <p>Antall år:   <input type="text" id="txtYear" placeholder="5"/></p>
+                <p>Rente (%):   <input type="text" id="txtInterest" placeholder="2"/></p>
+                                <input type="button" id="btnSubmit" value="Regn ut" />
+                                <input type="button" id="btnClean" value="Rens" />
+                <br /><br />
+
+                <textarea id="txtOutput"  rows="15" cols="50"></textarea>
+            </form>
+
+            <footer>
+                <p><a href="https://github.com/okstudies" target="_blank">GitHub</a></p>
+            </footer>
+        </div>
+
+    </body>
+
+</html>

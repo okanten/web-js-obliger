@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="no">
+    <head>
+        <title>Webutvikling oblig2</title>
+        <meta charset="utf-8" />
+        <!--link rel="stylesheet" href="normalize.css" /-->
+        <link rel="stylesheet" type="text/css" media="print" href="print.css" />
+        <link rel="stylesheet" media="screen" href="main.css" />
+        <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.css">
+        <!-- Har valgt å ikke importere noen tekstfont, da jeg personlig foretrekker at nettsteder ikke tvinger tekstfonts ned i halsen på meg -->
+
+        <!-- Er forsåvidt også klar over at nettsiden ikke følger skissen helt 100%, men det er vel et poeng at en skisse kun er et utgangspunkt å forholde seg til? Designet bygger på samme prinsippet imo -->
+        <script>
+                window.addEventListener("load", function() {
+                    document.getElementById("showCalender").onclick = jsCalender;
+                });
+
+                function jsCalender() {
+                    document.getElementById("cal").open = true;
+                }
+        </script>
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+            <header>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html" class="linkimg"><img src="img/logo.png" alt="Logo" id="imglogo" title="På kanten"/></a></li>
+                        <li><a href="index.html" class="active"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                        <li><a href="#articleone"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Artikler</a></li>
+                        <li><a href="#cal" id="showCalender"><i class="fa fa-calendar" aria-hidden="true"></i> Kalender</a></li>
+                        <li><a href="ekstra1.html"><i class="fa fa-mobile" aria-hidden="true"></i> Ekstra</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+
+                <div class="contentimg">
+                    <img src="img/g-crescoli-365898_630x350.jpg" alt="Papiravis" id="bodyimg" />
+                </div>
+
+                <section id="aboutme">
+                    <h2><i class="fa fa-user-o" aria-hidden="true"></i> På kanten</h2>
+                    <p>Dette nettstedet er én av fem obligatoriske oppgaver i faget webutvikling (itf10511).</p>
+                    <p>Oppgaven går ut på å planlegge et design ved bruk av skisser, designe det i html og css, samt skrive noen artikler om aktuelle temaer</p>
+                    <footer class="inside">
+                        <a href="om.html" class="readmore about">Les mer</a>
+                    </footer>
+                </section>
+
+
+
+
+                <section id="importantNotices">  <!-- Valgte å ikke putte kalenderen i sidebaren da den ble veldig uleselig. -->
+                    <div class="sidebar">
+                        <h2 id="sideheader">Viktige tidsfrister</h2>
+                        <p class="green assignmentOne"><i class="fa fa-check" aria-hidden="true"></i> itf10213 oblig2: 04.10.2017</p>
+                        <p class="red assignmentTwo"><i class="fa fa-times" aria-hidden="true"></i> itf10511 oblig2: 04.10.2017</p>
+
+                        <h3 id="sideheader2">Siste fullførte oppgaver</h3>
+                        <p class="prevhead">Webutv. oblig1:</p>
+                        <a href="https://ask.hiof.no/~olaka/itf10511/obliger/forste/oppgave1.html" class="sidelink linkweb" target="_blank"><img src="img/weboblig1_small.png" alt="Webutvikling oblig2" class="sideimg weboblig2" /></a>
+                        <p class="prevhead2">Infprog oblig2:</p>
+                        <a href="https://ask.hiof.no/~olaka/itf10213/obliger/andre/oppgave1.html" class="sidelink linkjs2" target="_blank"><img src="img/jsoblig2_small.png" alt="javascript oblig2" class="sideimg jsoblig2" /></a>
+
+                        <h3 id="sideresources"><i class="fa fa-external-link" aria-hidden="true"></i> Resursser</h3>
+                        <ul id="reslist">
+                            <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network (MDN)</a></li>
+                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" target="_blank">MDN CSS-Grid</a></li>
+                            <li><a href="https://git-scm.com/book/en/v2/" target="_blank">Pro Git, skrevet av Scott Chacon og Ben Straube</a></li>
+                        </ul>
+
+
+                        <a href="https://github.com/okstudies?tab=repositories" class="github" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    </div>
+                </section>
+
+
+                    <article id="articleone">
+                        <h2>MathML</h2>
+                        <p>MathML er et markeringsspråk slik som HTML.</p>
+                        <p>Det gjør det mulig å vise matematiske uttrykk på en korrekt måte på en nettside.</p>
+                        <p>Les mer om dette nyttige verktøyet her</p>
+                        <footer class="inside">
+                            <a href="mathml.html" class="readmore math">Les mer</a>
+                        </footer>
+                    </article>
+
+                    <article id="articletwo">
+                        <h2>SVG</h2>
+                        <p>SVG står for <em>Scalable Vector Graphics</em> og er et fantastisk alternativ til bitmaps om det blir brukt riktig.</p>
+                        <p>Få en liten innføring i hva SVG er, samt litt om deres bruksområder og noen eksempler.</p>
+                        <footer class="inside">
+                            <a href="svg.html" class="readmore svg">Les mer</a>
+                        </footer>
+                    </article>
+
+                    <article id="articlethree">
+                        <h2>Git og GitHub</h2>
+                        <p></p>
+                        <p>Git og GitHub er nyttige verktøy for utviklere. </p>
+                        <p>Få et lite innblikk i hvordan disse verktøyene samarbeider og gjør utvikling mer effektivt.</p>
+                        <footer class="inside">
+                            <a href="git.html" class="readmore git">Les mer</a>
+                        </footer>
+                    </article>
+
+
+                    <section id="calender"> <!-- Importerte kalenderen fra Canvas til min egen google konto -->
+                        <details id="cal">
+                        <summary>Kalender for informatikk 2017</summary>
+                            <iframe class="gcalender" src="https://calendar.google.com/calendar/embed?title=Informatikk%202017&amp;showTitle=0&amp;showPrint=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=j19u3d31kqt29fstcikvit8gs8%40group.calendar.google.com&amp;color=%23113F47&amp;ctz=Europe%2FOslo"></iframe>
+                        </details>
+                    </section>
+
+                <footer>
+                    <h2><a href="om.html"><i class="fa fa-info-circle" aria-hidden="true"> </i>Om denne siden</a></h2>
+                </footer>
+
+        </div>
+
+    </body>
+
+</html>

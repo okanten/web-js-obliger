@@ -1,0 +1,62 @@
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#hacker {
+    float: right;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "main main pres"
+                            "foot foot foot";
+}
+
+section#main {
+    grid-area: main;
+}
+
+section#register {
+    grid-area: main;
+    padding-left: 1em;
+}
+
+input, select {
+    padding: 0.5em;
+    border: 1px solid black;
+    background-color: rgba(32, 42, 87, 0.72);
+    color: white;
+}
+
+div#images {
+    grid-area: pres;
+}
+
+section#presentations {
+    grid-area: pres;
+    margin-left: 1em;
+    background-color: rgba(140, 140, 140, 0.2);
+    padding: 0 1em;
+}
+
+section#presentations a {
+    margin-left: 0.5em;
+    text-decoration: none;
+}
+
+div#test {
+    grid-area: foot;
+    position: fixed;
+    text-align: center;
+    bottom: 1em;
+}
+
+footer {
+    width: 100%;
+    padding: 0 1em;
+    bottom: 1em;
+}

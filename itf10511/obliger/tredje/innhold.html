@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kom i gang med SEO - Innhold</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+
+
+
+    <script>
+
+        var $ = function(id) {
+            return document.getElementById(id);
+        }
+
+        window.addEventListener("load", function() {
+
+            $("btnMenu").addEventListener("click", function() {
+                if ($("ulmenu").className === "closed") {
+                    $("ulmenu").className = "open";
+                    $("btnMenu").classList.remove("fa-bars");
+                    $("btnMenu").classList.add("fa-times");
+                } else {
+                    $("ulmenu").className = "closed";
+                    $("btnMenu").classList.remove("fa-times");
+                    $("btnMenu").classList.add("fa-bars");
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+    <div class="wrapper article">
+
+        <header>
+
+            <h1>Kom i gang med SEO</h1>
+
+          <nav>
+              <ul id="ulmenu" class="closed">
+                  <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                  <li><a href="kom-i-gang.html"><i class="fa fa-forward" aria-hidden="true"></i> Kom i gang</a></li>
+                  <li><a href="kode.html"><i class="fa fa-code" aria-hidden="true"></i> Kode</a></li>
+                  <li><a href="innhold.html"><i class="fa fa-list-alt" aria-hidden="true"></i> Innhold</a></li>
+                  <li><a href="analyse.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Analyse</a></li>
+                  <li><a href="sass.html"><i class="fa fa-css3" aria-hidden="true"></i> Sass</a></li>
+              </ul>
+          </nav>
+        </header>
+
+        <i class="fa fa-bars" id="btnMenu" aria-hidden="true"></i>
+
+        <article class="main article">
+            <p id="crumbs"><a href="index.html">Forside</a> > <a href="#">Innhold</a></p>
+            <h2>Innhold</h2>
+            <p>Innholdet har også noe å si for SEO, og det er mange komponenter som spiller en rolle.</p>
+            <h4>Hva spiller en rolle?</h4>
+            <p>Kvalitet er en viktig del av innholdet ditt, det skiller deg ut i fra blant millionvis av resultater og gjør siden din mer interessant. Sørger du for at innholdet ditt er av god kvalitet og er <strong>ferskt</strong> vil du oppnå høyere page rank enn sider med dårlig kvalitet og gammelt innhold.</p>
+            <p>Her er nøkkelord også en viktig faktor, men det er lurt å bake det inn i teksten (ergo: ikke lag en liste med nøkkelord i bunn av siden). Finn ut av hva som er vanlige søkeord og bruk disse bitene i teksten din. Det er også lurt å ta i bruk synonymer for ord du allerede har brukt slik at du får inn flere søkeord for "samme" ord</p>
+        </article>
+
+        <aside class="reflist">
+            <h5>Kilder</h5>
+            <p><a href="https://searchengineland.com/guide/seo/content-search-engine-ranking" class="source">Content &amp; search engine success factors - Search Engine Land</a> </p>
+        </aside>
+        <footer>
+            <p>Ola Kanten </p>
+            <p><a href="mailto:olaka@hiof.no">Kontakt</a></p>
+
+        </footer>
+
+
+    </div>
+</body>
+
+</html>

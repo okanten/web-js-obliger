@@ -1,0 +1,66 @@
+
+.wrapper {
+    display: grid;
+    box-shadow: 1px 3px 10px 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "header header header header header header header"
+                            "listNormal listReverse listDivide listModulo listEven listOdd listEveryOther"
+                            "foot foot foot foot foot foot foot";
+
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+.wrapper ul {
+    margin: 2em 2.5em 2em 0;
+    font-size: 12px;
+    list-style-type: none;
+    text-align: center;
+}
+
+
+
+
+
+#outNormal {
+    grid-area: listNormal;
+}
+
+#outReverse {
+    grid-area: listReverse;
+}
+
+#outDivide {
+    grid-area: listDivide;
+}
+
+#outModulo {
+    grid-area: listModulo;
+}
+
+#outEven {
+    grid-area: listEven;
+}
+
+#outOdd {
+    grid-area: listOdd;
+}
+
+#outEveryOther {
+    grid-area: listEveryOther;
+}
+
+
+footer {
+    margin: 2em 0 2em 0;
+    grid-area: foot;
+    border-top: 1px groove;
+    text-align: center;
+}

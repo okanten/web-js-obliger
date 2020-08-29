@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 5 - Microdata: Produkter</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="../../js/nav.js"></script>
+
+</head>
+<body>
+
+    <div id="mobilenav" class="test">
+    </div>
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 5</h1>
+         <nav>
+          <ul id="ulmenu">
+              <li><a href="../../index.html"> Hjem</a></li>
+              <li><a href="../oppgave2.html"> Oppgave 2</a></li>
+              <li><a href="../oppgave3.html"> Oppgave 3</a></li>
+              <li><a href="../oppgave4.html"> Oppgave 4</a></li>
+              <li><a href="../oppgave5.html"> Oppgave 5</a></li>
+              <li><a href="../oppgave6.html"> Oppgave 6</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+
+        <section class="main">
+            <p id="crumbs"><a href="../../index.html">Forside</a> > <a href="../../oppgaver/index.html">Oppgaver</a> > <a href="../microdata/index.html">Microdata</a> > <a href="eks3.html">Eksempel 3</a> </p>
+
+            <div itemscope itemtype="http://schema.org/Product">
+                <h2 itemprop="name">Nintendo Classic Mini SNES</h2>
+                <img itemprop="image" src="../../img/snes_classic_small.jpg" alt="SNES Classic fra Nintendo" />
+                <p><span itemprop="description">Gjenopplev gamle klassikere fra barndommen!</span></p>
+                <p>Produktnummer: <span itemprop="productID" content="isbn:978-1974321742">0045496343354</span></p>
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <span itemprop="priceCurrency" content="NOK"></span>
+                    <p>Pris: <span itemprop="price">999</span> kr</p>
+                    <a itemprop="url" href="#ikke-ekte-tilbud1">Pomklett - 24 timers tilbud</a>
+                </div>
+            </div>
+            <aside>
+                <p>Slik benytter google denne informasjonen: </p>
+                <a href="../../img/eks3.png"><img src="../../img/eks3_small.png" class="ssgoogle" alt="Screenshot av Google sitt testverktøy for strukturerte data"></a>
+                <p>Klikk på bildet for større versjon</p>
+            </aside>
+
+            <p><a href="eks4.html">Eksempel 4</a></p>
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

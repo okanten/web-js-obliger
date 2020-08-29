@@ -1,0 +1,94 @@
+
+.wrapper {
+    display: grid;
+    box-shadow: 1px 3px 10px 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "header header header"
+                            ". main ."
+                            "foot foot foot";
+
+}
+
+
+header {
+    grid-area: header;
+    font-size: 12px;
+    text-align: center;
+}
+
+form#regForm {
+    grid-area: main;
+    font-size: 1em;
+
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding-bottom: 20px;
+}
+
+div#footer {
+    margin-top: 25px;
+    margin-bottom: 2em;
+    grid-area: foot;
+    border-top: 1px solid;
+    padding-top: 1em;
+    text-align: center;
+}
+
+input.age {
+    text-align: center;
+    width: 12%;
+    margin: 0; // for å nullstille
+
+}
+
+input, button, p {
+    font-size: inherit;
+    padding: 0.05em;
+    width: 80%;
+    margin: 0.2em 10%;
+
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+
+}
+
+
+input#txtDay {
+    margin-left: 2.5em;
+    width: 5em;
+}
+
+input#txtMonth {
+    margin-left: 0.2em;
+    width: 5em;
+}
+
+input#txtYear {
+    margin-right: 2.5em;
+    width: 4em;
+}
+
+h3#out {
+    font-size: 14px;
+}
+
+p#dmyy {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 12px;
+}
+
+p#req {
+    margin-top: 1em;
+    font-size: 12px;
+    color: red;
+    text-align: center;
+}

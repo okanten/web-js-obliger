@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Infprog oblig 2 oppgave 7</title>
+        <meta charset ="utf-8" />
+        <link rel="stylesheet" href="styles/body.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/oppgave7.css" />
+
+
+        <script>
+
+            var $ = function(id) {
+                return document.getElementById(id);
+            }
+
+            window.addEventListener("load", function() {
+
+                // Delte opp hver løkke i en egen funksjon for enkelthetens skyld
+
+                outputNormal();
+                outputReverse();
+                outputDivide();
+                outputModulo();
+                outputEven();
+                outputOdd();
+                outputEveryOther();
+
+            });
+
+            function outputNormal() {
+                for (var number = 1; number <= 100; number++) { // for loop som kjører frem til (og med) number = 100
+                        $("outNormal").innerHTML += "<li>" + number + "</li>"; // skriver ut helt 1-100
+                }
+            }
+
+            function outputReverse() {
+                for (var number = 100; number >= 1; number--) { // for loop som kjører frem til number = 1
+                        $("outReverse").innerHTML += "<li>" + number + "</li>"; // skriver ut for hver loop (100-1)
+                }
+            }
+
+            function outputDivide() {
+                for (var number = 1; number <= 100; number++) { // for loop som kjører frem til og med i = 100
+                    $("outDivide").innerHTML += "<li>" + number / 2 + "</li>"; // skriver ut verdien til nummeret delt på 2.
+                }
+            }
+
+            function outputModulo() {
+                for (var number = 1; number <= 100; number++) {
+                    if (number % 3 === 0) { // sjekker om nummeret er delelig med 3.
+                        $("outModulo").innerHTML += "<li>" + number + "</li>";  // skriver ut tall som er delelig med 3.
+                    }
+                }
+            }
+
+            function outputEven() {
+                for (var number = 0; number <= 100; number+= 2) {
+                    if (number != 0) {
+                        $("outEven").innerHTML += "<li>" + number + "</li>";
+                    }
+                }
+            }
+
+            function outputOdd() {
+                for (var number = -1; number <= 100; number += 2) {
+                    if (number != -1) {
+                        $("outOdd").innerHTML += "<li>" + number + "</li>";
+                    }
+                }
+            }
+
+            function outputEveryOther() {
+                for (var number = 0; number <= 100; number++) {
+                    if (number % 2 === 0) {
+                        $("outEveryOther").innerHTML += "<li>" + number + "</li>";
+                    } else if (number % 2 !== 0) {
+                        $("outEveryOther").innerHTML += "<li>" + -1 * number + "</li>"; // ganger med minus for å gjøre tallet negativt.
+                    }
+                }
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <nav>
+            <ul id="navigation">
+                <li><a href="oppgave1.html">Oppgave 1-3</a></li>
+                <li><a href="oppgave4.html">Oppgave 4</a></li>
+                <li><a href="oppgave5.html">Oppgave 5</a></li>
+                <li><a href="oppgave6.html">Oppgave 6</a></li>
+                <li><a href="oppgave7.html">Oppgave 7</a></li>
+                <li><a href="ekstra1.html">Ekstra 1</a></li>
+                <li><a href="ekstra2.html">Ekstra 2</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+
+            <header>
+                <h1>Løsning: Oblig 2 oppgave 7</h1>
+            </header>
+
+                <ul id="outNormal"><h3>1-100</h3></ul>
+
+                <ul id="outReverse"><h3>100-1</h3></ul>
+
+                <ul id="outDivide"><h3>Delt på to</h3></ul>
+
+                <ul id="outModulo"><h3>Delelig med 3</h3></ul>
+
+                <ul id="outEven"><h3>Partall</h3></ul>
+
+                <ul id="outOdd"><h3>Oddetall</h3></ul>
+
+                <ul id="outEveryOther"><h3>Annenhver</h3></ul>
+
+            <footer>
+                <p><a href="https://github.com/okstudies" target="_blank">GitHub</a></p>
+            </footer>
+
+        </div>
+    </body>
+
+</html>

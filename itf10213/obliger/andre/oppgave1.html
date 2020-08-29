@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Infprog oblig 2 oppgave 1-3</title>
+        <meta charset ="utf-8" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/body.css" />
+        <link rel="stylesheet" href="styles/oppgave1.css" />
+
+        <script>
+
+            var birthdaySong = new Audio("mp3/happybirthday.mp3"); // laster inn bursdagssang
+
+            var birthday = new Boolean(false); // lager en boolean som brukes senere, default satt til false.
+
+            var emptyFields = []; // definerer en tom array som blir brukt til å lagre hvilke felt som ikke er fylt ut.
+
+            var $ = function(id){
+                return document.getElementById(id); // gjør det lettere/raskere å skrive document.getElementById
+            }
+
+            window.addEventListener("load", function() { // venter på page load
+
+                $("txtUsername").focus() // gir brukernavn feltet fokus når siden er lastet
+
+                $("btnReg").addEventListener("click", function() { // alternativ til onclick. Mer fleksibelt å bruke en anonym funksjon. Akkurat i dette tilfelle kunne jeg fint brukt onclick, har bare blitt en vane.
+                    checkFields(); // om btnReg blir klikket call funksjonen checkFields()
+                });
+
+            });
+
+
+            function checkFields() {
+                if ($("txtUsername").value.length < 1) { // hvis brukernavnsfeltet er mindre enn 1
+                    pushArray(" brukernavn"); // send " brukernavn" til arrayen emptyFields som vi definerte tidligere
+                }
+                if ($("txtPassword").value.length <= 0) {
+                    pushArray(" passord"); // send " passord" til arrayen emptyFields som vi definerte tidligere.
+                }
+                if ($("txtPasswordC").value.length <= 0) {
+                    pushArray(" gjenta passord"); // osv osv
+                }
+                if ($("txtDate").value.length <= 0) {
+                    pushArray(" fødselsdato");
+                }
+                if ($("txtMonth").value.length <= 0) {
+                    pushArray(" fødselsmåned");
+                }
+                if ($("txtYear").value.length <= 0) {
+                    pushArray(" fødselsår");
+                }
+
+                if (emptyFields.length === 0) { // Hvis emptyFields ikke har fått noen ny informasjon (strengt tatt om lengden er 0)
+                    ageVer(); // call funksjonen som sjekker alder.
+                } else {
+                    updateText("Du har ikke fylt ut følgene felt: <br />" + emptyFields + ".", "red"); // Viser brukeren hvilke felt som ikke er fylt ut.
+                    emptyFields = []; // gjør arrayet tomt igjen så den ikke holder på 'gammel' informasjon til neste gang.
+                }
+
+            }
+
+            function ageVer() {
+
+                birthdaySong.pause(); // Pauser sangen her i tilfelle den spiller
+                var minAge = 18; // greit med variabel her, så minimumsalderen lett kan endres ved senere anledning.
+                var inputDate = [parseInt($("txtYear").value), parseInt($("txtMonth").value), parseInt($("txtDate").value), 0] // bruker array her for å unngå fire linjer med definering
+
+                var inputAge = new Date((inputDate[0]), inputDate[1], inputDate[2]); // definerer inputAge som en ny dato med bestemt år, måned og dag(dato) etter hva brukeren har skrevet inn.
+                var today = new Date; // definerer today som dagens dato
+
+                var m = today.getMonth();
+                m++; // nødvendig for å sjekke måneden opp mot inputAge. today.getMonth() teller fra 0 til 11, hvor 0 er januar og 11 er desember.
+
+                inputDate[3] = today.getFullYear() - inputAge.getFullYear(); // setter den siste delen av arrayen til dagens fulle år (2017 i skrivende stund) minus fødselsåret til brukeren (f.eks 1999) for å finne alder.
+
+                if (m == inputAge.getMonth() && today.getDate() == inputAge.getDate() && inputDate[3] >= minAge) { // sjekker om brukeren har bursdag i dag
+                    birthday = true; // setter boolean til true for senere
+                    regUser(); // caller funksjonen som registrerer brukeren
+                } else if (inputDate[3] > minAge) { // hvis fødselsåret mer enn 18 år siden, ingen vits å sjekke måned og dato.
+                    birthday = false; // setter boolean til false så bursdagssangen ikke spilles av.
+                    regUser();
+                } else if (m > inputAge.getMonth() && inputDate[3] == minAge) { // hvis dagens måned er større enn fødselsmåneden og alderen == 18.
+                    birthday = false; // setter boolean til false så bursdagssangen ikke spilles av.
+                    regUser();
+                } else if ((inputAge.getDate() <= today.getDate()) && m == inputAge.getMonth() && inputDate[3] == minAge) { // Om brukeren er født i samme måned sjekker den om datoen er lavere eller lik dagens dato, samt også om måneden er lik og alderen er lik.
+                    birthday = false; // setter boolean til false så bursdagssangen ikke spilles av.
+                    regUser();
+                } else {
+                    updateText("Du er ikke gammel nok", "red");
+                }
+
+            }
+
+            function regUser() {
+
+                if ($("txtUsername").value.length > 0 && $("txtPassword").value.length >= "5" && $("txtPassword").value.toString() === $("txtPasswordC").value.toString()) {
+                    // trenger ikke sjekke lengden på txtPasswordC, fordi vi sjekker om den er lik txtPassword som vi allerede har sjekket lengden på.
+                    updateText("Takk for registreringen", "green");
+                    checkBirthday(); // caller funksjonen som sjekker om birthday == true og spiller av sangen om det stemmer.
+                } else if ($("txtPassword").value.length < 5){
+                    updateText("Vennligst fyll inn et passord som er minst 5 tegn", "red");
+                    $("txtPassword").select();
+                } else if ($("txtPassword").value.toString() !== $("txtPasswordC").value.toString()) {
+                    updateText("Passordene er ikke like, vennligst gjenta korrekt passord", "red")
+                    $("txtPasswordC").select();
+                }
+
+            }
+
+            function checkBirthday() {
+
+                if (birthday == true) {
+                    birthdaySong.volume = 0.2; // setter volumet lavere slik at sjansen for at lyden er ekstremt høy minker.
+                    birthdaySong.currentTime = 0; // starter sangen på nytt
+                    birthdaySong.play(); // spiller av sangen.
+                }
+            }
+
+            function pushArray(i) {
+                emptyFields.push(i); // legger til nytt element i arrayet emptyFields
+            }
+
+            function updateText(i, color) {
+                $("out").innerHTML = i;
+                $("out").style.color = color;
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <!--header-->
+            <nav>
+                <ul id="navigation">
+                    <li><a href="oppgave1.html">Oppgave 1-3</a></li>
+                    <li><a href="oppgave4.html">Oppgave 4</a></li>
+                    <li><a href="oppgave5.html">Oppgave 5</a></li>
+                    <li><a href="oppgave6.html">Oppgave 6</a></li>
+                    <li><a href="oppgave7.html">Oppgave 7</a></li>
+                    <li><a href="ekstra1.html">Ekstra 1</a></li>
+                    <li><a href="ekstra2.html">Ekstra 2</a></li>
+                </ul>
+            </nav>
+        <!--/header-->
+
+        <div class="wrapper">
+
+            <header>
+                <h1>Løsning: Oblig 2 oppgave 1, 2, 3</h1>
+            </header>
+            <form id="regForm">
+                <h2>Registrer deg</h2>
+                <h3 id="out"></h3>
+                <input type="text" id="txtUsername" placeholder="Brukernavn" /> <br />
+                <input type="password"  id="txtPassword" placeholder="Passord" /> <br />
+                <input type="password" id="txtPasswordC" placeholder="Gjenta passord" /> <br />
+                <p id="dmyy">Fødselsdato:</p>
+                    <input type="number" min="1" max="31" id="txtDate" class="age" placeholder="DD" />
+                    <input type="number" min="1" max="12" id="txtMonth" class="age" placeholder="MM" />
+                    <input type="number" min="1900" max="2017" id="txtYear" class="age" placeholder="YYYY" />
+                <p id="req">Alle feltene må fylles inn, og passordet må være på minst fem tegn</p>
+                <input type="button"  id="btnReg" value="Registrer" /><br />
+            </form>
+
+
+
+            <div id="footer">
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="Creative Commons" /></a><br />
+                <span>It's Your Birthday!</span>
+                by <a href="http://freemusicarchive.org/music/The_Blank_Tapes/" property="cc:attributionName" rel="cc:attributionURL">The Blank Tapes</a>
+                is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>.
+            </div>
+        </div>
+
+    </body>
+
+</html>

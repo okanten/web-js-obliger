@@ -1,0 +1,564 @@
+@charset "UTF-8";
+/* Generelt */
+a {
+  outline: none; }
+
+a:link {
+  color: #5d88a3; }
+
+a:visited {
+  color: #627987; }
+
+a:hover {
+  color: #86d8b2; }
+
+a:active {
+  color: #a7f2cf; }
+
+/* Mobiltelefoner */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: calc(1em + 1vw);
+    max-width: 600px;
+    margin: 0 auto; }
+    body p {
+      font-size: 1rem; }
+
+  * {
+    max-width: 100%; }
+
+  .wrapper.fp {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "header" "navbar" "main" "side" "foot"; }
+
+  .wrapper.article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "header" "navbar" "main" "ref" "foot"; }
+
+  #btnMenu {
+    margin: 1em;
+    position: fixed;
+    z-index: 9999;
+    padding: 1em;
+    margin: 1em;
+    background-color: rgba(0, 25, 100, 0.2);
+    border-radius: 2em;
+    bottom: 1em; }
+
+  header {
+    grid-area: header;
+    margin: 1em 1em 0em 1em;
+    text-align: center;
+    padding: 0.2em;
+    background-image: url("../img/banner.svg");
+    background-size: cover;
+    background-position: center; }
+    header h1 {
+      font-size: 1.5rem;
+      padding: 0.2em;
+      color: black;
+      background-color: rgba(255, 255, 255, 0.5); }
+    header nav {
+      grid-area: navbar;
+      margin: 0em 1em 1em 1em;
+      position: fixed;
+      text-align: left; }
+      header nav ul.open {
+        height: 100vh;
+        position: fixed;
+        overflow: scroll;
+        top: -0.6em;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        font-size: 2rem;
+        border: 1px solid black;
+        list-style-type: none;
+        z-index: 55;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.85); }
+        header nav ul.open .fa {
+          color: #36aff9;
+          float: left;
+          margin-right: 1em;
+          width: 1em;
+          /* Width her for å sørge for at teksten ved siden av er rett/aligned */
+          /* Ingen hover-effekt på ikon er ikke inkludert med vilje */ }
+        header nav ul.open li {
+          display: block;
+          margin: 1em;
+          color: black; }
+          header nav ul.open li a {
+            text-decoration: none;
+            padding: 1em; }
+      header nav ul.closed {
+        display: none; }
+
+  section {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0.5em 0.4em 0em 0.4em;
+    padding: 0.4em;
+    border-radius: 1em; }
+
+  .main.fp {
+    grid-area: main;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around; }
+    .main.fp article {
+      margin: 1em 0.2em;
+      padding: 0.5em 1.5em;
+      border: 1px dashed black;
+      -webkit-border-radius: 2em 0.5em;
+      -moz-border-radius: 2em 0.5em;
+      -ms-border-radius: 2em 0.5em;
+      border-radius: 2em 0.5em;
+      background-color: rgba(239, 239, 239, 0.8); }
+      .main.fp article img {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        float: left;
+        margin: 1em auto 1em auto;
+        margin-right: 1em;
+        float: none;
+        /* Slik at bildet kommer øverst over h2*/
+        width: 5em;
+        height: auto; }
+      .main.fp article .readmore {
+        margin: 0.5em 1em;
+        float: right;
+        font-size: 1rem;
+        border: 1px solid rgba(5, 5, 5, 0.2);
+        padding: 0.5em;
+        background-color: rgba(150, 75, 123, 0.3); }
+
+  article.main {
+    padding: 0.5em 1em; }
+
+  .main.article {
+    margin-top: 1em;
+    grid-area: main;
+    background-color: rgba(0, 0, 11, 0.05);
+    font-size: 1rem;
+    overflow: scroll; }
+    .main.article h2  {
+      text-align: center; }
+    .main.article figure {
+      /* For artikkelside */
+      border: 1px solid black;
+      margin: 1.5em;
+      width: 20rem;
+      height: auto; }
+      .main.article figure.smaller {
+        width: 15rem;
+        height: auto; }
+      .main.article figure.normal {
+        width: 20rem;
+        height: auto; }
+      .main.article figure.bigger {
+        width: 25rem;
+        height: auto; }
+      .main.article figure img {
+        width: 100%;
+        /* For at bildet skal fylle figuren */ }
+      .main.article figure figcaption {
+        text-align: center;
+        padding: 0.2em;
+        background-color: rgba(25, 10, 10, 0.1); }
+
+  #sidebar {
+    grid-area: side; }
+
+  .reflist {
+    grid-area: ref;
+    margin: 0 1em; }
+    .reflist .source {
+      font-size: 0.8rem;
+      margin: 0 1em;
+      padding: 0 1em;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1); } }
+/*
+
+End mobile
+
+
+*/
+/* pc */
+@media only screen and (min-width: 1200px) {
+  body {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: rgba(200, 200, 200, 0.5); }
+
+  * {
+    max-width: 100%; }
+
+  #btnMenu {
+    display: none; }
+
+  .wrapper.fp {
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.7fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "header header header" "navbar navbar navbar" "main main side" "foot foot foot"; }
+
+  .wrapper.article {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "header header header" "navbar navbar navbar" "main main main" "ref ref ref" "foot foot foot"; }
+
+  header {
+    grid-area: header;
+    margin: 1em;
+    background-image: url("../img/banner.svg");
+    /*background-size: 100% 100%;*/
+    border-radius: 2em 1em;
+    background-size: cover; }
+    header h1 {
+      padding: 0 0.5em;
+      text-align: center;
+      color: #2d2d2d; }
+    header nav {
+      grid-area: navbar;
+      width: 50%;
+      margin: 1em auto;
+      padding-left: 1.2em;
+      border: 1px solid black;
+      background-color: rgba(230, 230, 230, 0.6);
+      -webkit-box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7);
+      box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7); }
+      header nav ul {
+        display: block;
+        list-style-type: none; }
+        header nav ul li {
+          text-align: center;
+          display: inline-block;
+          margin: 1em; }
+          header nav ul li a {
+            text-decoration: none; }
+
+  section {
+    margin: 0.5em 1em 0em 1em;
+    padding: 0.5em 1em;
+    border-radius: 2em 1em; }
+
+  article.main {
+    margin: 0.5em 1em 0em 1em;
+    padding: 0.5em 10em;
+    /* For å få teksten nærmere midten.*/ }
+
+  .main.fp {
+    grid-area: main;
+    list-style: none;
+    background-color: rgba(0, 0, 11, 0.2);
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+    background-image: url("../img/articlebg.jpg");
+    background-size: cover; }
+    .main.fp article {
+      margin: 1.5em;
+      padding: 0.5em 1.5em;
+      width: 25em;
+      height: auto;
+      border: 1px groove black;
+      background-color: rgba(239, 239, 239, 0.8);
+      -webkit-box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7);
+      -moz-box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7);
+      box-shadow: 0px 0px 33px -12px rgba(0, 0, 0, 0.7);
+      border-radius: 1em 2em; }
+      .main.fp article img {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        float: left;
+        margin: 1em auto 1em auto;
+        margin-right: 1em;
+        background-color: #efefef;
+        /* For png med transparency */
+        width: 150px;
+        height: 200px; }
+      .main.fp article .readmore {
+        margin: 1.23em 0em;
+        float: right;
+        border: 1px solid rgba(5, 5, 5, 0.2);
+        padding: 0.5em;
+        background-color: rgba(150, 75, 123, 0.3); }
+
+  .main.article {
+    grid-area: main;
+    background-color: rgba(0, 0, 11, 0.05); }
+    .main.article h2 {
+      text-align: center; }
+    .main.article figure {
+      /* For artikkelside */
+      border: 1px solid black;
+      margin: 1.5em;
+      float: right;
+      width: 20rem;
+      height: auto; }
+      .main.article figure.smaller {
+        width: 15rem;
+        height: auto; }
+      .main.article figure.normal {
+        width: 20rem;
+        height: auto; }
+      .main.article figure.bigger {
+        width: 25rem;
+        height: auto; }
+      .main.article figure img {
+        width: 100%;
+        /* For at bildet skal fylle figuren */ }
+      .main.article figure figcaption {
+        text-align: center;
+        padding: 0.2em;
+        background-color: rgba(25, 10, 10, 0.1); }
+
+  .reflist {
+    grid-area: ref;
+    margin: 0 1em; }
+    .reflist .source {
+      /* 'a' funket ikke her */
+      margin: 0 1em;
+      padding: 0 1em;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
+  #content  {
+    grid-area: main; } }
+/*
+
+End pc
+
+
+*/
+/* Tablet/Landscape */
+@media only screen and (max-width: 1200px) and (min-width: 600px) {
+  body {
+    max-width: 1000px;
+    margin: 0 auto; }
+
+  * {
+    max-width: 100%; }
+
+  .wrapper.fp {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "header" "navbar" "main" "side" "foot"; }
+
+  .wrapper.article {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "header" "navbar" "main" "ref" "foot"; }
+
+  #btnMenu {
+    margin: 1em;
+    position: fixed;
+    z-index: 9999;
+    padding: 1em;
+    margin: 1em;
+    background-color: rgba(0, 25, 100, 0.2);
+    border-radius: 2em;
+    bottom: 1em; }
+
+  header {
+    grid-area: header;
+    margin: 1em 1em 0em 1em;
+    text-align: center;
+    background-image: url("../img/banner.svg");
+    background-size: cover; }
+    header nav {
+      grid-area: navbar;
+      margin: 0em 1em 1em 1em;
+      position: fixed;
+      text-align: left; }
+      header nav ul.open {
+        height: 100vh;
+        position: fixed;
+        overflow-y: scroll;
+        top: -0.6em;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        font-size: 2.5rem;
+        border: 1px solid black;
+        list-style-type: none;
+        z-index: 55;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.85); }
+        header nav ul.open .fa {
+          color: #36aff9;
+          float: left;
+          margin-right: 1em;
+          width: 1em;
+          /* Width her for å sørge for at teksten ved siden av er rett/aligned */
+          /* Ingen hover-effekt på ikon er ikke inkludert med vilje */ }
+        header nav ul.open li {
+          display: block;
+          margin: 1em;
+          color: black; }
+          header nav ul.open li a {
+            text-decoration: none;
+            padding: 1em; }
+      header nav ul.closed {
+        display: none; }
+
+  section {
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0.5em 1em 0em 1em;
+    padding: 1em;
+    border-radius: 1em; }
+
+  .main.fp {
+    grid-area: main;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around; }
+    .main.fp article {
+      /*background-color: rgba(0, 0, 5, 0.2);*/
+      margin: 1em 0.2em;
+      padding: 0.5em 1.5em;
+      border: 1px dashed black;
+      border-radius: 2em 0.5em 2em 0.5em;
+      background-color: rgba(239, 239, 239, 0.8);
+      /*background-image: url("http://via.placeholder.com/150x200");*/ }
+      .main.fp article img {
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        float: left;
+        margin: 1em auto 1em auto;
+        margin-right: 1em;
+        width: 7em; }
+      .main.fp article .readmore {
+        margin: 0.5em 1em;
+        float: right;
+        border: 1px solid rgba(5, 5, 5, 0.2);
+        padding: 0.5em;
+        background-color: rgba(150, 75, 123, 0.3); }
+
+  article.main {
+    padding: 0.5em 1em; }
+
+  .main.article {
+    margin: 1em;
+    grid-area: main;
+    background-color: rgba(0, 0, 11, 0.05);
+    overflow: scroll;
+    font-size: 1rem; }
+    .main.article figure {
+      /* For artikkelside */
+      border: 1px solid black;
+      margin: 1.5em;
+      width: 20rem;
+      height: auto; }
+      .main.article figure.smaller {
+        width: 15rem;
+        height: auto; }
+      .main.article figure.normal {
+        width: 20rem;
+        height: auto; }
+      .main.article figure.bigger {
+        width: 25rem;
+        height: auto; }
+      .main.article figure img {
+        width: 100%;
+        /* For at bildet skal fylle figuren */ }
+      .main.article figure figcaption {
+        text-align: center;
+        padding: 0.2em;
+        background-color: rgba(25, 10, 10, 0.1); }
+    .main.article h2  {
+      text-align: center; }
+
+  #sidebar {
+    grid-area: side; }
+
+  .reflist {
+    grid-area: ref;
+    margin: 0 1em; }
+    .reflist .source {
+      /* 'a' funket ikke her */
+      font-size: 0.8rem;
+      margin: 0 1em;
+      padding: 0 1em;
+      border-left: 1px solid rgba(0, 0, 0, 0.1);
+      border-right: 1px solid rgba(0, 0, 0, 0.1); } }
+/*
+
+End tablet
+
+
+*/
+/* ###########
+    GENERELT
+############## */
+body * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -ms-box-sizing: content-box;
+  box-sizing: content-box; }
+
+#sidebar {
+  grid-area: side;
+  background-color: rgba(0, 0, 0, 0.1); }
+  #sidebar p.externalArticle {
+    text-align: right; }
+    #sidebar p.externalArticle .fa {
+      float: left;
+      margin-left: 1em; }
+  #sidebar #googlesearch {
+    float: right;
+    border: 1px solid rgba(5, 5, 5, 0.2);
+    padding: 0.5em;
+    background-color: rgba(150, 75, 123, 0.3); }
+
+ul.directory {
+  list-style-type: none; }
+  ul.directory .indent {
+    margin: 0 1em; }
+
+pre {
+  background-color: #b2b2b2;
+  border: 2px dashed black;
+  border-radius: 1em;
+  font-size: 0.8rem;
+  overflow: scroll; }
+
+img.small {
+  width: 20em; }
+
+footer {
+  grid-area: foot;
+  margin: 1em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.2em 1em;
+  text-align: left;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around; }
+
+#crumbs {
+  font-size: 1rem; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,173 @@
+body {
+    color: black;
+    background-color: white;
+    font-family: times; /*Bedre for papir*/
+}
+
+
+img {
+    filter: grayscale(100%); /*Gjør bildene svart-hvitt for å spare blekk */
+}
+
+svg {
+    filter: grayscale(100%);
+}
+
+a {
+    outline: none;
+    color: black;
+}
+
+
+
+header {
+    border-bottom: 1px solid;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 1em;
+}
+
+#imglogo {
+    display: none;
+}
+
+header ul li a.active {
+    text-decoration: none;
+    color: rgba(134,216,178, 0.7);
+    display: block;
+}
+
+#importantNotices {
+    display: none;
+}
+
+#bodyimg {
+    width: 25%;
+    float: right;
+    margin: 3em 1em;
+}
+
+#aboutme {
+    padding-bottom: 1em;
+    border-bottom: 1px solid;
+}
+
+.readmore.about {
+    display: none;
+}
+
+.github {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    position: relative;
+    grid-area: github;
+    text-decoration: none;
+    text-align: right;
+    font-size: 25px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer:not(.inside) {
+    display: none;
+}
+
+/* ARTICLES */
+
+#crumbs {
+    padding-bottom: 0.2em;
+    border-bottom: 1px dashed;
+}
+
+div#middlecontent {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:    "contentleft contentright"
+                            "contentleft2 contentright2";
+}
+
+math {
+    font-size: 26px;
+    text-align: center;
+}
+
+pre {
+    text-align: left;
+}
+
+.sketch {
+
+    width: 350px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+    margin-bottom: 2em;
+}
+
+
+.printbreak {
+    page-break-before: always;
+}
+
+div#firstexample {
+    grid-area: contentleft;
+    margin: 1em 0 1em 0;
+}
+
+
+div#secondexample {
+    grid-area: contentright;
+    margin: 1em 0 1em 0;
+}
+
+div#thirdexample {
+    grid-area: contentleft2;
+    margin: 1em 0 1em 0;
+}
+
+div#fourthexample {
+    grid-area: contentright2;
+    margin: 1em 0 1em 0;
+}
+
+img#linus {
+    height: 300px;
+    float: left;
+}
+
+img#stallman {
+    height: 300px;
+    float: right;
+}
+
+img#ritchie {
+    height: 300px;
+    margin-left: 1em;
+}
+
+.screenshot.terminal {
+    display: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    font-size: 14px;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #eaeaea;
+}

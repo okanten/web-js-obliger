@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kom i gang med SEO - Sass</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+
+
+
+    <script>
+
+        var $ = function(id) {
+            return document.getElementById(id);
+        }
+
+        window.addEventListener("load", function() {
+
+            $("btnMenu").addEventListener("click", function() {
+                if ($("ulmenu").className === "closed") {
+                    $("ulmenu").className = "open";
+                    $("btnMenu").classList.remove("fa-bars");
+                    $("btnMenu").classList.add("fa-times");
+                } else {
+                    $("ulmenu").className = "closed";
+                    $("btnMenu").classList.remove("fa-times");
+                    $("btnMenu").classList.add("fa-bars");
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+    <div class="wrapper article">
+
+        <header>
+
+            <h1>Kom i gang med SEO</h1>
+
+          <nav>
+              <ul id="ulmenu" class="closed">
+                  <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                  <li><a href="kom-i-gang.html"><i class="fa fa-forward" aria-hidden="true"></i> Kom i gang</a></li>
+                  <li><a href="kode.html"><i class="fa fa-code" aria-hidden="true"></i> Kode</a></li>
+                  <li><a href="innhold.html"><i class="fa fa-list-alt" aria-hidden="true"></i> Innhold</a></li>
+                  <li><a href="analyse.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Analyse</a></li>
+                  <li><a href="sass.html"><i class="fa fa-css3" aria-hidden="true"></i> Sass</a></li>
+              </ul>
+          </nav>
+        </header>
+
+        <i class="fa fa-bars" id="btnMenu" aria-hidden="true"></i>
+
+        <article class="main article">
+            <p id="crumbs"><a href="index.html">Forside</a> > <a href="sass.html">Sass</a></p>
+            <h2>Sass</h2>
+            <p>Syntactically awesome stylesheets (Sass) er en videreutvikling/utvidelse av CSS som gjør det lettere å jobbe med. Sass har en rekke muligheter, som blant annet variabler, partials, import, include og nesting.</p>
+            <p>For min del er nesting en av det jeg har etterlengtet mest i CSS, men variabler og imports er også fantastisk</p>
+
+            <p>Slik ser sass mappen min ut:</p>
+            <ul class="directory">
+                <li><i class="fa fa-folder-open-o" aria-hidden="true"></i> fjerde/scss</li>
+                <li class="indent"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>    _mobile.scss</li>
+                <li class="indent"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>    _pc.scss</li>
+                <li class="indent"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>    _tablets.scss</li>
+                <li class="indent"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>    _variables.scss</li>
+                <li class="indent"> <i class="fa fa-long-arrow-right" aria-hidden="true"></i>    main.scss</li>
+            </ul>
+            <p>Jeg har valgt å lage en scss fil for hver platform og bruke @import i main.scss. Slik blir det mer strukturert og lettere å holde styr på, main.scss blir også betraktelig kortere</p>
+            <p>Jeg har også brukt en _variables.scss som jeg bruker til box-sizing, border radius og box-shadow.</p>
+            <p>For å bruke sass trenger man en form for compiler da nettlesere ikke kan lese .sass/.scss filer. Det finnes en rekke programvare for dette, for å nevne noen:
+                <a href="http://scout-app.io/" target="_blank">Scout-App</a>, <a href="http://compass.kkbox.com/" target="_blank">Compass.app</a>, <a href="http://koala-app.com/" target="_blank">Koala</a>, eller så kan man bruke terminalen slik jeg har gjort.</p>
+                <a href="img/sassterm.png"><img src="img/sassterm.png" class="small" alt="Screenshot av sass i terminalen" /></a>
+            <p>Her er et lite utdrag fra main.scss fila mi:</p>
+
+            <pre><code>
+
+                a {
+                    outline: none;
+                }
+
+                a:link {
+                    color: #5d88a3;
+                }
+
+                a:visited {
+                    color: #627987;
+                }
+
+                a:hover {
+                    color: #86d8b2;
+                }
+
+                a:active {
+                    color: #a7f2cf;
+                }
+
+                /* Mobiltelefoner */
+
+                @import 'mobile';
+
+                /* pc */
+
+                @import 'pc';
+
+
+                /* Tablet/Landscape */
+
+                @import 'tablets';
+
+                ...
+                ...
+                ...
+            </code></pre>
+        </article>
+
+
+        <footer>
+            <p>Ola Kanten </p>
+            <p><a href="mailto:olaka@hiof.no">Kontakt</a></p>
+
+        </footer>
+
+
+    </div>
+</body>
+
+</html>

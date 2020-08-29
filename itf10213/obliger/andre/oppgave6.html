@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Infprog oblig 2 oppgave 6</title>
+        <meta charset ="utf-8" />
+        <link rel="stylesheet" href="styles/body.css" />
+        <link rel="stylesheet" href="styles/menu.css" />
+        <link rel="stylesheet" href="styles/oppgave6.css" />
+
+        <script>
+
+            var $ = function(id) {
+                return document.getElementById(id);
+            }
+
+            window.addEventListener("load", function () { // page load
+
+                $("btnSubmit").addEventListener("click", function() { // om knappen btnSubmit blir klikket.
+                    addText();
+                });
+
+                $("btnClear").addEventListener("click", function() {
+                    $("outContent").innerHTML = "";
+                })
+
+            });
+
+            function addText() {
+                var userTimes = $("txtTimes").value;
+
+                if (userTimes.length > 0 && $("txtContent").value.length > 0) { // hvis begge tekstboksene har en verdi
+
+                    $("outContent").innerHTML += "<hr /> <p>Resultat: </p>" // lager en ny rekke for strukturens skyld
+
+                    for(var times = userTimes; times != 0; times--) { // for loop som kjøres frem til times == 0
+                        $("outContent").innerHTML += "<p>" + $("txtContent").value.toString() + "</p>"; // skriver direkte ut til html'en.
+                    }
+
+                    $("outContent").innerHTML += "<hr /><p>Antall linjer med " + "\"" + $("txtContent").value + "\"" + " : " + userTimes + "</p>"; // viser hvor mange ganger teksten har blitt skrevet ut
+
+                } else {
+                    alert("Du må bestemme hva som skal skrives ut og hvor mange ganger"); // gir varsel om en av tekstboksene ikke inneholder noen verdi
+                }
+
+            }
+
+
+        </script>
+
+    </head>
+
+    <body>
+        <nav>
+            <ul id="navigation">
+                <li><a href="oppgave1.html">Oppgave 1-3</a></li>
+                <li><a href="oppgave4.html">Oppgave 4</a></li>
+                <li><a href="oppgave5.html">Oppgave 5</a></li>
+                <li><a href="oppgave6.html">Oppgave 6</a></li>
+                <li><a href="oppgave7.html">Oppgave 7</a></li>
+                <li><a href="ekstra1.html">Ekstra 1</a></li>
+                <li><a href="ekstra2.html">Ekstra 2</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+
+            <header>
+                <h1>Løsning: Oblig 2 oppgave 6</h1>
+            </header>
+
+            <form id="formInfo">
+                <p>Tekst som skal skrives ut: </p><input type="text" id="txtContent" placeholder="Tekst som skal skrives ut" />
+                <p>Antall ganger: </p><input type="number" id="txtTimes" placeholder="1" min="1" width="20" />
+                <p><input type="button" id="btnSubmit" value="Utfør" />
+                <input type="button" id="btnClear" value="Rens" /></p>
+            </form>
+
+            <section id="outContent">
+
+            </section>
+
+            <footer>
+                <p><a href="https://github.com/okstudies" target="_blank">GitHub</a></p>
+            </footer>
+        </div>
+    </body>
+
+</html>

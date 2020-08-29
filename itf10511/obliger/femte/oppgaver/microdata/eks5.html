@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 5 - Microdata: Oppskrifter</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="../../js/nav.js"></script>
+
+</head>
+<body>
+
+    <div id="mobilenav" class="test">
+    </div>
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 5</h1>
+         <nav>
+          <ul id="ulmenu">
+              <li><a href="../../index.html"> Hjem</a></li>
+              <li><a href="../oppgave2.html"> Oppgave 2</a></li>
+              <li><a href="../oppgave3.html"> Oppgave 3</a></li>
+              <li><a href="../oppgave4.html"> Oppgave 4</a></li>
+              <li><a href="../oppgave5.html"> Oppgave 5</a></li>
+              <li><a href="../oppgave6.html"> Oppgave 6</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+
+        <section class="main">
+            <p id="crumbs"><a href="../../index.html">Forside</a> > <a href="../../oppgaver/index.html">Oppgaver</a> > <a href="../microdata/index.html">Microdata</a> > <a href="eks5.html">Eksempel 5</a> </p>
+
+            <div itemscope itemtype="http://schema.org/Recipe">
+                    <h2 itemprop="name">Pinnekjøtt med BBQ-saus</h2>
+                    <p>Oppskrift fra <a href="https://www.matprat.no/oppskrifter/kos/pinnekjott-med-bbq-saus/" target="_blank" itemprop="url">
+                        <span itemprop="author">matprat.no</span></a></p>
+                    <img src="../../img/pinnekjott_small.jpeg" itemprop="image" alt="Bilde av ferdig tilberedt pinnekjøtt med BBQ-saus" />
+                    <p>Tilberedningstid: <span itemprop="prepTime" content="PT15M">ca 15 min</span></p>
+                    <p>Koketid: <span itemprop="cookTime" content="PT60H">Over 60 min</span></p>
+
+                    <section itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                        <p><span itemprop="ratingValue">4.5</span>/5 fra <span itemprop="reviewCount">54</span> vurderinger</p>
+                    </section>
+                    <p itemprop="description"> Hva med en herlig variant av pinnekjøtt? Denne oppskriften med bbq-saus og en rødkål-slaw.
+                        Vi har brukt julekrydder i bbq-sausen, og det smaker utrolig godt! En kombinasjon av nellik og allehånde ringer julen inn.</p>
+
+                    <h3>Ingredienser</h3>
+                    <h4>Bbq-saus:</h4>
+                    <p itemprop="recipeIngredient">500 g ketchup</p>
+                    <p itemprop="recipeIngredient">250 g brunt sukker</p>
+                    <p itemprop="recipeIngredient">1 dl sterk kaffe</p>
+                    <p itemprop="recipeIngredient">1 ss tabasco</p>
+                    <p itemprop="recipeIngredient">1/2 ts malt nellik</p>
+                    <p itemprop="recipeIngredient">1/2 ts malt allehande</p>
+                    <h4>Rødkål-slaw:</h4>
+                    <p itemprop="recipeIngredient">200 g rødkål</p>
+                    <p itemprop="recipeIngredient">2 stk gulrot</p>
+                    <p itemprop="recipeIngredient">1/2 ts salt</p>
+                    <p itemprop="recipeIngredient">1 stk rødløk</p>
+                    <p itemprop="recipeIngredient">2 ss majones</p>
+                    <p itemprop="recipeIngredient">3 ss lettrømme</p>
+                    <p itemprop="recipeIngredient">1/2 ts kvernet pepper</p>
+                    <p itemprop="recipeIngredient">1 ss finhakket frist timian</p>
+
+                    <h3>Instrukser</h3>
+                    <ol>
+                        <li class="normal" itemprop="recipeInstructions">Vann ut pinnekjøttet i rikelig med vann i ca. 30 timer, la det stå i romtemperatur.</li>
+                        <li class="normal" itemprop="recipeInstructions">Legg en metallrist eller bjørkepinner uten bark i bunnen av en vid kjele.  Fyll på vann til det står i høyde med risten. Legg pinnekjøttet over og sett på lokk. Damp pinnekjøttet på svak varme i ca. 3 timer. Pass på så det ikke koker tørt, fyll eventuelt på med mer vann.</li>
+                        <li class="normal" itemprop="recipeInstructions">Når kjøttet er ferdig kokt legger du det på benken til det er avkjølt.</li>
+                        <li class="normal" itemprop="recipeInstructions">Bruk en skarp kniv eller ostehøvel og skjær rødkål i fine strimler. Skrell gulrøttene og skjær dem i tynne strimler. Bruk gjerne et rivjern.</li>
+                        <li class="normal" itemprop="recipeInstructions">Ha strimlene i en bolle og strø på salt. Bruk gjerne gummihansker på hendene og gni kålen og gulrøttene sammen med saltet, slik får du en noe mykere grønnsaker. Hell av eventuelt vann som samler seg i bunnen av skålen.</li>
+                        <li class="normal" itemprop="recipeInstructions">Del rødløk i to, og skjær den i tynne skiver. Bland løken med rødkål og gulrot.</li>
+                        <li class="normal" itemprop="recipeInstructions">Bland de øvrige ingrediensene i en bolle for seg, og deretter inn i kålblandingen. La rødkål-slawen stå i kjøleskap frem til servering.</li>
+                        <li class="normal" itemprop="recipeInstructions">Løs opp sukker i varm kaffe. Tilsett ketchup og smak til bbq-sausen med tabasco. Tilsett krydder og la stå i minst 10 minutter.</li>
+                        <li class="normal" itemprop="recipeInstructions">Legg pinnekjøttet på et stekebrett med bakepapir. Smør inn pinnekjøttet med bbq-sausen og grill det på høy varme til de blir gylne.</li>
+                    </ol>
+                    <p>Server med rødkål-slaw og litt ekstra bbq-saus for de som vil ha det. </p>
+
+                </div>
+
+            <aside>
+                <p>Slik benytter google denne informasjonen: </p>
+                <a href="../../img/eks5.png"><img src="../../img/eks5_small.png" class="ssgoogle" alt="Screenshot av Google sitt testverktøy for strukturerte data"></a>
+                <p>Klikk på bildet for større versjon</p>
+                <em>Advarselen er bare en oppfordring til å bruke itemprop="nutrition", men oppskriften har ingen fakta om ærnering</em>
+                <p>Oppskrift hentet fra <a href="https://www.matprat.no/oppskrifter/kos/pinnekjott-med-bbq-saus/" target="_blank">matprat.no</a></p>
+            </aside>
+
+
+
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

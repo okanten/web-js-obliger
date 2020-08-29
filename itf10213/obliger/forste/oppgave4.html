@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Løsning: Oblig 1 oppgave 4</title>
+        <meta charset ="utf-8" />
+
+        <script>
+
+            window.addEventListener("load", function() { // alternativ måte å vente på page load
+                document.getElementById("btnTable").addEventListener("click", function(event) { // event er et generelt objekt i javascript. Den leter etter hva som skjer. Istedenfor å bare lete etter onclick, ser den etter 'alt'. Kommer det et klikk behandles den deretter.
+                        addTo(event.target.value) // her finner den og sender verdien (value) til eventen den "oppdaget" til funksjonen addTo sin variabel 'i'. dvs. verdien til knappen som ble trykket
+                    })
+            }); // parantesen stammer fra window.addEventListener('load-->. Den kan ikke closes før funksjonen er closet.
+
+            function addTo(i) { // i for input
+                document.getElementById("txtInput").value = document.getElementById("txtInput").value.concat(i.toString()); // setter ny verdi til tekstfeltet. concat kombinerer to strings (her teksten som allerede er i tekstboksen og det nye tallet)
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Løsning: Oblig 1 oppgave 4</h1>
+
+
+        <br /><br />
+
+
+        <table id="btnTable">
+            <tr>
+                <td>
+                    <button value="7">7</button>
+                </td>
+                <td>
+                    <button value="8">8</button>
+                </td>
+                <td>
+                    <button value="9">9</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button value="4">4</button>
+                </td>
+                <td>
+                    <button value="5">5</button>
+                </td>
+                <td>
+                    <button value="6">6</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button value="1">1</button>
+                </td>
+                <td>
+                    <button value="2">2</button>
+                </td>
+                <td>
+                    <button value="3">3</button>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button value="0">0</button>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <br />
+
+        <textarea rows="5" cols="45" id="txtInput"></textarea> <!-- bruker textarea her for å unngå at input går lenger enn tekstboksen -->
+
+    </body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kom i gang med SEO</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+
+
+
+    <script>
+
+        var $ = function(id) {
+            return document.getElementById(id);
+        }
+
+        window.addEventListener("load", function() {
+
+            $("btnMenu").addEventListener("click", function() {
+                if ($("ulmenu").className === "closed") {
+                    $("ulmenu").className = "open";
+                    $("btnMenu").classList.remove("fa-bars");
+                    $("btnMenu").classList.add("fa-times");
+                } else {
+                    $("ulmenu").className = "closed";
+                    $("btnMenu").classList.remove("fa-times");
+                    $("btnMenu").classList.add("fa-bars");
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+    <div class="wrapper article">
+
+        <header>
+
+            <h1>Kom i gang med SEO</h1>
+
+          <nav>
+              <ul id="ulmenu" class="closed">
+                  <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                  <li><a href="kom-i-gang.html"><i class="fa fa-forward" aria-hidden="true"></i> Kom i gang</a></li>
+                  <li><a href="kode.html"><i class="fa fa-code" aria-hidden="true"></i> Kode</a></li>
+                  <li><a href="innhold.html"><i class="fa fa-list-alt" aria-hidden="true"></i> Innhold</a></li>
+                  <li><a href="analyse.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Analyse</a></li>
+                  <li><a href="sass.html"><i class="fa fa-css3" aria-hidden="true"></i> Sass</a></li>
+              </ul>
+          </nav>
+        </header>
+
+        <i class="fa fa-bars" id="btnMenu" aria-hidden="true"></i>
+
+        <article class="main article">
+            <p id="crumbs"><a href="index.html">Forside</a> > <a href="#">Kom i gang</a></p>
+            <h2>Kom i gang</h2>
+            <p>SEO står for «Search Engine Optimization» eller «Søkemotoroptimalisering» og er en rekke metoder som kan brukes for at søkemotorer som f.eks <a href="https://google.com/" target="_blank">Google</a> eller <a href="https://duckduckgo.com/">DuckDuckGo</a> kan indeksere siden din bedre og gir deg dermed en høyere "Page Rank. Med andre ord er det en rekke metoder som putter siden din høyere opp på listen i et søkeresultat.</p>
+            <p>Søkemotoroptimalisering er altså en viktig del av det å lage nettsider da en side som er bra optimalisert vil nå høyere opp i søkeresultatene hos de forskjellige søkemotorene.</p>
+            <p>Disse metodene innebærer ting som kode, nøkkelord og innhold. Dette kan du lese mer om i de andre artiklene.</p>
+        </article>
+
+        <footer>
+            <p>Ola Kanten </p>
+            <p><a href="mailto:olaka@hiof.no">Kontakt</a></p>
+
+        </footer>
+
+
+    </div>
+</body>
+
+</html>

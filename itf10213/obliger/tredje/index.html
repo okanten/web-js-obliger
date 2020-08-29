@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="no">
+
+    <head>
+        <title>Løsning: Oblig 3, innføring i programmering</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="main.css" />
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+
+    <body>
+
+
+
+        <div id="settings">
+            <h3>Innstillinger</h3>
+            <p>Generer nytt array til oppgave 1</p>
+            <input type="button" id="btnGenArray" value="Generer" />
+            <p class="separator"></p>
+            <p>Legg til navn i array</p>
+            <input type="text" id="txtAddName" placeholder="Navn" /> <input type="button" id="btnAddName" value="+" />
+            <p id="settingsName"></p>
+            <p class="separator"></p>
+            <p>Generer nytt array til oppgave 8</p>
+            <input type="button" id="btnGenArrayEight" value="Generer" />
+        </div>
+
+        <div class="wrapper">
+
+            <section id="assOne">
+
+                <h3>Oppgave 1</h3>
+
+                <p id="outNormal">forlengs</p>
+
+                <p id="outReverse">Baklengs</p>
+
+                <p id="outEveryOther">Annenhver</p>
+
+                <p id="outLessTen">Mindre enn 10</p>
+
+                <p id="outEven">Partall</p>
+
+                <p id="outSum">Summen</p>
+
+                <p id="outElements">Antall elementer</p>
+
+                <p id="outAverage">Gjennomsnitt</p>
+
+                <p id="outSumEven">Summen av partall</p>
+
+                <p id="outSmallest">Minste tallet</p>
+
+                <p id="outOccurence">Bestemt verdi</p>
+
+                <p id="outAmountX">Antall x</p>
+
+            </section>
+
+            <section id="assTwo">
+
+                <h3>Oppgave 2</h2>
+
+                <p>Skriv inn måned i tall: <input type="text" id="txtMonth" placeholder="1-12" /> <input type="button" id="btnMonth" value="Utfør" /></p>
+
+                <p id="pMonth"> </p>
+
+            </section>
+
+            <section id="assThree">
+
+                <h3>Oppgave 3</h3>
+
+                <p id="pNamesDupe"></p>
+                <input type="button" id="btnNamesDupe" value="Hvis andre navn" />
+
+
+            </section>
+
+            <section id="assFour">
+
+                <h3>Oppgave 4</h3>
+
+                <aside>
+                    <p>Med en papirliste ville jeg valgt ut navnene ved å lukke øynene og peke på et tilfeldig navn, for å så krysse ut de navnene jeg allerede har plukket ut og valgt et nytt om jeg peker på det to ganger</p>
+                </aside>
+
+                <p id="pNamesProper"></p>
+                <input type="button" id="btnNamesProper" value="Hvis andre navn" />
+
+
+            </section>
+
+            <section id="assFiveC">
+
+                <h3>Oppgave 5c</h3>
+
+                <textarea cols="70" rows="20" id="txtAnalyze">I'd just like to interject for a moment. What you're referring to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux. Linux is not an operating system unto itself, but rather another free component of a fully functioning GNU system made useful by the GNU corelibs, shell utilities and vital system components comprising a full OS as defined by POSIX.
+
+Many computer users run a modified version of the GNU system every day, without realizing it. Through a peculiar turn of events, the version of GNU which is widely used today is often called "Linux", and many of its users are not aware that it is basically the GNU system, developed by the GNU Project.
+
+There really is a Linux, and these people are using it, but it is just a part of the system they use. Linux is the kernel: the program in the system that allocates the machine's resources to the other programs that you run. The kernel is an essential part of an operating system, but useless by itself; it can only function in the context of a complete operating system. Linux is normally used in combination with the GNU operating system: the whole system is basically GNU with Linux added, or GNU/Linux. All the so-called "Linux" distributions are really distributions of GNU/Linux.</textarea>
+                <img src="img/stallman.png" alt="Richard Stallman" />
+
+                <br /><br /><br />
+
+                <p>Vis de
+                <select id="selectedPrint">
+                    <option value="5" selected="selected">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                    <option value="30">30</option>
+                    <option value="35">35</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                    <option value="50">50</option>
+
+                </select> mest brukte ordene</p>
+
+                <input type="button" id="btnAnalyze" value="Analyser" />
+
+                <div id="outList">
+
+                </div>
+
+            </section>
+
+            <section id="assSix">
+                <h3>Oppgave 6a</h3>
+
+                <textarea id="txtRansom" cols="40" rows="10" value="">abcdefghijklmnopqrstuvwxyzæøå!?.'1234567890</textarea> <br />
+                <input type="button" value="Konverter" id="btnRansom" />
+
+                <section id="printRansom">
+
+
+
+                </section>
+
+
+            </section>
+
+            <section id="assSeven">
+                <h3>Oppgave 7</h3>
+
+                <input type="text" id="txtNumber" placeholder="Spesifikk verdi" />
+                <input type="text" id="txtStart" placeholder="1" />
+                <input type="text" id="txtEnd" placeholder="100" />
+
+                <br />
+                <br />
+
+
+                <input type="button" id="btnCheckSeven" value="Sjekk" />
+
+                <br />
+
+                <div id="sevenOut"></div>
+
+            </section>
+
+            <section id="assEight">
+                <h3>Oppgave 8</h3>
+
+                <input type="button" id="btnCheckArrayBiggest" value="Finn største" />
+                <input type="button" id="btnCheckArraySum" value="Summér array" />
+                <input type="button" id="btnCheckArrayAverage" value="Regn ut gjennomsnittet av arrayet" />
+                <input type="button" id="btnCheckArraySpec" value="Sjekk etter tallet 2" />
+                <input type="button" id="btnCheckArrayAll" value="Sjekk alle" />
+
+
+
+                <ul id="listOut">
+
+                </ul>
+
+            </section>
+
+        </div>
+
+
+    </body>
+
+</html>

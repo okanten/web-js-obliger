@@ -1,0 +1,104 @@
+body {
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #ffffff;
+    background-image: url("img/backgrounds.svg");
+    background-size: 100% 100%;
+    background-color: rgba(10, 10, 10, 0.2);
+
+}
+
+#settings {
+    padding: 1em;
+    position: fixed;
+    right: 2em;
+    background-color: rgba(68, 66, 68, 0.9);
+    border-radius: 1em;
+    -webkit-box-shadow: 0px 0px 45px -17px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 45px -17px rgba(0,0,0,0.46);
+    box-shadow: 0px 0px 45px -17px rgba(0,0,0,0.46);
+    overflow: hidden;
+    
+}
+
+#settings p.separator {
+    border-top: 1px solid black;
+}
+
+#settings p {
+    margin: 1em 0.5em;
+}
+
+.wrapper {
+    margin: 1em;
+}
+
+section {
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    border: 1px solid;
+    border-color: rgba(0,0,0,0);
+    padding: 2em;
+    background-color: rgba(68, 66, 68, 0.9);
+    border-radius: 1em;
+    -webkit-box-shadow: 0px 0px 45px -17px rgba(0,0,0,0.46);
+    -moz-box-shadow: 0px 0px 45px -17px rgba(0,0,0,0.46);
+    box-shadow: 0px 0px 45px -17px rgba(0,0,0,0.46);
+}
+
+section p, section h3 {
+
+}
+
+input, textarea {
+    background-color: #45384f;
+    border: 1px solid;
+    padding: 0.5em;
+    color: #ffffff;
+    margin: 0.2em 0.5em;
+}
+
+#btnCheckArrayAll {
+    position: relative;
+    left: 6em;
+}
+
+div#sevenOut {
+    margin: 2em 0.5em;
+
+}
+
+.pstat {
+    margin-top: 1em;
+}
+
+.stat.green {
+    color: white;
+    text-align: center;
+    margin-bottom: 2em;
+
+    background-image: url("img/stat.svg"); /* Brukte bilde her mer for morroskyld*/
+
+
+    border: 1px solid green;
+    box-sizing: border-box;
+}
+
+aside {
+    float: right;
+
+    width: 50%;
+}
+
+div.border {
+    border-bottom: 1px solid;
+    padding-bottom: 1em;
+}
+
+#printRansom {
+    background-color: white;
+}
+
+#printRansom img {
+    height: 50px;
+}

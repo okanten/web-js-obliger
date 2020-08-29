@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 4 - Temaer i WordPress</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="js/nav.js"></script>
+</head>
+<body>
+
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 4 - Wordpress</h1>
+        <nav>
+         <ul id="ulmenu">
+             <li><a href="index.html"> Hjem</a></li>
+             <li><a href="oppsett.html"> Oppsett</a></li>
+             <li><a href="temaer.html"> Temaer</a></li>
+             <li><a href="plugins.html"> Plugins</a></li>
+             <li><a href="widgets.html"> Widgets</a></li>
+             <li><a href="posts.html"> Artikler og sider</a></li>
+             <li><a href="statisk.html"> Statisk forside</a></li>
+         </ul>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <article class="main">
+            <h2 id="top">Statisk forside i WordPress</h2>
+            <p class="fragmentedlinks"><a href="#result">Hopp til resultat</a></p>
+            <p>For å få en statisk forside på WordPress må man først lage en ny side. Jeg kommer ikke til å gå i detalj om hvordan man gjør det her, se <a href="posts.html#wpPage">Artikler og sider</a> for dette.</p>
+
+            <figure>
+                <a href="img/wp-static-fp.png"><img src="img/wp-static-fp.png" alt="Skjermdump av oppretting av statisk forside" /></a>
+                <figcaption>Her inkluderer jeg forresten formen vi lagde for nyhetsbrev.</figcaption>
+            </figure>
+
+            <p>Jeg legger ved et fremhevet bilde også og publiserer det</p>
+            <p>Nå må vi gjøre denne siden til en statisk forside. Dette gjør vi ved å navigere til Settings -> Reading i menyen til venstre.</p>
+
+            <figure>
+                <a href="img/wp-static-fp-reading.png"><img src="img/wp-static-fp-reading.png" alt="Skjermdump av settings reading" /></a>
+                <figcaption>Her ser vi hvor vi bestemmer forsiden.</figcaption>
+            </figure>
+
+            <p>Her trykker jeg på "A static page" og velger siden jeg nettopp lagde i nedtrekkslista</p>
+
+            <h2 class="multiple" id="result">Resultat</h2>
+            <section class="sflex smaller">
+
+                <figure>
+                    <a href="img/wp-static-fp-final.png"><img src="img/wp-static-fp-final.png" alt="Skjermdump av forsiden" /></a>
+                    <figcaption>Forsiden</figcaption>
+                </figure>
+
+                <figure>
+                    <a href="img/wp-fp-static-email-form.png"><img src="img/wp-fp-static-email-form.png" alt="Skjermdump av forsiden" /></a>
+                    <figcaption>Del 2 av forsiden</figcaption>
+                </figure>
+
+            </section>
+
+
+            <aside>
+                <p><a href="#top">Til toppen</a></p>
+            </aside>
+
+        </article>
+
+
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

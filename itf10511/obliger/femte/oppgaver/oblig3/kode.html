@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kom i gang med SEO - Kode</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@fiktivtbrukernavn" />
+    <!-- Jeg bruker ikke twitter og har derfor ingen konto, men denne taggen brukes for å spesifisere twitterbrukernavnet til nettstedet ditt. f.eks kan vg bruke @vgnett her -->
+    <meta name="twitter:title" content="Kom i gang med SEO - Kode" />
+    <meta name="twitter:description" content="Hvordan burde koden din bør se ut for å optimalisere den mer for søkemotorer? En mulig forklaring finnes her." />
+    <meta name="twitter:image" content="http://ask.hiof.no/~olaka/itf10511/obliger/femte/oppgaver/oblig3/img/article2.png" />
+    <meta name="twitter:url" content="http://ask.hiof.no/~olaka/itf10511/oblig5/oppgaver/oblig3/kode.html" />
+
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Kom i gang med SEO - Kode" />
+    <meta property="og:locale" content="nb_NO" />
+    <meta property="og:url" content="http://ask.hiof.no/~olaka/itf10511/oblig5/oppgaver/oblig3/kode.html" />
+    <meta property="og:image" content="http://ask.hiof.no/~olaka/itf10511/obliger/femte/oppgaver/oblig3/img/article2.png" />
+    <meta property="article:author" content="https://facebook.com/minprofil" />
+    <!-- Bruker ikke facebook og har derfor ingen konto, men denne propertien kan brukes for å linke til facebook kontoen/siden til forfattere-->
+    <meta property="og:description" content="Hvordan burde koden din bør se ut for å optimalisere den mer for søkemotorer? En mulig forklaring finnes her." />
+
+
+
+    <script>
+
+        var $ = function(id) {
+            return document.getElementById(id);
+        }
+
+        window.addEventListener("load", function() {
+
+            $("btnMenu").addEventListener("click", function() {
+                if ($("ulmenu").className === "closed") {
+                    $("ulmenu").className = "open";
+                    $("btnMenu").classList.remove("fa-bars");
+                    $("btnMenu").classList.add("fa-times");
+                } else {
+                    $("ulmenu").className = "closed";
+                    $("btnMenu").classList.remove("fa-times");
+                    $("btnMenu").classList.add("fa-bars");
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+    <div class="wrapper article">
+
+        <header>
+
+            <h1>Kom i gang med SEO</h1>
+
+          <nav>
+              <ul id="ulmenu" class="closed">
+                  <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                  <li><a href="kom-i-gang.html"><i class="fa fa-forward" aria-hidden="true"></i> Kom i gang</a></li>
+                  <li><a href="kode.html"><i class="fa fa-code" aria-hidden="true"></i> Kode</a></li>
+                  <li><a href="innhold.html"><i class="fa fa-list-alt" aria-hidden="true"></i> Innhold</a></li>
+                  <li><a href="analyse.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Analyse</a></li>
+                  <li><a href="sass.html"><i class="fa fa-css3" aria-hidden="true"></i> Sass</a></li>
+              </ul>
+          </nav>
+        </header>
+
+        <i class="fa fa-bars" id="btnMenu" aria-hidden="true"></i>
+
+        <article class="main article">
+            <p id="crumbs"><a href="index.html">Forside</a> > <a href="#">Kode</a></p>
+            <h2>Kode</h2>
+
+            <p>Når vi snakker om kode i SEO sammenheng tenker vi hovedsaklig på HTML, og da spesielt HTML5. Noe av det viktigste for å få brukerne inn på siden din er <code>&lt;title&gt;</code> taggen.
+                Denne bestemmer hvordan linken (eller tittelen) vil se ut i søkeresultatet i søkemotoren </p>
+                <figure class="smaller">
+                    <a href="img/searchresult.png"><img src="img/search_small.png" alt="Screenshot of search results from google with the html tags" /></a>
+                    <figcaption>Eksempel på hvorfor title-taggen og headings er viktig</figcaption>
+                </figure>
+
+            <p>Nå skal det sies at tittel ikke nødvendigvis direkte gir deg høyere page rank, men det øker sjansene for at brukeren trykker på akkurat din lenke i søkeresultatet og gjør dermed siden din mer populær. Tittel, beskrivelse og author (såkalt metatags) viser også relevant informasjon om siden din blir linket til på f.eks facebook.</p>
+            <p>Det at siden din blir linket til ofte er viktig for å havne høyere opp i søkeresultatene (såkalt "page rank"), derfor er det viktig å ha informative meta-tags slik at siden din blir aktuell å linke til på blant annet sosiale medier. Føler det er viktig å nevne at Google har mindre fokus på hvor ofte siden din blir linket til nå enn det de hadde i oppstartsfasen, men det er fortsatt en viktig faktor.</p>
+
+            <h4>Semantiske tagger</h4>
+            <p>Semantiske tagger er noe som har blitt satt stor fokus på de siste årene, spesielt etter at HTML5 ble lansert. Dette gjør koden mer oversiktlig for blant annet søkemotorene, utviklere og skjermlesere (screen-readers). Ved å bruke semantiske tagger som <code>&lt;nav&gt;</code>, <code>&lt;article&gt;</code> og <code>&lt;footer&gt;</code> skjønner søkemotorene og skjermlesere at dette er kodebiten for navigasjonsmenyen, artikkelteksten eller footeren.
+                Det finnes en rekke semantiske tagger, disse kan du se i kodebiten i bunnen av denne artikkelen.</p>
+            <p>Det er derfor lurt å unngå å bruke ekstremt mange <code>&lt;div&gt;</code> tagger, men heller bruke semantiske tagger hvor det lar seg gjøre.</p>
+
+            <h4>Bilder</h4>
+            <p>Bilder er ofte brukt og er en fin måte å gripe leseren på, samt et godt verktøy for å illustrere noe eller komme med eksempler. Søkemotorene registrerer bildene, men de vet lite om hva bildet er uten en alt attributt (og kontekst rundt bildet, dvs innhold på siden).</p>
+            <p>Derfor er det viktig å gi en kort, men korrekt, beskrivelse av hva bildet inneholder slik at disse søkemotorene kan gi et mer korrekt søkeresultat.
+                Google Images bruker blant annet alt tags og sammenheng for å vise relevante bilder basert på søkeordene.</p>
+
+
+            <h4>Kodeeksempel</h4>
+
+            <pre><code>
+    &lt;!DOCTYPE html&gt;
+
+    &lt;html lang="no"&gt;
+        &lt;head&gt;
+            &lt;title&gt;Informativ tittel&lt;/title&gt;
+            &lt;meta charset="utf-8" /&gt;
+            &lt;meta name="description" content="Putt en god beskrivelse her, ikke søkeord."&gt;
+            &lt;meta name="keywords" content="SEO,search engine optimization,søkeord1,søkeord2,osv,osv"&gt;
+            &lt;meta name="author" content="Forfatter"&gt;
+
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;header&gt;
+                &lt;nav&gt;
+                    &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="link"&gt;Link #1&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/nav&gt;
+            &lt;/header&gt;
+
+            &lt;article&gt;
+                &lt;h2&gt;Artikkel tittel&lt;/h2&gt;
+                &lt;p&gt;Artikkel tekst her&lt;/p&gt;
+            &lt;/article&gt;
+
+            &lt;footer&gt;
+                &lt;p&gt;Bunntekst går her&lt;/p&gt;
+            &lt;/footer&gt;
+        &lt;/body&gt;
+
+    &lt;/html&gt;
+            </code></pre>
+
+        </article>
+
+        <aside class="reflist">
+            <h5>Kilder</h5>
+            <p><a href="https://blog.kissmetrics.com/website-source-code-seo/" class="source">How to Make Your Website Source Code Optimized for SEO - kissmetric</a> <a href="http://www.dummies.com/education/internet-basics/knowing-google-images-basics/" class="source">Knowing Google Images Basics - by Harold Davis</a></p>
+        </aside>
+        <footer>
+            <p>Ola Kanten </p>
+            <p><a href="mailto:olaka@hiof.no">Kontakt</a></p>
+
+        </footer>
+
+
+    </div>
+</body>
+
+</html>

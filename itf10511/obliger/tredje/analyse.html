@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kom i gang med SEO - Analyse</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+
+
+
+    <script>
+
+        var $ = function(id) {
+            return document.getElementById(id);
+        }
+
+        window.addEventListener("load", function() {
+
+            $("btnMenu").addEventListener("click", function() {
+                if ($("ulmenu").className === "closed") {
+                    $("ulmenu").className = "open";
+                    $("btnMenu").classList.remove("fa-bars");
+                    $("btnMenu").classList.add("fa-times");
+                } else {
+                    $("ulmenu").className = "closed";
+                    $("btnMenu").classList.remove("fa-times");
+                    $("btnMenu").classList.add("fa-bars");
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+    <div class="wrapper article">
+
+        <header>
+
+            <h1>Kom i gang med SEO</h1>
+
+          <nav>
+              <ul id="ulmenu" class="closed">
+                  <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                  <li><a href="kom-i-gang.html"><i class="fa fa-forward" aria-hidden="true"></i> Kom i gang</a></li>
+                  <li><a href="kode.html"><i class="fa fa-code" aria-hidden="true"></i> Kode</a></li>
+                  <li><a href="innhold.html"><i class="fa fa-list-alt" aria-hidden="true"></i> Innhold</a></li>
+                  <li><a href="analyse.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Analyse</a></li>
+                  <li><a href="sass.html"><i class="fa fa-css3" aria-hidden="true"></i> Sass</a></li>
+              </ul>
+          </nav>
+        </header>
+
+        <i class="fa fa-bars" id="btnMenu" aria-hidden="true"></i>
+
+        <article class="main article">
+            <p id="crumbs"><a href="index.html">Forside</a> > <a href="analyse.html">Analyse</a></p>
+            <h2>Analyse</h2>
+            <p>Hvis du kikker i kildekoden på forsiden (og artikkelsidene) så kan du se at jeg har brukt semantiske tagger, en relevant og beskrivende tittel, samt beskrivende alt attributter for illustrasjonsbildene og meta-description.</p>
+            <p>Jeg har brukt <code>&lt;header&gt;</code> rundt det øverste elementet i siden (navigasjonsmenyen) og <code>&lt;nav&gt;</code> rundt navigasjonsmenyen. Jeg har også brukt <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code> og <code>&lt;footer&gt;</code></p>
+            <p>Hver artikkelrubrikk har en ingress som fører til at søkemotorene har iallefall noe å lese fra innholdet på forsiden.</p>
+            <p>Mye av innholdet i artiklene er ganske kort, men oppgaven denne siden bygger på ber om korte tekster så derfor blir det lite innhold.</p>
+        </article>
+
+
+        <footer>
+            <p>Ola Kanten </p>
+            <p><a href="mailto:olaka@hiof.no">Kontakt</a></p>
+
+        </footer>
+
+
+    </div>
+</body>
+
+</html>

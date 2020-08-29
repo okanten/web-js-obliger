@@ -1,0 +1,109 @@
+<!doctype HTML>
+<html lang="no">
+<!-- Hei :) -->
+    <head>
+        <title>Mopedbart</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="js/main.js" charset="UTF-8"></script>
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <section class="wrapper">
+            <nav id="js">
+                <p>$ ask.hiof.no/~olaka/itf10213/obliger: ls</p>
+                <ul>
+                    <li><a href="itf10213/obliger/forste/">Oblig 1</a></li>
+                    <li><a href="itf10213/obliger/andre/">Oblig 2</a></li>
+                    <li><a href="itf10213/obliger/tredje/">Oblig 3</a></li>
+                    <li><a href="itf10213/obliger/fjerde/">Oblig 4</a></li>
+                    <li><a href="itf10213/obliger/femte/">Oblig 5</a></li>
+                </ul>
+            </nav>
+
+            <nav id="web">
+                <p>$ ask.hiof.no/~olaka/itf10511/obliger: ls</p>
+                <ul>
+                    <li><a href="itf10511/obliger/forste/">Oblig 1</a></li>
+                    <li><a href="itf10511/obliger/andre/">Oblig 2</a></li>
+                    <li><a href="itf10511/obliger/tredje/">Oblig 3</a></li>
+                    <li><a href="itf10511/obliger/fjerde/">Oblig 4</a></li>
+                    <li><a href="itf10511/obliger/femte/">Oblig 5</a></li>
+                </ul>
+            </nav>
+
+            <article id="neofetch">
+                <p>$ ~: neofetch</p>
+                <pre>
+                    <p></p>
+                    <p>         _,met$$$$$gg.           <span class="red">olaka</span>@<span class="red">ask.hiof.no</span></p>
+                    <p>      ,g$$$$$$$$$$$$$$$P.        <span class="red">OS:</span> <a href="https://debian.org" target="_blank">Debian</a> </p>
+                    <p>    ,g$$P""       """Y$$.".      <span class="red">Kernel:</span> Generic Male</p>
+                    <p>   ,$$P'              `$$$.      <span class="red">Uptime:</span> <a href="https://i.imgur.com/7NJtAb2.jpg" target="_blank">4h 20m</a></p>
+                    <p>  ',$$P       ,ggs.     `$$b:    <span class="red">Packages:</span> 1111</p>
+                    <p>   $$P      d$'     <span class="red">,</span>    $$P     <span class="red">Resolution:</span> <span id="res">800x600</span></p>
+                    <p>   $$:      $$.   <span class="red">-</span>    ,d$$'     <a href="https://en.wikipedia.org/wiki/Window_manager" target="_blank"><span class="red">WM:</span></a> <a href="https://github.com/Airblader/i3" target="_blank">i3-gaps</a></p>
+                    <p>   $$\;      Y$b._   _,d$P'      <span class="red">Studiekull:</span> 2017</p>
+                    <p>   Y$$.    <span class="red">`.</span>`"Y$$$$P"'          <span class="red">Studieretning:</span> <a href="https://www.hiof.no/studier/studietilbudet/viser-aktuelle-beskrivelser?displayitem=961&module=studieinfo&type=katalog#/aktuelt" target="_blank">Informatikk</a></p>
+                    <p>   `$$b      <span class="red">"-.__</span>              </p>
+                    <p>    `Y$$                        </p>
+                    <p>     `Y$$.                      </p>
+                    <p>       `$$b.                    </p>
+                    <p>         `Y$$b.                 </p>
+                    <p>            `"Y$b._             </p>
+                    <p>                `""""           </p>
+                    <p></p>
+                </pre>
+            </article>
+
+            <article id="code">
+                <p>$ ~: vim hangman.js</p>
+                <pre id="vim">
+                    <p>     <span class="yellow">window</span>.addEventListener(<span class="red">"load"</span>, <span class="teal">function</span>() <span class="yellow">{</span></p>
+                    <p>         $("hangman").addEventListener("click", function() {</p>
+                    <p>            <span class="yellow">if</span> (hangCount !== 9 && triesLeft !== 0) <span class="teal"></span>{</p>
+                    <p>               hangCount++;</p>
+                    <p>               triesLeft--;</p>
+                    <p>               nextElement(hangCount);</p>
+                    <p>            <span class="teal"></span>}</p>
+                    <p>         <span class="teal">}</span>);</p>
+                    <p>         pickWord(0, 4);</p>
+                    <p>     <span class="teal">}</span>);</p>
+                    <p></p>
+                    <p>     <span class="teal">function</span> pickWord(startDifficulty, endDifficulty) <span class="teal">{</span></p>
+                    <p>         clearVariables();</p>
+                    <p>         rand = Math.floor(Math.random() * (endDifficulty - startDifficulty) + startDifficulty);</p>
+                    <p>         drawInitialize(hangmanArray<span class="teal">[</span>rand<span class="teal">]</span>.split(<span class="red">""</span>));</p>
+                    <p>         prevRandMax = endDifficulty;</p>
+                    <p>     <span class="teal">}</span></p>
+                    <p></p>
+                    <p></p>
+                    <p>"hangman.js" 328L, 13106C written <span id="vimsaveright">109,0-1       18%</span></p>
+
+
+                </pre>
+            </article>
+
+            <!--article id="mplayer">
+                <!--span> MPlayer</span-->
+
+                <!--img src="img/breakfastclub_fix.jpg" />
+            </article-->
+
+            <footer id="polybar">
+                <!--h1 id="lul">Ola Kanten</h1-->
+                <ul>
+                    <li id="active"><i class="fas fa-terminal"></i></li>
+                    <li id="github"><a href="https://github.com/okstudies/" target="_blank"><i class="fab fa-github"></i></a></li>
+                    <li><i class="fab fa-spotify"></i></li>
+                    <li id="name">Ola Kanten</li>
+                    <li id="date">undefined</li>
+                </ul>
+
+            </footer>
+
+        </section>
+    </body>
+</html>

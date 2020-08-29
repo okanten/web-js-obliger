@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="no">
+    <head>
+        <title>På kanten - MathML</title>
+        <meta charset="utf-8" />
+        <!--link rel="stylesheet" href="normalize.css" /-->
+        <link rel="stylesheet" type="text/css" media="print" href="print.css" /> <!-- For printer -->
+        <link rel="stylesheet" media="screen" href="article.css" />
+        <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.css">
+
+        <script type="text/javascript" async
+            src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script> <!-- nødvendig fordi Chrome ikke støtter MathML -->
+
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+            <header>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html" class="linkimg"><img src="img/logo.png" alt="Logo" id="imglogo"/></a></li>
+                        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                        <li><a href="#articleone" class="active"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Artikler</a></li>
+                        <li><a href="index.html#cal" id="showCalender"><i class="fa fa-calendar" aria-hidden="true"></i> Kalender</a></li>
+                        <li><a href="ekstra1.html"><i class="fa fa-mobile" aria-hidden="true"></i> Ekstra</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="crumbs">
+                <p><a href="index.html">På kanten</a> > <a href="index.html#articleone">Artikler</a> > <a href="mathml.html">MathML</a></p>
+            </section>
+
+
+
+                <article class="main">
+                    <h2 id="articleTitle">MathML</h2>
+                    <p>Markeringsspråket MathML gjør det lettere for oss å vise matematiske uttrykk på en nettside. Dette er spesielt nyttig om du for eksempel drifter et nettsted eller forum som har matematikk som tema.</p>
+                    <p>Her er noen eksempler på MathML: </p> <br />
+                    <div id="middlecontent">
+
+                        <div id="firstexample"> <!-- bruker div her fordi MathJax endrer på tags i f.eks <math> -->
+                            <math> <!-- Nullpunktsformelen -->
+                                <mrow>
+                                     <mi>x</mi>
+                                     <mo>=</mo>
+                                     <mfrac>
+                                        <mrow>
+                                             <mo>-</mo>
+                                             <mi>b</mi>
+                                             <mo>&plusmn;</mo> <!-- pluss minus -->
+                                             <msqrt>
+                                                 <msup>
+                                                     <mi>b</mi>
+                                                     <mn>2</mn>
+                                                </msup>
+                                                <mo>-</mo>
+                                                <mn>4</mn>
+                                                <mi>ac</mi>
+                                            </msqrt>
+                                        </mrow>
+                                        <mrow>
+                                                <mn>2</mn>
+                                                <mi>a</mi>
+                                        </mrow>
+                                        </mfrac>
+                                </mrow>
+                            </math>
+                        </div>
+
+                        <div id="secondexample">
+                            <math>
+                                <mrow>
+                                    <mfrac>
+                                        <mrow>
+                                            <mi>x</mi>
+                                            <mo>+</mo>
+                                            <msup>
+                                                <mi>y</mi>
+                                                <mn>2</mn>
+                                            </msup>
+                                        </mrow>
+                                        <mrow>
+                                            <mi>k</mi>
+                                            <mo>+</mo>
+                                            <mn>1</mn>
+                                        </mrow>
+                                    </mfrac>
+                                </mrow>
+                            </math>
+                        </div>
+
+                        <div id="thirdexample">
+                            <math>
+                                <mrow>
+                                    <mn>3.99</mn>
+                                    <mo>+</mo>
+                                    <mn>4</mn>
+                                    <mo>&asymp;</mo>
+                                    <mn>5</mn>
+                               </mrow>
+                           </math>
+                       </div>
+
+                       <div id="fourthexample">
+                           <math>
+                               <mrow>
+                                   <mi>&pi;</mi>
+                                   <mo>&times;</mo>
+                                   <msup>
+                                       <mi>r</mi>
+                                       <mn>2</mn>
+                                   </msup>
+                               </mrow>
+                           </math>
+                       </div>
+
+                    </div>
+                    <br />
+                    <p>Her har vi tre formler laget med MathML (og MathJax). </p>
+                    <p>La oss ta nullpunktsformelen som eksempel.</p>
+
+                    <pre><code>
+                        &lt;math&gt; &lt;!-- Nullpunktsformelen --&gt;
+                            &lt;mrow&gt;
+                                 &lt;mi&gt;x&lt;/mi&gt;
+                                 &lt;mo&gt;=&lt;/mo&gt;
+                                 &lt;mfrac&gt;
+                                    &lt;mrow&gt;
+                                         &lt;mo&gt;-&lt;/mo&gt;
+                                         &lt;mi&gt;b&lt;/mi&gt;
+                                         &lt;mo&gt;&plusmn;&lt;/mo&gt; &lt;!-- pluss minus --&gt;
+                                         &lt;msqrt&gt;
+                                             &lt;msup&gt;
+                                                 &lt;mi&gt;b&lt;/mi&gt;
+                                                 &lt;mn&gt;2&lt;/mn&gt;
+                                            &lt;/msup&gt;
+                                            &lt;mo&gt;-&lt;/mo&gt;
+                                            &lt;mn&gt;4&lt;/mn&gt;
+                                            &lt;mi&gt;ac&lt;/mi&gt;
+                                        &lt;/msqrt&gt;
+                                    &lt;/mrow&gt;
+                                    &lt;mrow&gt;
+                                            &lt;mi&gt;2&lt;/mi&gt;
+                                            &lt;mi&gt;a&lt;/mi&gt;
+                                    &lt;/mrow&gt;
+                                    &lt;/mfrac&gt;
+                            &lt;/mrow&gt;
+                        &lt;/math&gt;
+                    </code></pre>
+
+                    <p>Vi må altså starte med en math tag, så en mrow tag, etterfulgt av en identifier tag som inneholder x (eller en annen bokstav), så en operator tag som inneholder en operatør (= i dette tilfellet).</p>
+                    <p>For å få en brøkstrek bruker vi mfrac taggen rundt det vi ønsker skal deles. Hver mrow tag bestemmer hva som skal over eller under brøkstreken. Taggen msqrt tegner en kvadratrot rundt alt inni taggen.
+                        msup taggen bruker vi for å tegne et grunntall med en eksponent (potens). Vi bestemmer grunntallet først og eksponenten sist. Det er viktig å close alle taggene som strekker seg over alle elementene (math og mrow i dette tilfelle.)</p>
+
+                </article>
+
+
+            <article class="extra">
+
+                <h4>Notis</h4>
+
+                <p>Chrome støtter ikke MathML og krever da at man bruker MathJax</p>
+            </article>
+
+            <footer>
+                <h2><a href="om.html"><i class="fa fa-info-circle" aria-hidden="true"> </i>Om denne siden</a></h2>
+                <p><i class="fa fa-github" aria-hidden="true"></i>  <a href="https://github.com/okstudies" target="_blank">GitHub</a></p>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

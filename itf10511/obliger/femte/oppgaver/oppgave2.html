@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 5 - Sammenhengen mellom SEO, tilgjengelighet, UU og microdata</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="../js/nav.js"></script>
+</head>
+<body>
+
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 5</h1>
+         <nav>
+          <ul id="ulmenu">
+              <li><a href="../index.html"> Hjem</a></li>
+              <li><a href="oppgave2.html"> Oppgave 2</a></li>
+              <li><a href="oppgave3.html"> Oppgave 3</a></li>
+              <li><a href="oppgave4.html"> Oppgave 4</a></li>
+              <li><a href="oppgave5.html"> Oppgave 5</a></li>
+              <li><a href="oppgave6.html"> Oppgave 6</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+        <article class="main">
+            <p id="crumbs"><a href="../index.html">Forside</a> > <a href="../oppgaver/index.html">Oppgaver</a> > <a href="oppgave2.html">Sammenheng mellom SEO</a> </p>
+            <h2>Sammenhengen mellom SEO, tilgjengelighet, universell utforming og microdata</h2>
+            <p class="fragmentedlinks"><a href="#accessibility">Hopp til tilgjengelighet</a> <a href="#universal-design">Hopp til unversiell utforming</a> <a href="#microdata">Hopp til microdata</a> <a href="#sources">Hopp til kilder</a></p>
+
+            <p>Kombinerer du dette som er nevnt under vil det føre til bra SEO som øker din page rank og gjør at søkemotorene enklere kan forstå hvilken kategori din nettside tilhører.</p>
+            <p>Det vil også gjøre siden din mer attraktiv for besøkende.</p>
+
+            <h2 class="multiple" id="accessibility">Tilgjengelighet</h2>
+            <p>Når vi snakker om tilgjengelighet i forbindelse med SEO snakker vi først og fremst om tilgjengelighet for flest mulige målgrupper.
+                Et godt eksempel er svaksynte eller blinde mennesker. Grunnen til at dette er viktig er først og fremst fordi robotene til søkemotorene (såkalte crawlers) og skjermlesere bruker noe av de samme metodene for å forstå nettsiden.
+                En annen faktor er jo at de svaksynte vil velge din side ovenfor andre sider som ikke er optimalisert for skjermlesere, og kanskje også sende linken videre til andre om innholdet er interessant.
+                Noen eksempler på hva som gjør siden din brukervennlig for flere målgrupper: </p>
+            <ul class="general">
+                <li>Semantisk HTML*</li>
+                <li>Alt-tagger på bilder</li>
+                <li>Undertekster på bilder</li>
+                <li><code>&lt;title&gt;</code> taggen</li>
+                <li>Overskrifter (h1, h2 osv) </li>
+                <li>Brødsmuler</li>
+                <li>Rekkefølge på kode</li>
+            </ul>
+
+            <h4>Semantisk HTML</h4>
+                <p>Semantisk HTML er kode hvor de forskjellige taggene gir åpenbar kontekst til hva de inneholder. Ikke alle semantiske tagger er like åpenbart for mannen på gata, men de nyeste taggene er relativt lette å forstå. Eksempler på dette er: <code>&lt;title&gt; &lt;header&gt; &lt;section&gt; &lt;article&gt; &lt;em&gt; &lt;nav&gt; &lt;footer&gt;</code>. Disse er enkle for de fleste å forstå, men det finnes også tagger som anses som semantiske selv om de ikke er innlysende for mennesker. Et eksempel på en slik tag er heading taggene (<code>&lt;h1&gt;-&lt;h6&gt;</code>) og paragraf taggene (<code>&lt;p&gt;</code>). Disse kjenner robotene og skjermleserne til og kan hente ut kontekst fra.</p>
+                <p>*Det er verdt å nevne at det ikke finnes noen konkrete bevis på at søkemotorer som Google prioriterer nettsider med «semantic markup» ovenfor nettsider som ikke bruker det, men det kan fort endre seg med tiden da disse taggene er relativt nye.</p>
+
+            <h4>Alt-tagger på bilder</h4>
+                <p>Alt tagger på bilder er en måte for både skjermlesere og søkemotorer å vite innholdet i bildet. Om du leser «Mann med solbriller, frakk og flosshatt» vil du nok mest sannsynlig se for deg en mann med akkurat dette antrekket. Det vil brukerne av skjermleserne også, og det vil også gi søkemotorene en liten oversikt over hva bildet ditt er og om det er relevant til resten av innholdet.</p>
+
+            <h4>Undertekster på bilder</h4>
+                <p>Undertekster er en måte man kan gå mer i detalj om hva bildet fremstiller. Dette skiller seg ut fra alt -tagger ved at man kan tilføye ekstra informasjon til bildet. Dette er ikke kun nyttig bare for skjermlesere og søkemotorene, men også besøkende som leser artikkelen din. Du har muligheten til å holde artikkelteksten ren fra å måtte forklare bildene og du gir også leserne en mulighet til å forstå sammenhengen lettere. Det kan også brukes til å tilføye ekstra informasjon sammen med et bilde, som gir en annen effekt enn ren tekst.</p>
+                <p>Eksempler på dette kan vi ofte se i artikler på nettaviser. Veldig ofte har for eksempel VG screenshots av tekstmeldinger med undertekster som går litt mer i detalj om innholdet og konteksten i bildet.</p>
+
+            <h4><code>&lt;title&gt;</code> taggen</h4>
+                <p>Tittel-taggen på nettsiden din bestemmer hva tittelen på nettsiden din er, men også hva tittelen på søkeresultatet for din nettside blir. Derfor er det viktig å ha en informativ og attraktiv tittel som gir brukerne (og robotene) innblikk i hva nettsiden inneholder og som kan skape nyskjerrighet (uten å være clickbait). Gode titler vil øke din page rank.</p>
+                <p>Eksempel på en god tittel:</p>
+                <em>What is Cryptocurrency: Everything You Need To Know – Firmanavn</em>
+                <p>Denne tittelen har to gode søkeord helt i starten av tittelen, nemlig: "What is Cryptocurrency" og "Everything you need to know" etterfulgt av firmanavn, eventuelt kan det erstattes med "guide"</p>
+                <p>Eksempel på dårlig tittel:</p>
+                <em>Firmanavn | Cryptocurrency | BitCoin | Etherium | Buy | Sell | Information | Front-page -> Articles -> What is cryptocurrency?</em>
+                <p>Denne tittelen er dårlig fordi det er ekstremt mange nøkkelord, noe søkemotorer vil straffe deg for. Den virker også veldig altomfangene for lesere, noe som kan skape tvil.</p>
+                <h4>Overskrifter</h4>
+                    <p>Overskrifter er en viktig del i det å gi kontekst for hva innholdet under bringer. Dette er noe søkemotorene bruker for å forstå hva innholdet kan dreie seg om, og noe som kan tjene deg positivt om noen av søkeordene stemmer overens med headingen på f.eks artikkelen din.</p>
+
+            <h4>Brødsmuler</h4>
+                <p>Brødsmuler gjør det noe lettere for søkemotoren å vite hvor i hierarkiet nettsiden befinner seg, men det er også kjekt for leserne å vite hvor dette ligger og ikke minst hvilken kategori det går under.</p>
+
+            <h4>Rekkefølge på kode</h4>
+                <p>HTML-strukturen din har mye å si for skjermlesere, da de leser fra topp til bunn og overser eventuell CSS. Selv om man i teorien kan plassere navigasjonsmenyen på toppen av nettsiden med CSS uavhengig av hvor den befinner seg i HTML-koden er dette dumt. Det vil være ekstremt plagsomt for en bruker av skjermleser å måtte klikke seg nedover hele nettsiden for å komme seg til navigasjonsmenyen.</p>
+
+            <h2 class="multiple" id="universal-design">Universell utforming</h2>
+                <p>Universell utforming vil si å gjøre nettsiden/nettstedet unviersalt for alle brukere. Dette inkluderer brukere med syn- og hørselsproblemer, samt motoriske vansker. Som du kanskje forstår er tilgjengelighet og universell utforming tilknyttet hverandre.
+                    Ting som ikke er nevnt ovenfor er mobilvennlighet, fragmented links, responsive typografi, og microdata</p>
+
+            <h4>Hørsel og motorikk </h4>
+                <p>For å gjøre nettsiden din vennlig for de med hørselproblemer er det lurt å beskrive eventuelle videoer (såkalt transcript) på nettsiden din slik at de kan lese innholdet. </p>
+                <p>For motoriske evner er det lurt å la nettsiden din være vennlig for tastaturbrukere, da det er et verktøy som er brukt mye blant den målgruppen. Responstid er også noe å tenke på, ikke la ting som animasjoner eller informasjonsbokser forsvinne for fort. Gjør også knapper lett å trykke på.</p>
+
+            <h4>Mobilvennlig nettside</h4>
+                <p>At nettsiden din er optimalisert for mobiltelefoner er veldig viktig, da surfing på mobiltelefoner er større enn noen gang.</p>
+                <p>Google prioriterer nettsider som er mobilvennlige. Om nettsiden din ikke er mobilvennlig vil folk forlate nettsiden din og finne et alternativ (om de surfer med mobilen)</p>
+
+            <h4>Fragmented links</h4>
+                <p>Fragmented links er en måte å linke til en del av nettsiden ved hjelp av identifiers. På toppen av denne siden kan du se "Hopp til ...", disse bruker såkalte fragmented links og hopper til informasjonen man er ute etter</p>
+                <p>Dette vil ikke øke søkemotoroptimaliseringen din, tvert i mot vil det straffe seg <em>om du bruker det feil</em>. Google indekserer ikke fragmented links, det ser på hele nettsiden som en side, så om du ønsker at søkemotorene skal indeksere delene hver for seg kan det være lurt å lage en ny side for de store temaene.</p>
+                <p>Det vil derimot gjøre siden din veldig brukervennlig, noe brukerne liker, så ikke gå over stokk og stein slik som enkelte nettsider gjør ved å splitte hver eneste del av artikkelen din opp i forskjellige sider (<em>BuzzFeed er en versting på sånt</em>).</p>
+
+            <h4>Responsivt typografi</h4>
+                <p>Dette går under mobilvennlighet, men ikke nødvendigvis begrenset til det.</p>
+                <p>Responsivt typografi går ut på at teksten på nettstedet ditt skalerer bra med diverse skjermoppløsninger og skjermstørrelser.</p>
+
+            <h2 class="multiple" id="microdata">Microdata</h2>
+                <p>Microdata gjør det lettere for søkemotorene å få et innblikk i hva nettsiden din er. Om du har en del microdata for bøker f.eks vil du konkurere med andre bokbutikker på nett og på samme tid vil ikke page ranken din bli tatt til betraktning i andre urelevante kategorier for nettsteder</p>
+
+        </article>
+
+        <section class="reflist">
+            <h3 id="sources">Kilder</h3>
+            <p><a href="https://moz.com/blog/accessibility-seo-1" class="source">moz.com - What You Should Know About Accessibility + SEO, Part I: An Intro</a> <a href="https://moz.com/learn/seo/title-tag" class="sources" target="_blank">Title Tag | Moz</a> </p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 5 - SEO-konsulent for arngren.net</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="../js/nav.js"></script>
+</head>
+<body>
+
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 5</h1>
+         <nav>
+          <ul id="ulmenu">
+              <li><a href="../index.html"> Hjem</a></li>
+              <li><a href="oppgave2.html"> Oppgave 2</a></li>
+              <li><a href="oppgave3.html"> Oppgave 3</a></li>
+              <li><a href="oppgave4.html"> Oppgave 4</a></li>
+              <li><a href="oppgave5.html"> Oppgave 5</a></li>
+              <li><a href="oppgave6.html"> Oppgave 6</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+        <article class="main">
+            <p id="crumbs"><a href="../index.html">Forside</a> > <a href="../oppgaver/index.html">Oppgaver</a> > <a href="oppgave6.html">arngren.net</a> </p>
+
+            <h2>Arngren.net</h2>
+
+            <h3>Analyse av bedriften</h3>
+                <p>Målgruppe: Folk som elsker duppeditter og som sløser ekstremt mye penger på unødvendige produkter</p>
+                <p>Produkter: Hobby og «kule» ting og tang, ting man generelt ikke trenger i hverdagen.</p>
+                <p>Salgskanaler: Internett – på en veldig upraktisk måte. Tilbyr også kjøp hos lager-butikk</p>
+                <p>Konkurenter: <a href="https://thisiswhyimbroke.com" target="_blank">This Is Why I'm Broke</a> - <a href="http://superkul.no">superkul.no</a></p>
+
+            <h3>Analyse av eksisterende nettsted</h3>
+                <p>Arngren slik som det er nå er rett og slett helt forferdelig. Det er alvorlig mangel på struktur og oversikt, ei heller har den noen form for fokus på søkemotor optimalisering. Tittel taggen inneholder søkeord, noe som påvirker SEO. Den er faktisk så dårlig at google ignorerer title taggen og har heller gitt den en egen tittel (arngren.net) i søkeresultatet.</p>
+                <p>Hele nettstedet strukturert ved hjelp av tables og inline-css. Dette er en utdatert metode for design og gjør at kildekoden blir ekstremt stygg og uoversiktlig (gjør det vanskelig å gjøre endringer). Dette designet skyldes nok bruk av en sitebuilder, som mest sannsynlig også er utdatert.</p>
+                <p>Tables er ikke responsivt, noe som gjør det til en unødvendig utfordring om man ønsker å gjøre siden mobilvennlig. Dette fører til at veldig mange besøkende forlater siden innen et par sekunder, som igjen gjør at søkemotorer som Google merker at mobilbrukere ikke er fornøyd med siden.</p>
+                <p>En faktor i SEO er å ha nytt og relevant innhold. Siden bruk av tables og inline-css er vanskelig å vedlikeholde for en utvikler gjør det at design metoden til arngren straffer seg.</p>
+
+            <h3>SEO-informasjon/plan</h3>
+                <p>Om jeg skulle vært SEO-konsulent så hadde jeg først og fremst oppdatert hele forsiden til å bruke semantiske html-tagger som: <code>&lt;header&gt;</code> <code>&lt;nav&gt;</code> <code>&lt;section&gt;</code> og <code>&lt;footer&gt;</code>.
+                    Etter det hadde jeg oppdatert <code>&lt;title&gt;</code> taggen til noe mer informativt og akseptert enn keywords. Hadde også implementert en skikkelig bestilling- og betalingsprosess, noe àla det komplett, cdon og power.no har.</p>
+                <p>Forsiden skal inneholde enkelte varer, men først og fremst skal ting deles opp i et skikkelig kategori-system. Trenger ikke være veldig avansert, men en seksjon for de mest populære kategoriene på forsiden.</p>
+                <p>I headeren skal det ligge en responsiv navigasjonsmeny med forskjellige kategorier, hvor hver kategori har en dropdown meny hvor det passer seg. Dette vil gjøre nettsiden mer oversiktlig og mer optimalisert for søkemotorene. </p>
+                <p>De mest solgte og relevantene produktene skal også inneholde microdata (eller JSON-LD, da dette er mer belønnet av søkemotorene over microdata i html) slik at søkemotorene kan få et mye bedre innblikk i hva nettsiden inneholder (nemlig produkter). Det gir også et mye mer attraktivt søkeresultat da akkurat arngren sin link kan inneholde bilder og relevant informasjon i søkeresultatene for produktene. Produktbeskrivelsene skal også inneholde beskrivelser som inneholder inneholder relevante søkeord (naturlig skrevet inn i teksten).</p>
+                <p>Hele nettstedet skal også være mobilvennlig</p>
+
+
+            <h3>Teknisk implementasjon</h3>
+                <p>Forsiden struktureres med semantiske tagger, vi bytter ut alle tables med skikkelig struktur, en <code>&lt;header&gt;</code> med <code>&lt;nav&gt;</code> for en skikkelig navigasjonsmeny, samt en <code>&lt;section&gt;</code> for de mest populære kategoriene og sist men ikke minst, ekstern css. Deretter lager jeg en template som brukes til produktene, hvor det finnes en dedikert plass til bilder, pris, lagerstatus, produktbeskrivelse, tekniske detaljer osv osv. Alt dette lastes inn via en JSON-fil for det aktuelle produktet. Slik kan Frithjof Arngren, som åpenbart ikke kan HTML, bruke en JSON-generator som følger en bestemt struktur vi bestemmer på forhånd for å endre detaljer på diverse produkter.</p>
+
+        </article>
+    </div>
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Løsning: Oblig 1 oppgave 2</title>
+        <meta charset ="utf-8" />
+
+        <script>
+
+            window.addEventListener("load", function() { // alternativ måte å vente på page load som tillater å calle funksjoner med (); bak.
+
+                document.getElementById("assertionTable").addEventListener("click", function(event) { // bestemmer hva som skjer om en knapp blir trykket
+                    checkAssertion(event.target.className); // henter ut klassenavnet (class="") fra knappen som ble trykket og sender det til funksjonen checkAssertion(svar)
+
+                });
+
+            });
+
+            function checkAssertion(answer) { // sjekker om påstanden er riktig eller galt ved bruk av variabelen 'answer' som har fått verdien sin fra checkAssertion(event.target.className)
+
+                if (answer === "correct") { // sjekker om answer er lik "correct"
+                    alert("Riktig"); // dette skjer om answer === riktig (tre erlikhetstegn sjekker om innholdet OG type (f.eks string eller integer) er det samme), med bare to sjekker man kun om verdien er det samme.
+                } else if (answer === "wrong") { // må bruke else if statement her, ellers kommer det alertboks med "galt" hver gang man trykker inni tabellen (f.eks om man markerer tekst).
+                    alert("Galt");
+                }
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <h1>Løsning: Oblig 1 oppgave 2</h1>
+
+            <table id="assertionTable">
+                <tr>
+                    <td>
+                        <p>Jorden er flat <button class="wrong" type="button">Sann</button> <button class="correct" type="button">Usann</button></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>VG (avisen) står for Verdens Gang  <button class="correct" type="button">Sann</button> <button class="wrong" type="button">Usann</button></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Valgdagen i USA er alltid på en tirsdag <button class="correct" type="button">Sann</button> <button class="wrong" type="button">Usann</button></p>
+                    </td>
+                </tr>
+            </table>
+
+    </body>
+
+</html>

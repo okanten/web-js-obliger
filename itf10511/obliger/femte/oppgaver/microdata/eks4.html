@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="nb">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webutvikling oblig 5 - Microdata: TV-serier</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+    <script type="text/javascript" src="../../js/nav.js"></script>
+
+</head>
+<body>
+
+    <div id="mobilenav" class="test">
+    </div>
+    <header id="navheader" class="full">
+        <i id="btnClose" class="fa fa-times" aria-hidden="true"></i>
+        <i id="btnOpen" class="fa fa-bars" aria-hidden="true"></i>
+        <!-- Tror ikke JavaScript liker at knappen flyttes, derfor kreves det to forskjellige 'knapper' her...-->
+        <h1>Oblig 5</h1>
+         <nav>
+          <ul id="ulmenu">
+              <li><a href="../../index.html"> Hjem</a></li>
+              <li><a href="../oppgave2.html"> Oppgave 2</a></li>
+              <li><a href="../oppgave3.html"> Oppgave 3</a></li>
+              <li><a href="../oppgave4.html"> Oppgave 4</a></li>
+              <li><a href="../oppgave5.html"> Oppgave 5</a></li>
+              <li><a href="../oppgave6.html"> Oppgave 6</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+
+        <section class="main">
+            <p id="crumbs"><a href="../../index.html">Forside</a> > <a href="../../oppgaver/index.html">Oppgaver</a> > <a href="../microdata/index.html">Microdata</a> > <a href="eks4.html">Eksempel 4</a> </p>
+
+            <div itemscope itemtype="http://schema.org/TVSeries">
+                <h2>Mr. Robot</h2>
+                <span itemprop="name">Mr. Robot</span> is an American drama–thriller television series created by
+                <div itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">Sam Esmail</span>
+                </div>
+                <!--div itemprop="accessibilitySummary" itemscope itemtype="http://schema.org/CreativeWork"-->
+                    <p>Mr. Robot follows Elliot, a young programmer working as a cyber-security engineer by day, and a vigilante hacker by night. </p>
+                <!--/div-->
+                <!-- Google gir error her, selv om schema.org sier at accessibilitySummary er under CreativeWork -->
+                <div itemprop="actor" itemscope itemtype="http://schema.org/Person">
+                    Elliot Alderson is portrayed by <span itemprop="name">Rami Malek</span>
+                </div>
+                <h2>Seasons</h2>
+                <div itemprop="containsSeason" itemscope itemtype="http://schema.org/TVSeason">
+                    <h4 itemprop="name">Season 1</h4><meta itemprop="numberOfEpisodes" content="10"/>
+                    <p itemprop="startDate" content="2015-06-24">Season premiere aired: 24 Jun. 2015</p>
+                    <p itemprop="endDate" content="2015-09-02">Season finale aired: 2 Sep. 2015</p>
+                </div>
+                <div itemprop="containsSeason" itemscope itemtype="http://schema.org/TVSeason">
+                    <h4 itemprop="name">Season 2</h4><meta itemprop="numberOfEpisodes" content="12"/>
+                    <p itemprop="startDate" content="2016-06-10">Season premiere aired: 10 Jul. 2016</p>
+                    <p itemprop="endDate" content="2016-09-21">Season finale aired: 21 Sep. 2016</p>
+                </div>
+                <div itemprop="containsSeason" itemscope itemtype="http://schema.org/TVSeason">
+                    <h4 itemprop="name">Season 3</h4><meta itemprop="numberOfEpisodes" content="10"/>
+                    <p itemprop="startDate" content="2017-10-11">Season premiere aired: 11 Oct. 2017</p>
+                    <p itemprop="endDate" content="2016-12-13">Season finale is set to air: 13 Dec. 2017</p>
+                </div>
+
+                <h2>Skuespillere: </h2>
+                <div itemprop="actor" itemscope itemtype="http://schema.org/Person">
+                    <p><strong itemprop="name">Rami Malek</strong> as <em>Elliot Alderson</em></p>
+                </div>
+                <div itemprop="actor" itemscope itemtype="http://schema.org/Person">
+                    <p><strong itemprop="name">Carly Chaikin</strong> as <em>Darlene</em></p>
+                </div>
+                <div itemprop="actor" itemscope itemtype="http://schema.org/Person">
+                    <p><strong itemprop="name">Portia Doubleday</strong> as <em>Angela Moss</em></p>
+                </div>
+                <div itemprop="actor" itemscope itemtype="http://schema.org/Person">
+                    <p><strong itemprop="name">Martin Wallström</strong> as <em>Tyrell Wellick</em></p>
+                </div>
+                <div itemprop="actor" itemscope itemtype="http://schema.org/Person">
+                    <p><strong itemprop="name">Christian Slater</strong> as <em>Mr. Robot</em></p>
+                </div>
+
+            </div>
+                <aside>
+                    <p>Slik benytter google denne informasjonen: </p>
+                    <a href="../../img/eks4.png"><img src="../../img/eks4_small.png" class="ssgoogle" alt="Screenshot av Google sitt testverktøy for strukturerte data"></a>
+                    <p>Klikk på bildet for større versjon</p>
+                </aside>
+
+                <p><a href="eks5.html">Eksempel 5</a></p>
+
+
+        </section>
+    </div>
+
+
+    <footer>
+        <p>Ola Kanten <a href="mailto:olaka@hiof.no">Kontakt</a></p>
+    </footer>
+
+
+</body>
+
+</html>

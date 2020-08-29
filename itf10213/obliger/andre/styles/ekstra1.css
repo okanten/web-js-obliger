@@ -1,0 +1,64 @@
+
+.wrapper {
+    display: grid;
+    box-shadow: 1px 3px 10px 1px;
+    background-color: rgba(255, 255, 255, 0.7);
+
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:    "header header header"
+                            ". main ."
+                            "foot foot foot";
+
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    margin: 0 0 1em 0;
+}
+
+
+
+footer {
+    margin-top: 25px;
+    margin-bottom: 2em;
+    grid-area: foot;
+    border-top: 1px solid;
+    padding-top: 1em;
+    text-align: center;
+}
+
+form#interest {
+    grid-area: main;
+    font-size: 1em;
+
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    padding-bottom: 20px;
+}
+
+textarea {
+    overflow-y: scroll;
+    width: 90%;
+    max-width: 100%;
+}
+
+input {
+    float: right;
+    width: 55%;
+}
+
+input#btnClean {
+    float: left;
+    width: 55%;
+}
+
+input#btnSubmit {
+    float: left;
+    width: 25%;
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Infprog oblig 2 oppgave 4</title>
+        <meta charset ="utf-8" />
+
+        <link rel="stylesheet" href="styles/menu.css" />
+        <!--link rel="stylesheet" href="styles/body.css" /-->
+        <link rel="stylesheet" href="styles/oppgave4.css" />
+        <script>
+
+            // Definerer en rekke arrays: en for lenken til radiostasjonen, en til navnet på radiostasjonen, en til kreditering av bakgrunnsbilde og en til bilde i teksten.
+
+            var radioUrl = ["http://lyd.nrk.no/nrk_radio_p1_ostlandssendingen_mp3_h", "http://lyd.nrk.no/nrk_radio_p13_mp3_h", "http://lyd.nrk.no/nrk_radio_mp3_aac_h", "http://lyd.nrk.no/nrk_radio_p3_urort_mp3_h", "http://lyd.nrk.no/nrk_radio_p13_mp3_h"];
+
+            var radioTitle = ["Nattradioen på NRK P1", "Tidenes morgen på NRK P13", "NRK mP3 - Alltid musikk", "NRK P3 Urørt", "NRK P13 Musikk"];
+
+            var backimgCred = ["https://unsplash.com/photos/A2Y3VsCKx_E", "https://unsplash.com/photos/kMInhS0Nh-w", "https://unsplash.com/photos/jWklQXHhJuo", "https://unsplash.com/photos/pQMM63GE7fo", "https://unsplash.com/photos/SHIDPK_URIU"];
+
+            var frontimgCred = ["https://unsplash.com/photos/loAgTdeDcIU", "https://unsplash.com/photos/lPWSIC2OjUs", "https://unsplash.com/photos/vA306RVn7t0", "https://unsplash.com/photos/H9p1dvVvkqI", "https://unsplash.com/photos/-RftbQ6sxG8"];
+
+
+
+            var today = new Date();    // henter ut dagens dato.
+
+            var $ = function(id) { // forkorter document.getElementById til $
+                return document.getElementById(id);
+            }
+
+            window.addEventListener("load", function() { // page load
+                timeOfDay(today.getHours()); // endrer siden etter tiden nå.
+
+                updateTime(); // oppdaterer klokken en gang (med en gang siden lastes)
+                setInterval(updateTime, 1000); // oppdaterer klokken hvert sekund
+
+                $("btnChange").addEventListener("click", function() { // om btnChange blir klikket
+                    timeOfDay(parseInt($("txtHours").value));  // endrer siden etter hvilken time på døgnet brukeren skrev inn i tekstfeltet.
+                });
+
+            });
+
+
+            function timeOfDay(hrs) {
+
+                var hours = hrs // setter hours til hva som blir sendt med når vi caller funksjonen
+
+                if (hours <= 5) { // Hvis time i døgnet er mindre eller lik 5 endre siden så den reflekterer natt
+                    changeContent( // caller en funksjon med x antall verdier. Gjør det mer strukturert imo.
+                        "Zzzz", // Endrer tittel
+                        "Le, og verden ler med deg. Snork, og du sover alene.", // Endrer tekst under tittel
+                        "bilder/background/felix-plakolb-137007.jpg", // Endrer bakgrunnsbilde
+                        "bilder/content/jay-wennington-2250_500x300.jpg", // Endrer bilde under tekst
+                        radioTitle[0], // Endrer teksten over radiospilleren
+                        radioUrl[0], // Endrer radiostasjon
+                        "Photo by <a href=" + backimgCred[0] + " target=\"_blank\">Felix Plakolb</a>", // Endrer kreditering
+                        "Photo by <a href=" + frontimgCred[0] + " target=\"_blank\">Jay Wennington</a>" // Endrer kreditering
+                    );
+
+                } else if (hours < 9) { // reflekter morgen
+                    changeContent(
+                        "God morgen!",
+                        "Morgenstund har gull i munn",
+                        "bilder/background/tae-in-kim-13625.jpg",
+                        "bilder/content/anete-lusina-146471_500x350.jpg",
+                        radioTitle[1],
+                        radioUrl[1],
+                        "Photo by <a href=" + backimgCred[1] + " target=\"_blank\">Tae In Kim</a>",
+                        "Photo by <a href=" + frontimgCred[1] + " target=\"_blank\">Anete Lūsiņa</a>"
+                    );
+
+                } else if (hours < 12) { // reflekter formiddag (frem til 11:59)
+                    changeContent(
+                        "God formiddag!",
+                        "På tide med lunsj?",
+                        "bilder/background/gabriel-santiago-3977.jpg",
+                        "bilder/content/diego-duarte-cereceda-340520_500x350.jpg",
+                        radioTitle[2],
+                        radioUrl[2],
+                        "Photo by <a href=" + backimgCred[2] + " target=\"_blank\">Gabriel Santiago</a>",
+                        "Photo by <a href=" + frontimgCred[2] + " target=\"_blank\">Diego Duarte Cereceda</a>"
+                    );
+                } else if (hours < 18) { // reflekter ettermidag (frem til 17:59)
+                    changeContent(
+                        "God ettermiddag!",
+                        "Er det middag snart?",
+                        "bilder/background/milada-vigerova-35578.jpg",
+                        "bilder/content/chris-rhoads-202247_500x350.jpg",
+                        radioTitle[3],
+                        radioUrl[3],
+                        "Photo by <a href=" + backimgCred[3] + " target=\"_blank\">Milada Vigerova</a>",
+                        "Photo by <a href=" + frontimgCred[3] + " target=\"_blank\">Chris Rhoads</a>"
+                    );
+                } else if (hours <= 23) { // reflekter kveld frem til 23:59
+                    changeContent(
+                        "God kveld!",
+                        "Moralen synker med solen",
+                        "bilder/background/corina-ardeleanu-33962.jpg",
+                        "bilder/content/sabri-tuzcu-317828_500x350.jpg",
+                        radioTitle[4],
+                        radioUrl[4],
+                        "Photo by <a href=" + backimgCred[4] + " target=\"_blank\">Corina Ardeleanu</a>",
+                        "Photo by <a href=" + frontimgCred[4] + " target=\"_blank\">Chris Rhoads</a>"
+                    );
+                }
+
+            }
+
+            function changeContent(inputHeader, inputText, backimg, img, radioStation, audioSrc, backCred, frontCred) {
+                $("title").innerHTML = inputHeader;
+                $("paragraph").innerHTML = inputText;
+                document.body.style.backgroundImage = "url(" + backimg + ")"
+                $("pageImage").src = img;
+                $("radioTitle").innerHTML = radioStation;
+                $("audioControls").src = audioSrc;
+                $("backImgCredits").innerHTML = "Background image: " + backCred; + " on <a href=\"https://unsplash.com\" target=\"_blank\">Unsplash</a>"
+                $("frontImgCredits").innerHTML = "Content image: " + frontCred; + " on <a href=\"https://unsplash.com\" target=\"_blank\">Unsplash</a>"
+
+                if($("autoplay").checked === true) {
+                    $("audioControls").load();
+                    $("audioControls").play();
+                }
+
+            }
+
+            function updateTime() {
+                var updateToday = new Date();
+                var time = ["0" + updateToday.getHours(), "0" + updateToday.getMinutes(), "0" + updateToday.getSeconds()];
+                $("time").innerHTML = time[0].slice(-2) + ":" + time[1].slice(-2) + ":" + time[2].slice(-2);
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <nav>
+            <ul id="navigation">
+                <li><a href="oppgave1.html">Oppgave 1-3</a></li>
+                <li><a href="oppgave4.html">Oppgave 4</a></li>
+                <li><a href="oppgave5.html">Oppgave 5</a></li>
+                <li><a href="oppgave6.html">Oppgave 6</a></li>
+                <li><a href="oppgave7.html">Oppgave 7</a></li>
+                <li><a href="ekstra1.html">Ekstra 1</a></li>
+                <li><a href="ekstra2.html">Ekstra 2</a></li>
+            </ul>
+        </nav>
+
+        <div class="wrapper">
+
+            <!--h1>Løsning: Oblig 2 oppgave 4</h1-->
+
+            <header>
+                <p id="time">hurr</p>
+                <h1 id="title">Placeholder</h1>
+
+
+            </header>
+
+            <div id="radioPlayer">
+                <h4 id="radioTitle">P1</h4>
+                <audio id="audioControls" controls>
+                    <source src="http://lyd.nrk.no/nrk_radio_p1_hordaland_mp3_l" id="radioStream" type="audio/mp3" />
+                </audio>
+            </div>
+
+            <div id="maincontent">
+                <p id="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+                <img src="http://via.placeholder.com/500x350" id="pageImage" />
+
+            </div>
+
+            <div id="config">
+                <h3>Test andre tider på døgnet</h3>
+                <p>Time på døgnet: <input type="number" id="txtHours" placeholder="9" min="1" max="23" /> </p>
+                <p><input type="checkbox" id="autoplay" />Autoplay radio</p>
+                <input type="button" id="btnChange" value="Se forandringen"/>
+
+                <br /><br /><br />
+
+                <p>Tips: </p>
+                <p class="tips">Natt er mellom kl 00:00 frem til 05:59</p>
+                <p class="tips">Morgen er mellom 06:00 frem til 08:59</p>
+                <p class="tips">Formiddag er mellom 10:00 frem til 10:59</p>
+                <p class="tips">Ettermiddag er mellom 12:00 frem til 17:59</p>
+                <p class="tips">Kveld er mellom 18:00 frem til 23:59</p>
+            </div>
+
+
+            <div id="footer">
+                <p>Denne siden følger <a href="https://metlex.met.no/wiki/Tid">Meteorologisk Institutt</a> sin inndeling av tider på døgnet</p> <br/>
+                <p id="frontImgCredits">placeholder</p>
+                <p id="backImgCredits">placeholder</p>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>Løsning: Oblig 1 oppgave 1</title>
+        <meta charset ="utf-8" />
+
+        <script>
+
+            window.addEventListener("load", function() { // alternativ måte å vente på page load
+
+                document.getElementById("btnHPD").addEventListener("click", function() {
+                    changeText("Hei på deg"); // sender "Hei på deg" til changeText om knapp 1 (btnHPD) blir trykket
+                });
+
+                document.getElementById("btnHDB").addEventListener("click", function() {
+                    changeText("Ha det bra"); // sender "Ha det bra" til changeText om knapp 2 (btnHDB) blir trykket
+                });
+
+            });
+
+            function changeText(i) {
+                document.getElementById("out").innerHTML = i;
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <h1>Løsning: Oblig 1 oppgave 1</h1>
+
+        <button id="btnHPD" type="button">Klikk meg</button>
+        <button id="btnHDB" type="button">Meg også</button>
+
+        <p id="out">Tekst endres her</p>
+
+    </body>
+
+</html>

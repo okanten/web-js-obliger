@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="no">
+    <head>
+        <title>På kanten - SVG</title>
+        <meta charset="utf-8" />
+        <!--link rel="stylesheet" href="normalize.css" /-->
+        <link rel="stylesheet" type="text/css" media="print" href="print.css" />
+        <link rel="stylesheet" media="screen" href="article.css" />
+        <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.css">
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+            <header>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html" class="linkimg"><img src="img/logo.png" alt="Logo" id="imglogo"/></a></li>
+                        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                        <li><a href="#articleone" class="active"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Artikler</a></li>
+                        <li><a href="index.html#cal" id="showCalender"><i class="fa fa-calendar" aria-hidden="true"></i> Kalender</a></li>
+                        <li><a href="ekstra1.html"><i class="fa fa-mobile" aria-hidden="true"></i> Ekstra</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="crumbs">
+                <p><a href="index.html">På kanten</a> > <a href="index.html#articleone">Artikler</a> > <a href="svg.html">SVG</a></p>
+            </section>
+
+                <article class="main">
+                    <h2 id="articleTitle">Scalable Vector Graphics</h2>
+                    <p>SVG står, som tittelen forteller, for Scalable Vector Graphics og er en måte å fremvise grafikk på. Det er viktig å bemerke seg at SVG ikke fungerer på samme måte som bitmaps (bildefiler). SVG er skalerbart (noe som forøvrig ligger i navnet) og gir oss den fordelen at vi kan strekke grafikken uten at bildet mister kvalitet.
+
+                        En annen fordel er at grafikken blir definert i XML og kildekoden kan leses av en hvilken som helst tekst-editor. Dette gjør også at filstørrelsen blir betraktelig mindre.</p>
+
+                        <p>Som en demonstrasjon av hvordan en SVG fil er bygd opp kan vi ta en titt på denne eksempelkoden fra w3schools (finnes <a href="https://www.w3schools.com/graphics/svg_examples.asp">her</a>)</p>
+
+
+
+                        <div id="code">
+                            <pre>
+                                &lt;svg height="100" width="100"&gt;
+                                  &lt;circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /&gt;
+                                  Sorry, your browser does not support inline SVG.
+                                &lt;/svg&gt;
+                            </pre>
+                        </div>
+
+                        <p>Som vi ser er vektor-grafikk bygd opp av tagger med verdier.</p>
+
+                        <p>Under kan du se noen eksempler på hvordan SVG'er kan se ut.</p>
+
+                    <div id="middlecontent">
+
+                        <div id="firstexample">
+                            <svg height="100" width="100">
+                                <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+                            </svg>
+                            <p><em>Dette er hvordan kodeeksempelet ser ut</em></p>
+                        </div>
+
+                        <div id="secondexample">
+                            <svg height="100" width="100">
+                                <rect x="20" y="25" height="50" width="50" stroke="gray" stroke-width="3" fill="cyan" />
+                            </svg>
+                            <p><em>Et helt enkelt rektangel</em></p>
+                        </div>
+
+                        <div id="thirdexample">
+                            <svg height="100" width="200">
+                                <circle cx="125" cy="70" r="7" stroke="black" stroke-width="2" fill="#dedfe0" /> <!-- Høyre hjul ytterkant -->
+                                <circle cx="125" cy="70" r="2" stroke="black" stroke-width="1.2" fill="white" /> <!-- Høyre hjul mutter -->
+                                <circle cx="70" cy="70" r="7" stroke="black" stroke-width="2" fill="#dedfe0" /> <!-- venstre hjul ytterkant -->
+                                <circle cx="70" cy="70" r="2" stroke="black" stroke-width="1.2" fill="white" /> <!-- venstre hjul mutter -->
+                                <rect width="100" height="10" ry="10" x="50" y="52" fill="#b7a89d"/>
+                            </svg>
+                            <p><em>Et skateboard laget med circle og rect</em></p>
+                        </div>
+
+                    </div>
+
+                    <p>SVG har et mye større bruksområde enn å tegne sirkler, rektangler eller et skateboard. Det er veldig kjekt for ting som (men ikke begrenset til) logoer, iconer, "tegninger" og animasjoner.</p>
+                    <p>Under kan du se mer avansert bruk av SVG. Disse er ikke laget av meg og ikke nødvendigvis skrevet for hånd.</p>
+
+                    <div class="bottomsection img">
+                        <a href="img/linus-tux.svg" target="_blank"><img id="linus" src="img/linus-tux.svg" alt="SVG of Linus Torvalds"/></a>
+                        <a href="img/stallman.svg" target="_blank"><img id="stallman" src="img/stallman.svg" alt="SVG of Richard M. Stallman"/></a>
+                        <a href="img/dennis-ritchie.svg" target="_blank"><img id="ritchie" src="img/dennis-ritchie.svg" alt="SVG of Dennis Ritchie"/></a>
+                        <p>Disse er lagt inn ved bruk av img tag, men om du klikker på de og ser på kildekoden kan du se koden bak grafikken.</p>
+                    </div>
+
+                </article>
+
+
+            <article class="extra">
+                <h2>Tilleggsinformasjon</h2>
+                <p>W3schools har en rekke eksempler på bruk av SVG <a href="https://www.w3schools.com/graphics/svg_examples.asp" target="_blank">her</a> <i class="fa fa-external-link" style="font-size: 8px;" aria-hidden="true"></i></p>
+            </article>
+
+            <footer>
+                <h2><a href="om.html"><i class="fa fa-info-circle" aria-hidden="true"> </i>Om denne siden</a></h2>
+                <p><i class="fa fa-github" aria-hidden="true"></i>  <a href="https://github.com/okstudies" target="_blank">GitHub</a></p>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>

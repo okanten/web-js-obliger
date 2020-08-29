@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kom i gang med SEO - En kort introduksjon til de forskjellige faktorene for god SEO</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="En samleside for flere faktorer i søkemotoroptimalisering.
+                                        Les om bruk av semantiske tagger og generell kode, kvalifikasjonene for innhold og få et innblikk i Sass for å gjøre utviklingen enklere.">
+    <meta name="keywords" content="SEO,search engine optimization,assignment,webutvikling">
+    <meta name="author" content="Ola Kanten">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.css">
+
+
+
+    <script>
+
+        var $ = function(id) {
+            return document.getElementById(id);
+        }
+
+        window.addEventListener("load", function() {
+
+            $("btnMenu").addEventListener("click", function() {
+                if ($("ulmenu").className === "closed") {
+                    $("ulmenu").className = "open";
+                    $("btnMenu").classList.remove("fa-bars");
+                    $("btnMenu").classList.add("fa-times");
+                } else {
+                    $("ulmenu").className = "closed";
+                    $("btnMenu").classList.remove("fa-times");
+                    $("btnMenu").classList.add("fa-bars");
+                }
+            });
+
+        });
+
+
+
+    </script>
+
+</head>
+<body>
+    <div class="wrapper fp">
+
+        <header>
+
+            <h1>Kom i gang med SEO</h1>
+
+          <nav>
+              <ul id="ulmenu" class="closed">
+                  <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                  <li><a href="kom-i-gang.html"><i class="fa fa-forward" aria-hidden="true"></i> Kom i gang</a></li>
+                  <li><a href="kode.html"><i class="fa fa-code" aria-hidden="true"></i> Kode</a></li>
+                  <li><a href="innhold.html"><i class="fa fa-list-alt" aria-hidden="true"></i> Innhold</a></li>
+                  <li><a href="analyse.html"><i class="fa fa-bar-chart" aria-hidden="true"></i> Analyse</a></li>
+                  <li><a href="sass.html"><i class="fa fa-css3" aria-hidden="true"></i> Sass</a></li>
+              </ul>
+          </nav>
+        </header>
+
+        <i class="fa fa-bars" id="btnMenu" aria-hidden="true"></i>
+
+        <section class="main fp">
+
+            <article id="articleOne">
+                <img src="img/article1.jpg" alt="Tegning av kvinne på et kontor" />
+                <h3>Kom i gang</h3>
+                <p>En kort forklaring på hva SEO står for og hva det innebærer. Dette legger grunnlaget for resten av artiklene. Start her</p>
+                <p><a class="readmore" href="kom-i-gang.html">Les mer</a></p>
+            </article>
+
+            <article id="articleTwo">
+                <img src="img/article2.png" alt="HTML5 kodesnutt" />
+                <h3>Kode</h3>
+                <p>Les om hvordan koden din bør se ut for å optimalisere den mer for søkemotorer, og hvorfor semantiske tagger og bilde attributter er viktig.</p>
+                <a class="readmore" href="kode.html">Les mer</a>
+            </article>
+
+            <article id="articleThree">
+                <img src="img/article3.png" alt="A4 ark med linjer og blyant" />
+                <h3>Innhold</h3>
+                <p>Innholdet har noe å si for å optimalisere siden din for søkemotorer, både kvalitet og ordbruk. Les mer her.</p>
+                <a class="readmore" href="innhold.html">Les mer</a>
+            </article>
+
+            <article id="articleFour">
+                <img src="img/article4.jpg" alt="Flipover som viser statistikk" />
+                <h3>Analyse</h3>
+                <p>Her går jeg igjennom hvilke tiltak jeg har gjort for å praktisere SEO. Se en kort oppsummering av hvilke tiltak jeg har gjort.</p>
+                <a class="readmore" href="analyse.html">Les mer</a>
+            </article>
+
+
+
+        </section>
+
+        <section id="sidebar">
+            <h3>Ekstra informasjon</h3>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tqg3F-8jBec" allowfullscreen></iframe>
+            <h3>Eksterne artikler</h3>
+            <p class="externalArticle"><i class="fa fa-external-link" aria-hidden="true"></i><a href="https://moz.com/beginners-guide-to-seo" target="_blank">The beginners guide to SEO - Moz.com</a></p>
+            <p class="externalArticle"><i class="fa fa-external-link" aria-hidden="true"></i><a href="https://searchengineland.com/guide/what-is-seo" target="_blank">What is SEO - Search Engine Land</a></p>
+            <p class="externalArticle"><i class="fa fa-external-link" aria-hidden="true"></i><a href="https://en.wikipedia.org/wiki/Search_engine_optimization" target="_blank">Wikipedia</a></p>
+            <p id="googlesearch"><a href="https://encrypted.google.com/search?hl=en&q=search%20engine%20optimization" target="_blank">Google søk for SEO</a></p>
+        </section>
+
+        <footer>
+            <p>Ola Kanten</p>
+            <p><a href="mailto:olaka@hiof.no" class="mail">Kontakt</a></p>
+        </footer>
+
+
+    </div>
+</body>
+
+</html>

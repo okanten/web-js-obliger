@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="no">
+    <head>
+        <title>På kanten - Git og GitHub</title>
+        <meta charset="utf-8" />
+        <!--link rel="stylesheet" href="normalize.css" /-->
+        <link rel="stylesheet" type="text/css" media="print" href="print.css" />
+        <link rel="stylesheet" media="screen" href="article.css" />
+        <link rel="stylesheet" href="./fonts/font-awesome-4.7.0/css/font-awesome.css">
+
+    </head>
+
+    <body>
+
+        <div class="wrapper">
+
+            <header>
+                <nav>
+                    <ul id="menu">
+                        <li><a href="index.html" class="linkimg"><img src="img/logo.png" alt="Logo" id="imglogo"/></a></li>
+                        <li><a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Hjem</a></li>
+                        <li><a href="#articleone" class="active"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Artikler</a></li>
+                        <li><a href="index.html#cal" id="showCalender"><i class="fa fa-calendar" aria-hidden="true"></i> Kalender</a></li>
+                        <li><a href="ekstra1.html"><i class="fa fa-mobile" aria-hidden="true"></i> Ekstra</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section id="crumbs">
+                <p><a href="index.html">På kanten</a> > <a href="index.html#articleone">Artikler</a> > <a href="git.html">Git og GitHub</a></p>
+            </section>
+
+
+
+                <article class="main">
+                    <h2 id="articleTitle">Git</h2>
+                    <p>Git er et nyttig verktøy for versjon kontroll som ble utviklet av Linus Torvalds, samme person som har utviklet linuxkjernen. Det har i dag en antatt markedsandel på rundt 42% blant utviklere.</p>
+                    <p>Verktøyet ble utviklet som et resultat av at versjonskontrollsystemet <em>BitKeeper</em> sluttet å gi ut gratis-lisenser. BitKeeper ble brukt i utviklingen av linux, men da de begynte å ta penger for bruk av programmet måtte de finne på noe annet.</p>
+                    <p>Med erfaringen fra BitKeeper begynte Linus Torvalds og andre personer i miljøet rundt utviklingen av Linux å utvikle Git.</p>
+                    <blockquote>
+                        <h4>De hadde følgende krav for et nytt system: </h4>
+                        <ul>
+                            <li>Det skulle være raskt</li>
+                            <li>Simpelt design (merk: simpelt betyr ikke nødvendigvis intuitivt).</li>
+                            <li>God støtte for ikke-lineær utvikling (kjent som branching).</li>
+                            <li>Fullt distribuert. Det vil si åpent for allmenheten og fri programvare.</li>
+                            <li>Effektiv og raskt ved bruk i større prosjekter som for eksempel linuxkjernen.</li>
+                        </ul>
+                        <footer class="quote">
+                            <p>- Boka <cite><a href="https://git-scm.com/book/en/v2/Getting-Started-A-Short-History-of-Git" target="_blank">Pro Git</a></cite> av Scott Chacon og Ben Straub.</p>
+                        </footer>
+                    </blockquote>
+                    <p>Git i seg selv kommer uten noe grafisk brukergrensesnitt og er designet for å brukes i terminalen. Det finnes heldigvis noen git-klienter som har et brukergrensesnitt, men de er ofte mindre fleksible enn å bruke terminalen.</p>
+                    <p>Eksempler på klienter med et brukergrensesnitt er <a href="#" target="_blank">GitHub Desktop</a> og <a href="https://www.gitkraken.com/" target="_blank">GitKraken</a>.</p>
+
+                    <p>Personlig foretrekker jeg terminalen fordi jeg finner det mer effektivt å bruke tastaturet over mus.</p>
+
+                    <p>Selv om git kan virke avstøtende og komplisert trenger man ikke nødvendigvis å kunne alle kommandoene for å bruke git.</p>
+
+                    <blockquote>
+                        <h4>Essensielle kommandoer: </h4>
+                        <ul>
+                            <li>git init - Lager et nytt repository</li>
+                            <li>git clone - Kloner et annet repository både lokalt og eksternt</li>
+                            <li>git add - Legger til filer i staging</li>
+                            <li>git diff &lt;fil&gt; - Viser endringer i gitt fil i staging area og i HEAD</li>
+                            <li>git commit -m "Commit beskrivelse" - Importerer filene fra staging til repositoriet</li>
+                            <li>git push origin master - Sender filene til et ekstern repository (f.eks ditt repository på github)</li>
+                            <li>git pull - Henter ned filene fra det eksterne repositoriet.</li>
+                        </ul>
+                    </blockquote>
+
+                    <p>Det finnes forskjellige stadier/steder i repositoriet ditt. </p>
+
+                    <blockquote>
+                        <h4>Forskjellige stadier</h4>
+                        <ol>
+                            <li>Untracked files<p> - <em>Filene som ikke har blitt lagt til i repositoriet enda</em></p></li>
+                            <li>Modified files<p> - <em>Filene som har blitt lagt til i repositoriet, men som har blitt endret på etter siste commit</em></p></li>
+                            <li>Staging area<p> - <em>Filene som har blitt lagt til og har nytt innhold, men som ikke har blitt committed enda</em></p></li>
+                            <li>HEAD<p> - <em>Her ligger filene i siste commmit</em></p></li>
+                        </ol>
+                    </blockquote>
+
+                    <p class="printbreak">Slik ser det ut i terminalen: </p>
+                    <div id="middlecontent">
+                        <div id="firstexample">
+                            <img src="img/gitexample.png" class="screenshot terminal" alt="Skjermdump av git log" />
+                            <div class="printer-terminal"><!-- for printer -->
+                                <pre>
+                                    [På kanten]$ ~/github/itf10511: git log --log-size --max-count=3
+                                    commit ec8ea7f63f75babd80e6ca716d06c7c0c7958aeb
+                                    log size 101
+                                    Author: O.K &lt;redacted@example.com&gt; <!-- fjernet i tekstversjonen for å unngå ulydige crawlers-->
+                                    Date:   Mon Oct 9 07:22:26 2017 +0200
+
+                                        Images for git article
+
+                                    commit 3c3d5a4dd56b758e846adb25946e73f91e7e0c8b
+                                    log size 117
+                                    Author: O.K &lt;redacted@example.com&gt;
+                                    Date:   Mon Oct 9 07:20:43 2017 +0200
+
+                                        Updated navbar + minor changes to text
+
+                                    commit fc66da778f04678bb6d943bd8634562437b069a3
+                                    log size 93
+                                    Author: O.K &lt;redacted@example.com&gt;
+                                    Date:   Mon Oct 9 07:20:23 2017 +0200
+
+                                        Updated navbar
+                                    [På kanten]$ ~/github/itf10511: scrot -u
+                                </pre>
+                            </div>
+                            <p><em>Mine tre siste commits</em></p>
+                        </div>
+                        <div id="thirdexample">
+                            <img src="img/gitstatus.png" class="screenshot terminal" alt="Skjermdump av git status" />
+                            <div class="printer-terminal"><!-- for printer -->
+                                <pre>
+                                    [På kanten]$ ~/github/itf10511: git status
+                                    On branch master
+                                    Your branch is ahead of 'origin/master' by 1 commit.
+                                        (use "git push" to publish your local commits)
+                                    Changes to be committed:
+                                        (use "git reset HEAD "&lt;file&gt;..." to unstage)
+
+                                            new file:   oblig2/git.html
+
+                                    Changes not staged for commit:
+                                        (use "git add &lt;file&gt;..." to update what will be committed)
+                                        (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+                                            modified: oblig2/index.html
+
+                                    Untracked files:
+                                        (use "git add &lt;file&gt;..." to include what will be committed)
+
+                                            oblig2/img/commitsgithub.png
+                                            oblig2/img/gitexample.png
+
+                                    [På kanten]$ ~/github/itf10511: scrot -u
+                                </pre>
+                            </div>
+                            <p><em>Her ser vi tre av de forskjellige stadiene</em></p>
+                        </div>
+                    </div>
+
+                    <h2 class="printbreak">GitHub</h2>
+                    <p>GitHub er et nettsted og en tjeneste hvor man kan oppbevare, samt dele med andre, sine git repositories. Det er veldig populært blant open-source entusiaster, men også utviklere generelt.</p>
+                    <p>Tjenesten gjør det enkelt å samarbeide med andre, da man enkelt kan gjøre endringer på prosjekter andre har lagt ut og foreslå en endring ved å bruke git for å hente ned og sende opp endringer.
+                        Det er også mulig å opprette private repositories som gjør at prosjektet og eventuelt programkoden din ikke ligger ute offentlig på internett. </p>
+
+
+
+                    <div class="bottomsection img">
+                        <img src="img/commitsgithub.png" class="screenshot" alt="Skjermdump av commits på GitHub"/>
+                        <p><em>Tilsvarende commits på github</em></p>
+                        <img src="img/githubrepo.png" class="screenshot" alt="Skjermdump av repository på GitHub" />
+                        <p><em>Repositoriet for denne oppgaven på github</em></p>
+                    </div>
+
+                </article>
+
+            <article class="extra">
+                <h2>Tilleggsinformasjon</h2>
+                <p>Facebook har repositories på GitHub</p>
+                <a href="https://github.com/facebook" target="_blank">Link</a>
+            </article>
+
+            <footer>
+                <h2><a href="om.html"><i class="fa fa-info-circle" aria-hidden="true"> </i>Om denne siden</a></h2>
+                <p><i class="fa fa-github" aria-hidden="true"></i>  <a href="https://github.com/okstudies" target="_blank">GitHub</a></p>
+            </footer>
+
+        </div>
+
+    </body>
+
+</html>
